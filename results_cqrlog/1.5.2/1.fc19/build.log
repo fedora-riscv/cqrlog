@@ -1,0 +1,2283 @@
+Mock Version: 1.1.26
+ENTER do(['bash', '--login', '-c', 'rpmbuild -bs --target x86_64 --nodeps builddir/build/SPECS/cqrlog.spec'], False, '/var/lib/mock/fedora-rawhide-x86_64/root/', None, 0, True, False, 1000, 990, None, False, {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'CCACHE_DIR': '/tmp/ccache', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'CCACHE_UMASK': '002'}, logger=<mockbuild.trace_decorator.getLog object at 0x18283d0>)
+Executing command: ['bash', '--login', '-c', 'rpmbuild -bs --target x86_64 --nodeps builddir/build/SPECS/cqrlog.spec'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'CCACHE_DIR': '/tmp/ccache', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'CCACHE_UMASK': '002'}
+Building target platforms: x86_64
+Building for target x86_64
+Wrote: /builddir/build/SRPMS/cqrlog-1.5.2-1.fc19.src.rpm
+Child return code was: 0
+LEAVE do --> 
+
+ENTER do(['bash', '--login', '-c', 'rpmbuild -bb --target x86_64 --nodeps builddir/build/SPECS/cqrlog.spec'], False, '/var/lib/mock/fedora-rawhide-x86_64/root/', None, 0, True, False, 1000, 990, None, False, {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'CCACHE_DIR': '/tmp/ccache', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'CCACHE_UMASK': '002'}, logger=<mockbuild.trace_decorator.getLog object at 0x18283d0>)
+Executing command: ['bash', '--login', '-c', 'rpmbuild -bb --target x86_64 --nodeps builddir/build/SPECS/cqrlog.spec'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'CCACHE_DIR': '/tmp/ccache', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'CCACHE_UMASK': '002'}
+Building target platforms: x86_64
+Building for target x86_64
+Executing(%prep): /bin/sh -e /var/tmp/rpm-tmp.Te9neg
++ umask 022
++ cd /builddir/build/BUILD
++ tar -xpf /builddir/build/SOURCES/cqrlog_1.5.2.deb.src.tar.gz
++ tar -xpf cqrlog_1.5.2.orig.tar.gz
++ cd /builddir/build/BUILD
++ cd cqrlog-1.5.2
++ /usr/bin/chmod -Rf a+rX,u+w,g-w,o-w .
++ echo 'Patch #0 (cqrlog.makefile.patch):'
+Patch #0 (cqrlog.makefile.patch):
++ /usr/bin/cat /builddir/build/SOURCES/cqrlog.makefile.patch
++ /usr/bin/patch -p0 --fuzz=0
+patching file Makefile
+Patch #1 (cqrlog.desktop.patch):
++ echo 'Patch #1 (cqrlog.desktop.patch):'
++ /usr/bin/cat /builddir/build/SOURCES/cqrlog.desktop.patch
++ /usr/bin/patch -p0 --fuzz=0
+patching file tools/cqrlog.desktop
++ chmod -x src/azidis3.pas
++ chmod -x src/gline2.pas
++ chmod -x src/odbec.pas
++ chmod -x src/aziloc.pas
++ chmod -x src/znacmech.pas
++ exit 0
+Executing(%build): /bin/sh -e /var/tmp/rpm-tmp.rMm9Ed
++ umask 022
++ cd /builddir/build/BUILD
++ cd cqrlog-1.5.2
++ make -j8
+lazbuild -d --ws=gtk2 src/cqrlog.lpi
+NOTE: miscellaneous options file not found - using defaults
+TBaseCompilerOptions.MakeOptionsString UnitOutputDirectory="" CurOutputDir=""
+TCompiler.Compile WorkingDir="/builddir/build/BUILD/cqrlog-1.5.2/src/" CompilerFilename="/usr/bin/fpc" CompilerParams=" -MObjFPC -Sghi -O1 -gl -vewil -l -Fl/usr/lib64/lazarus/lcl -Fulnet/lib -Fuipc -Fumysql -Fu/usr/lib64/lazarus/components/memds/lib/x86_64-linux/gtk2 -Fu/usr/lib64/lazarus/components/tdbf/lib/x86_64-linux/gtk2 -Fu/usr/lib64/lazarus/components/rtticontrols/lib/x86_64-linux/gtk2 -Fu/usr/lib64/lazarus/components/tachart/lib/x86_64-linux/gtk2 -Fu/usr/lib64/lazarus/components/sdf/lib/x86_64-linux/gtk2 -Fu/usr/lib64/lazarus/components/sqldb/lib/x86_64-linux/gtk2 -Fu/usr/lib64/lazarus/components/synedit/units/x86_64-linux -Fu/usr/lib64/lazarus/ideintf/units/x86_64-linux -Fu/usr/lib64/lazarus/components/turbopower_ipro/units/x86_64-linux -Fu/usr/lib64/lazarus/components/printers/lib/x86_64-linux/gtk2 -Fu/usr/lib64/lazarus/lcl/units/x86_64-linux -Fu/usr/lib64/lazarus/lcl/units/x86_64-linux/gtk2 -Fu/usr/lib64/lazarus/packager/units/x86_64-linux -Fu. -ocqrlog -dNO_CONTEST -dLCL -dLCLgtk2 cqrlog.lpr"
+[TCompiler.Compile] CmdLine="/usr/bin/fpc  -MObjFPC -Sghi -O1 -gl -vewil -l -Fl/usr/lib64/lazarus/lcl -Fulnet/lib -Fuipc -Fumysql -Fu/usr/lib64/lazarus/components/memds/lib/x86_64-linux/gtk2 -Fu/usr/lib64/lazarus/components/tdbf/lib/x86_64-linux/gtk2 -Fu/usr/lib64/lazarus/components/rtticontrols/lib/x86_64-linux/gtk2 -Fu/usr/lib64/lazarus/components/tachart/lib/x86_64-linux/gtk2 -Fu/usr/lib64/lazarus/components/sdf/lib/x86_64-linux/gtk2 -Fu/usr/lib64/lazarus/components/sqldb/lib/x86_64-linux/gtk2 -Fu/usr/lib64/lazarus/components/synedit/units/x86_64-linux -Fu/usr/lib64/lazarus/ideintf/units/x86_64-linux -Fu/usr/lib64/lazarus/components/turbopower_ipro/units/x86_64-linux -Fu/usr/lib64/lazarus/components/printers/lib/x86_64-linux/gtk2 -Fu/usr/lib64/lazarus/lcl/units/x86_64-linux -Fu/usr/lib64/lazarus/lcl/units/x86_64-linux/gtk2 -Fu/usr/lib64/lazarus/packager/units/x86_64-linux -Fu. -ocqrlog -dNO_CONTEST -dLCL -dLCLgtk2 cqrlog.lpr"
+Free Pascal Compiler version 2.6.0 [2012/07/19] for x86_64
+Copyright (c) 1993-2011 by Florian Klaempfl and others
+Target OS: Linux for x86-64
+Compiling cqrlog.lpr
+2 207/832 Kb Used
+Compiling uScrollBars.pas
+Compiling fMain.pas
+100 139.471/142.336 Kb Used
+200 139.497/142.336 Kb Used
+300 139.574/142.592 Kb Used
+400 139.916/143.104 Kb Used
+Compiling fNewQSO.pas
+Compiling httpsend.pas
+Compiling blcksock.pas
+Compiling synafpc.pas
+100 147.609/151.040 Kb Used
+Compiling synsock.pas
+100 148.236/151.552 Kb Used
+200 148.254/151.552 Kb Used
+300 148.273/151.552 Kb Used
+400 148.446/151.808 Kb Used
+500 148.727/152.064 Kb Used
+600 148.987/152.832 Kb Used
+700 149.211/152.832 Kb Used
+800 149.464/153.344 Kb Used
+Compiling synautil.pas
+100 148.535/153.600 Kb Used
+200 148.620/153.600 Kb Used
+300 148.729/153.600 Kb Used
+400 149.053/153.856 Kb Used
+500 149.333/153.856 Kb Used
+synautil.pas(551,51) Warning: Symbol "TimeSeparator" is deprecated
+600 150.107/153.856 Kb Used
+700 150.384/153.856 Kb Used
+800 150.454/153.856 Kb Used
+900 150.616/154.368 Kb Used
+1000 151.024/154.368 Kb Used
+1100 151.479/155.136 Kb Used
+1200 151.827/155.136 Kb Used
+1300 152.360/155.904 Kb Used
+1400 152.751/156.416 Kb Used
+1500 152.986/156.672 Kb Used
+1600 153.277/156.928 Kb Used
+1700 153.584/157.440 Kb Used
+synautil.pas(1745,43) Warning: Symbol "ShortMonthNames" is deprecated
+synautil.pas(1746,42) Warning: Symbol "ShortMonthNames" is deprecated
+Compiling synacode.pas
+100 148.923/157.440 Kb Used
+200 149.085/157.440 Kb Used
+300 149.156/157.440 Kb Used
+400 149.239/157.440 Kb Used
+500 149.389/157.440 Kb Used
+600 149.622/157.440 Kb Used
+700 149.809/157.440 Kb Used
+800 150.161/157.440 Kb Used
+900 150.399/157.440 Kb Used
+1000 150.962/157.952 Kb Used
+1100 151.251/157.952 Kb Used
+1200 151.553/157.952 Kb Used
+1300 151.911/157.952 Kb Used
+Compiling synaip.pas
+100 149.193/157.696 Kb Used
+200 149.535/157.696 Kb Used
+300 149.824/157.696 Kb Used
+100 149.169/157.696 Kb Used
+200 149.217/157.696 Kb Used
+300 149.284/157.696 Kb Used
+400 149.396/157.696 Kb Used
+500 149.449/157.696 Kb Used
+600 149.534/157.696 Kb Used
+700 149.577/157.696 Kb Used
+800 149.599/157.696 Kb Used
+900 149.660/157.696 Kb Used
+1000 149.713/157.696 Kb Used
+1100 149.797/157.952 Kb Used
+1200 149.865/157.952 Kb Used
+1300 149.898/157.952 Kb Used
+1400 150.093/157.952 Kb Used
+1500 150.311/157.952 Kb Used
+1600 150.468/158.208 Kb Used
+1700 150.728/158.208 Kb Used
+1800 151.084/158.464 Kb Used
+1900 151.279/158.464 Kb Used
+2000 151.579/158.464 Kb Used
+2100 151.781/158.464 Kb Used
+2200 151.993/158.464 Kb Used
+2300 152.285/158.464 Kb Used
+2400 152.516/158.464 Kb Used
+2500 152.961/158.464 Kb Used
+2600 153.423/158.720 Kb Used
+2700 153.686/158.720 Kb Used
+2800 153.911/158.720 Kb Used
+2900 154.114/158.720 Kb Used
+3000 154.189/158.720 Kb Used
+3100 155.030/159.488 Kb Used
+3200 155.439/159.488 Kb Used
+3300 155.810/159.744 Kb Used
+3400 156.189/160.512 Kb Used
+3500 156.683/161.280 Kb Used
+3600 157.011/161.536 Kb Used
+3700 157.488/162.048 Kb Used
+3800 157.739/162.304 Kb Used
+3900 158.314/162.816 Kb Used
+4000 158.613/163.072 Kb Used
+100 150.285/163.840 Kb Used
+200 150.330/163.840 Kb Used
+300 150.627/163.840 Kb Used
+400 150.959/163.840 Kb Used
+500 151.096/163.840 Kb Used
+600 151.200/163.840 Kb Used
+700 152.525/163.840 Kb Used
+Compiling uCWKeying.pas
+Compiling synaser.pas
+100 150.478/163.840 Kb Used
+200 150.513/163.840 Kb Used
+300 150.568/163.840 Kb Used
+400 150.650/163.840 Kb Used
+500 150.718/163.840 Kb Used
+600 150.777/163.840 Kb Used
+700 150.796/163.840 Kb Used
+800 151.067/163.840 Kb Used
+900 151.330/163.840 Kb Used
+1000 151.509/163.840 Kb Used
+1100 151.805/163.840 Kb Used
+1200 152.037/164.096 Kb Used
+1300 152.247/164.096 Kb Used
+1400 152.693/164.096 Kb Used
+1500 152.800/164.096 Kb Used
+1600 152.984/164.096 Kb Used
+1700 153.097/164.096 Kb Used
+1800 153.190/164.096 Kb Used
+1900 153.300/164.096 Kb Used
+2000 153.422/164.096 Kb Used
+2100 153.929/164.096 Kb Used
+2200 154.384/164.096 Kb Used
+synaser.pas(2279,41) Warning: range check error while evaluating constants
+2300 154.599/164.096 Kb Used
+Compiling ./lnet/lib/lnet.pp
+Compiling ./lnet/lib/levents.pp
+100 151.207/163.072 Kb Used
+200 151.366/163.072 Kb Used
+Compiling ./lnet/lib/lcommon.pp
+100 151.394/163.072 Kb Used
+200 151.459/163.072 Kb Used
+300 151.459/163.072 Kb Used
+400 151.635/163.072 Kb Used
+500 151.948/163.072 Kb Used
+lcommon.pp(515,18) Warning: Symbol "family" is deprecated
+lcommon.pp(516,18) Warning: Symbol "port" is deprecated
+lcommon.pp(521,24) Warning: Symbol "addr" is deprecated
+lcommon.pp(522,55) Warning: Symbol "addr" is deprecated
+lcommon.pp(523,26) Warning: Symbol "addr" is deprecated
+300 151.755/163.328 Kb Used
+400 152.086/163.328 Kb Used
+500 152.291/163.328 Kb Used
+600 152.519/163.328 Kb Used
+100 152.653/163.584 Kb Used
+100 153.042/163.584 Kb Used
+200 153.319/163.584 Kb Used
+100 151.621/163.328 Kb Used
+200 151.784/163.328 Kb Used
+300 151.943/163.584 Kb Used
+400 152.127/163.584 Kb Used
+500 152.532/163.584 Kb Used
+600 152.782/163.584 Kb Used
+700 153.050/163.584 Kb Used
+lnet.pp(778,30) Warning: User defined: check if we need aOp = soSend in the IF, perhaps bad recv is possible?
+800 153.342/163.840 Kb Used
+900 153.721/164.096 Kb Used
+1000 154.096/164.096 Kb Used
+1100 154.343/164.096 Kb Used
+1200 154.686/164.096 Kb Used
+1300 154.936/164.096 Kb Used
+1400 155.545/164.096 Kb Used
+1500 155.750/164.096 Kb Used
+1600 155.980/164.096 Kb Used
+Compiling ./lnet/lib/lnetcomponents.pas
+Compiling ./lnet/lib/lclnet.pas
+100 152.790/164.096 Kb Used
+Compiling ./lnet/lib/ltelnet.pp
+Compiling ./lnet/lib/lcontrolstack.pp
+Compiling ./lnet/lib/ltelnet.pp
+100 152.685/164.096 Kb Used
+200 152.883/164.096 Kb Used
+300 153.282/164.096 Kb Used
+400 153.590/164.096 Kb Used
+500 154.221/164.096 Kb Used
+100 153.153/164.096 Kb Used
+lnetcomponents.pas(87,3) Warning: Comment level 2 found
+100 153.028/164.096 Kb Used
+lnetcomponents.pas(110,3) Warning: Comment level 2 found
+lnetcomponents.pas(131,3) Warning: Comment level 2 found
+lnetcomponents.pas(151,3) Warning: Comment level 2 found
+lnetcomponents.pas(169,3) Warning: Comment level 2 found
+200 153.146/164.096 Kb Used
+lnetcomponents.pas(213,1) Warning: Comment level 2 found
+lnetcomponents.pas(222,1) Warning: Comment level 2 found
+lnetcomponents.pas(230,1) Warning: Comment level 2 found
+lnetcomponents.pas(238,1) Warning: Comment level 2 found
+lnetcomponents.pas(246,1) Warning: Comment level 2 found
+100 153.313/164.096 Kb Used
+200 153.601/164.096 Kb Used
+300 153.944/164.352 Kb Used
+400 154.320/164.608 Kb Used
+Compiling ./ipc/ipc.pp
+100 153.219/164.352 Kb Used
+200 153.234/164.352 Kb Used
+300 153.268/164.352 Kb Used
+ipc.pp(340,51) Warning: Comment level 2 found
+ipc.pp(341,51) Warning: Comment level 2 found
+ipc.pp(342,54) Warning: Comment level 2 found
+ipc.pp(343,52) Warning: Comment level 2 found
+ipc.pp(344,59) Warning: Comment level 2 found
+ipc.pp(345,51) Warning: Comment level 2 found
+400 153.293/164.352 Kb Used
+100 153.544/164.352 Kb Used
+100 153.367/164.352 Kb Used
+200 153.393/164.352 Kb Used
+300 153.524/164.352 Kb Used
+400 153.843/164.608 Kb Used
+500 154.053/164.608 Kb Used
+Compiling dUtils.pas
+Compiling aziloc.pas
+aziloc.pas(20,11) Note: Local variable "ko" is assigned but never used
+100 154.820/165.120 Kb Used
+Compiling azidis3.pas
+100 154.773/165.120 Kb Used
+100 159.913/168.448 Kb Used
+200 160.298/168.448 Kb Used
+Compiling dData.pas
+dData.pas(22,27) Warning: Unit "dbf" is deprecated: "Abandoned by maintainer, no longer supported by FPC team. Help may be available at http://tdbf.sourceforge.net and http://sourceforge.net/projects/tdbf/forums/forum/107245"
+Compiling ./mysql/mysql51conn.pas
+Compiling ./mysql/mysql51dyn.pp
+100 164.092/171.776 Kb Used
+200 164.120/171.776 Kb Used
+300 164.143/171.776 Kb Used
+400 164.174/171.776 Kb Used
+500 164.206/171.776 Kb Used
+600 164.226/171.776 Kb Used
+700 164.258/171.776 Kb Used
+800 164.291/171.776 Kb Used
+900 164.331/171.776 Kb Used
+1000 164.360/171.776 Kb Used
+1100 164.430/172.032 Kb Used
+1200 164.448/172.032 Kb Used
+1300 164.464/172.032 Kb Used
+1400 164.562/172.032 Kb Used
+1500 164.568/172.032 Kb Used
+1600 164.775/172.032 Kb Used
+1700 164.969/172.288 Kb Used
+1800 165.503/172.544 Kb Used
+Writing Resource String Table file: mysql51dyn.rst
+100 164.829/172.800 Kb Used
+200 164.984/172.800 Kb Used
+300 165.291/172.800 Kb Used
+mysqlconn.inc(360,5) Note: Local variable "esc_str" not used
+mysqlconn.inc(371,5) Note: Local variable "esc_str" not used
+400 165.853/173.312 Kb Used
+mysqlconn.inc(454,3) Note: Local variable "ClientVerStr" is assigned but never used
+500 166.195/173.312 Kb Used
+600 166.426/173.312 Kb Used
+700 166.685/173.312 Kb Used
+800 166.918/173.312 Kb Used
+mysqlconn.inc(809,5) Warning: Symbol "DecimalSeparator" is deprecated
+mysqlconn.inc(827,5) Warning: Symbol "DecimalSeparator" is deprecated
+900 167.429/173.824 Kb Used
+1000 167.583/173.824 Kb Used
+1100 168.030/173.824 Kb Used
+mysqlconn.inc(1129,26) Warning: Function result does not seem to be set
+mysqlconn.inc(1134,26) Warning: Function result does not seem to be set
+mysqlconn.inc(1139,26) Warning: Function result does not seem to be set
+1200 168.470/173.824 Kb Used
+mysqlconn.inc(236,3) Note: Local variable "FSQLFormatSettings" not used
+Writing Resource String Table file: mysql51conn.rst
+Compiling RegExpr.pas
+100 165.172/174.336 Kb Used
+200 165.222/174.336 Kb Used
+300 165.272/174.336 Kb Used
+400 165.375/174.336 Kb Used
+500 165.414/174.336 Kb Used
+600 165.456/174.336 Kb Used
+700 165.489/174.336 Kb Used
+800 165.738/174.592 Kb Used
+900 165.825/174.592 Kb Used
+1000 165.985/174.592 Kb Used
+1100 166.053/174.592 Kb Used
+1200 166.693/174.592 Kb Used
+1300 166.967/174.592 Kb Used
+1400 167.193/174.848 Kb Used
+1500 167.310/174.848 Kb Used
+1600 167.376/174.848 Kb Used
+1700 167.522/175.104 Kb Used
+1800 167.672/175.104 Kb Used
+1900 167.806/175.104 Kb Used
+2000 167.918/175.360 Kb Used
+2100 168.236/175.360 Kb Used
+2200 168.327/175.360 Kb Used
+2300 168.412/175.360 Kb Used
+2400 168.504/175.616 Kb Used
+2500 168.583/175.616 Kb Used
+2600 169.310/176.128 Kb Used
+2700 169.368/176.128 Kb Used
+2800 169.528/176.128 Kb Used
+2900 169.590/176.128 Kb Used
+3000 169.670/176.128 Kb Used
+3100 169.744/176.128 Kb Used
+3200 169.823/176.128 Kb Used
+3300 170.216/176.384 Kb Used
+3400 170.446/176.640 Kb Used
+3500 170.508/176.640 Kb Used
+3600 170.672/176.640 Kb Used
+3700 170.801/176.640 Kb Used
+3800 171.195/177.920 Kb Used
+3900 171.809/177.664 Kb Used
+4000 172.154/178.432 Kb Used
+Compiling ssl_openssl_lib.pas
+100 165.832/177.408 Kb Used
+200 165.858/177.408 Kb Used
+300 165.864/177.408 Kb Used
+400 165.864/177.408 Kb Used
+500 165.864/177.408 Kb Used
+600 165.864/177.408 Kb Used
+700 166.014/177.408 Kb Used
+800 166.287/177.408 Kb Used
+900 166.454/177.664 Kb Used
+1000 166.595/177.664 Kb Used
+1100 166.900/177.664 Kb Used
+1200 167.152/177.664 Kb Used
+1300 167.397/177.664 Kb Used
+1400 167.698/177.664 Kb Used
+1500 168.027/177.920 Kb Used
+1600 168.321/177.920 Kb Used
+1700 168.593/177.920 Kb Used
+1800 168.800/177.920 Kb Used
+1900 169.271/178.176 Kb Used
+2000 169.403/178.176 Kb Used
+Compiling ./mysql/mysql55dyn.pp
+100 166.476/177.920 Kb Used
+200 166.504/177.920 Kb Used
+300 166.527/177.920 Kb Used
+400 166.559/177.920 Kb Used
+500 166.590/177.920 Kb Used
+600 166.610/177.920 Kb Used
+700 166.643/177.920 Kb Used
+800 166.676/177.920 Kb Used
+900 166.716/177.920 Kb Used
+1000 166.746/177.920 Kb Used
+1100 166.816/177.920 Kb Used
+1200 166.833/177.920 Kb Used
+1300 166.849/177.920 Kb Used
+1400 166.947/177.920 Kb Used
+1500 166.953/177.920 Kb Used
+1600 167.160/178.176 Kb Used
+1700 167.354/178.176 Kb Used
+1800 167.888/178.432 Kb Used
+Writing Resource String Table file: mysql55dyn.rst
+Compiling ./mysql/mysql55conn.pas
+100 167.218/178.432 Kb Used
+200 167.373/178.432 Kb Used
+300 167.681/178.432 Kb Used
+mysqlconn.inc(360,5) Note: Local variable "esc_str" not used
+mysqlconn.inc(371,5) Note: Local variable "esc_str" not used
+400 168.239/178.432 Kb Used
+mysqlconn.inc(454,3) Note: Local variable "ClientVerStr" is assigned but never used
+500 168.579/178.432 Kb Used
+600 168.808/178.432 Kb Used
+700 169.070/178.432 Kb Used
+800 169.298/178.688 Kb Used
+mysqlconn.inc(809,5) Warning: Symbol "DecimalSeparator" is deprecated
+mysqlconn.inc(827,5) Warning: Symbol "DecimalSeparator" is deprecated
+900 169.808/178.688 Kb Used
+1000 169.966/178.688 Kb Used
+1100 170.404/178.688 Kb Used
+mysqlconn.inc(1129,26) Warning: Function result does not seem to be set
+mysqlconn.inc(1134,26) Warning: Function result does not seem to be set
+mysqlconn.inc(1139,26) Warning: Function result does not seem to be set
+1200 170.842/178.688 Kb Used
+mysqlconn.inc(236,3) Note: Local variable "FSQLFormatSettings" not used
+Writing Resource String Table file: mysql55conn.rst
+100 167.584/178.432 Kb Used
+200 167.697/178.432 Kb Used
+300 167.896/178.432 Kb Used
+Compiling dDXCC.pas
+dDXCC.pas(20,39) Warning: Unit "dbf" is deprecated: "Abandoned by maintainer, no longer supported by FPC team. Help may be available at http://tdbf.sourceforge.net and http://sourceforge.net/projects/tdbf/forums/forum/107245"
+100 169.051/179.200 Kb Used
+Compiling znacmech.pas
+Compiling odbec.pas
+100 169.170/179.200 Kb Used
+200 169.296/179.200 Kb Used
+300 169.630/179.456 Kb Used
+400 169.944/179.456 Kb Used
+500 170.621/179.712 Kb Used
+600 171.117/179.712 Kb Used
+700 171.352/179.712 Kb Used
+800 171.523/179.712 Kb Used
+900 171.682/179.712 Kb Used
+Compiling uMyIni.pas
+100 169.871/179.456 Kb Used
+200 169.909/179.712 Kb Used
+300 170.388/179.712 Kb Used
+400 171.250/179.712 Kb Used
+500 171.468/179.712 Kb Used
+600 172.170/179.968 Kb Used
+700 172.508/179.968 Kb Used
+800 173.470/179.968 Kb Used
+900 174.133/180.224 Kb Used
+Compiling fWorking.pas
+100 170.013/180.992 Kb Used
+Compiling fUpgrade.pas
+100 170.161/180.992 Kb Used
+Compiling fImportProgress.pas
+Compiling synachar.pas
+Compiling synaicnv.pas
+100 170.255/180.992 Kb Used
+200 170.403/180.992 Kb Used
+300 170.548/180.992 Kb Used
+100 170.356/180.992 Kb Used
+200 170.412/180.992 Kb Used
+300 170.465/180.992 Kb Used
+400 170.524/180.992 Kb Used
+500 170.587/180.992 Kb Used
+600 170.649/180.992 Kb Used
+700 170.709/180.992 Kb Used
+800 170.771/180.992 Kb Used
+900 171.062/180.992 Kb Used
+1000 171.254/181.248 Kb Used
+1100 171.489/181.248 Kb Used
+1200 171.809/181.248 Kb Used
+1300 172.302/181.248 Kb Used
+1400 172.469/181.248 Kb Used
+1500 172.815/181.248 Kb Used
+1600 172.815/181.248 Kb Used
+1700 172.923/181.248 Kb Used
+1800 173.205/181.248 Kb Used
+1900 173.377/181.248 Kb Used
+2000 173.547/181.248 Kb Used
+Compiling fImportTest.pas
+100 170.794/181.504 Kb Used
+200 170.805/181.504 Kb Used
+100 170.885/181.504 Kb Used
+200 171.084/181.504 Kb Used
+300 172.231/181.504 Kb Used
+400 172.825/181.504 Kb Used
+500 172.825/181.504 Kb Used
+600 173.275/181.504 Kb Used
+700 173.422/181.504 Kb Used
+800 173.528/181.504 Kb Used
+900 173.740/181.504 Kb Used
+1000 175.334/182.016 Kb Used
+1100 176.004/182.016 Kb Used
+1200 176.110/182.016 Kb Used
+1300 176.296/182.016 Kb Used
+fImportProgress.pas(1100,3) Note: Local variable "qslrdate" is assigned but never used
+fImportProgress.pas(1101,3) Note: Local variable "cqz" is assigned but never used
+fImportProgress.pas(1102,3) Note: Local variable "ituz" is assigned but never used
+fImportProgress.pas(1103,3) Note: Local variable "iota" is assigned but never used
+fImportProgress.pas(1104,3) Note: Local variable "grid" is assigned but never used
+fImportProgress.pas(1105,3) Note: Local variable "state" is assigned but never used
+fImportProgress.pas(1106,3) Note: Local variable "county" is assigned but never used
+fImportProgress.pas(1113,3) Note: Local variable "PosQslrDate" not used
+fImportProgress.pas(1114,3) Note: Local variable "PosCqz" not used
+fImportProgress.pas(1115,3) Note: Local variable "PosItuz" not used
+fImportProgress.pas(1116,3) Note: Local variable "PosIota" not used
+fImportProgress.pas(1117,3) Note: Local variable "PosGrid" not used
+fImportProgress.pas(1118,3) Note: Local variable "PosState" not used
+fImportProgress.pas(1119,3) Note: Local variable "PosCounty" not used
+100 177.742/182.784 Kb Used
+Compiling dDXCluster.pas
+100 171.292/184.064 Kb Used
+200 171.617/184.320 Kb Used
+300 172.269/184.320 Kb Used
+400 173.126/184.320 Kb Used
+500 173.227/184.320 Kb Used
+600 174.096/184.320 Kb Used
+dDXCluster.pas(694,42) Warning: Symbol "DecimalSeparator" is deprecated
+dDXCluster.pas(697,42) Warning: Symbol "DecimalSeparator" is deprecated
+700 174.735/184.320 Kb Used
+800 175.472/184.320 Kb Used
+900 176.195/184.320 Kb Used
+1000 176.779/184.320 Kb Used
+Compiling fTRXControl.pas
+Compiling uRigControl.pas
+100 171.616/184.576 Kb Used
+uRigControl.pas(132,14) Warning: Symbol "CommandLine" is deprecated
+200 172.167/184.576 Kb Used
+300 172.793/184.576 Kb Used
+400 172.922/184.576 Kb Used
+uRigControl.pas(337,3) Note: Local variable "tmp" not used
+uRigControl.pas(338,3) Note: Local variable "poz" not used
+uRigControl.pas(339,3) Note: Local variable "wdt" not used
+uRigControl.pas(496,30) Warning: Local variable "excode" does not seem to be initialized
+500 173.199/184.576 Kb Used
+uRigControl.pas(530,32) Warning: Local variable "excode" does not seem to be initialized
+100 171.837/184.576 Kb Used
+Compiling fBandMap.pas
+Compiling jakozememo.pas
+100 172.047/184.576 Kb Used
+200 172.159/184.576 Kb Used
+300 172.505/184.576 Kb Used
+400 172.967/184.576 Kb Used
+500 173.396/184.832 Kb Used
+600 173.693/184.832 Kb Used
+700 173.950/184.832 Kb Used
+fBandMap.pas(21,57) Warning: Unit "dbf" is deprecated: "Abandoned by maintainer, no longer supported by FPC team. Help may be available at http://tdbf.sourceforge.net and http://sourceforge.net/projects/tdbf/forums/forum/107245"
+Compiling fPreferences.pas
+100 172.736/184.832 Kb Used
+200 172.762/184.832 Kb Used
+300 172.791/184.832 Kb Used
+400 172.814/184.832 Kb Used
+500 172.849/184.832 Kb Used
+600 172.872/184.832 Kb Used
+700 172.895/184.832 Kb Used
+800 172.930/184.832 Kb Used
+900 173.169/184.832 Kb Used
+Compiling fFreq.pas
+Compiling fChangeFreq.pas
+100 173.957/185.600 Kb Used
+Compiling fQTHProfiles.pas
+Compiling fNewQTHProfile.pas
+100 173.800/185.600 Kb Used
+100 173.682/185.600 Kb Used
+200 174.616/185.600 Kb Used
+Compiling fSerialPort.pas
+Compiling fClubSettings.pas
+100 174.060/185.600 Kb Used
+Compiling fLoadClub.pas
+100 174.026/185.600 Kb Used
+200 174.170/185.600 Kb Used
+100 175.417/185.856 Kb Used
+Compiling fGrayline.pas
+Compiling gline2.pas
+Compiling ah_math.pas
+100 174.433/185.856 Kb Used
+Compiling vsop.pas
+100 174.463/185.856 Kb Used
+200 174.757/185.856 Kb Used
+300 174.786/185.856 Kb Used
+400 174.814/185.856 Kb Used
+500 174.842/185.856 Kb Used
+600 174.870/185.856 Kb Used
+700 174.898/185.856 Kb Used
+800 174.926/185.856 Kb Used
+900 174.954/185.856 Kb Used
+1000 174.983/185.856 Kb Used
+1100 175.010/185.856 Kb Used
+1200 175.037/185.856 Kb Used
+1300 175.198/185.856 Kb Used
+1400 175.226/185.856 Kb Used
+1500 175.253/185.856 Kb Used
+1600 175.281/185.856 Kb Used
+1700 175.309/185.856 Kb Used
+1800 175.441/185.856 Kb Used
+1900 175.470/185.856 Kb Used
+2000 175.498/185.856 Kb Used
+2100 175.526/185.856 Kb Used
+2200 175.554/185.856 Kb Used
+2300 175.581/185.856 Kb Used
+2400 175.608/185.856 Kb Used
+2500 175.636/185.856 Kb Used
+2600 175.664/185.856 Kb Used
+2700 175.692/186.112 Kb Used
+2800 175.719/186.112 Kb Used
+2900 175.870/186.368 Kb Used
+3000 175.898/186.368 Kb Used
+3100 175.926/186.368 Kb Used
+3200 175.954/186.368 Kb Used
+3300 175.982/186.368 Kb Used
+3400 176.010/186.368 Kb Used
+3500 176.039/186.368 Kb Used
+3600 176.067/186.368 Kb Used
+3700 176.094/186.368 Kb Used
+3800 176.122/186.368 Kb Used
+3900 176.150/186.368 Kb Used
+4000 176.178/186.368 Kb Used
+4100 176.206/186.368 Kb Used
+4200 176.234/186.368 Kb Used
+4300 176.261/186.368 Kb Used
+4400 176.289/186.368 Kb Used
+4500 176.458/186.880 Kb Used
+4600 176.486/186.880 Kb Used
+4700 176.514/186.880 Kb Used
+4800 176.541/186.880 Kb Used
+4900 176.568/186.880 Kb Used
+5000 176.596/186.880 Kb Used
+5100 176.746/186.880 Kb Used
+5200 176.774/186.880 Kb Used
+5300 176.802/186.880 Kb Used
+5400 176.831/186.880 Kb Used
+5500 176.859/186.880 Kb Used
+5600 176.887/186.880 Kb Used
+5700 176.915/186.880 Kb Used
+5800 176.943/186.880 Kb Used
+5900 176.970/186.880 Kb Used
+6000 176.998/186.880 Kb Used
+6100 177.026/187.136 Kb Used
+6200 177.054/187.136 Kb Used
+6300 177.081/187.136 Kb Used
+6400 177.110/187.136 Kb Used
+6500 177.136/187.136 Kb Used
+6600 177.164/187.136 Kb Used
+100 174.590/187.392 Kb Used
+200 174.640/187.392 Kb Used
+300 174.849/187.392 Kb Used
+400 175.179/187.392 Kb Used
+500 175.484/187.392 Kb Used
+600 175.625/187.392 Kb Used
+700 175.945/187.392 Kb Used
+800 176.221/187.648 Kb Used
+100 179.490/190.208 Kb Used
+fGrayline.pas(141,40) Warning: Symbol "DecimalSeparator" is deprecated
+fGrayline.pas(149,40) Warning: Symbol "DecimalSeparator" is deprecated
+100 179.937/190.464 Kb Used
+Compiling fBandMapFilter.pas
+Compiling fDefaultFreq.pas
+100 179.537/190.208 Kb Used
+200 180.574/190.720 Kb Used
+100 181.453/190.720 Kb Used
+Compiling fKeyTexts.pas
+100 179.887/190.720 Kb Used
+200 179.965/190.720 Kb Used
+300 180.396/190.976 Kb Used
+100 180.721/190.976 Kb Used
+200 180.831/190.976 Kb Used
+300 180.935/190.976 Kb Used
+Compiling fSplitSettings.pas
+100 180.462/190.976 Kb Used
+Compiling fNewQSODefValues.pas
+100 180.734/190.976 Kb Used
+1000 180.919/191.232 Kb Used
+1100 181.318/191.488 Kb Used
+1200 181.752/192.000 Kb Used
+1300 182.160/192.000 Kb Used
+1400 186.605/194.560 Kb Used
+1500 187.221/194.560 Kb Used
+1600 187.965/194.304 Kb Used
+fPreferences.pas(1681,14) Warning: Symbol "CommandLine" is deprecated
+fPreferences.pas(1682,40) Warning: Symbol "CommandLine" is deprecated
+1700 188.715/195.840 Kb Used
+1800 189.451/196.096 Kb Used
+1900 189.855/196.864 Kb Used
+2000 190.226/197.120 Kb Used
+2100 190.525/197.120 Kb Used
+2200 190.966/197.632 Kb Used
+2300 191.419/197.888 Kb Used
+2400 191.879/198.400 Kb Used
+2500 196.237/205.824 Kb Used
+100 196.398/205.824 Kb Used
+200 196.511/205.824 Kb Used
+300 196.614/205.824 Kb Used
+400 196.722/205.824 Kb Used
+500 196.830/205.824 Kb Used
+600 196.940/205.824 Kb Used
+700 197.041/205.824 Kb Used
+800 197.158/205.824 Kb Used
+900 197.259/205.824 Kb Used
+1000 197.368/205.824 Kb Used
+1100 197.475/205.824 Kb Used
+1200 197.581/206.080 Kb Used
+Compiling fTestMain.pas
+100 182.490/203.520 Kb Used
+200 182.633/203.520 Kb Used
+300 182.806/203.520 Kb Used
+Compiling fSelectDXCC.pas
+fSelectDXCC.pas(34,29) Warning: Symbol "TNotebook" is deprecated
+fSelectDXCC.pas(35,19) Warning: Symbol "TPage" is deprecated
+fSelectDXCC.pas(36,21) Warning: Symbol "TPage" is deprecated
+100 183.110/203.520 Kb Used
+Compiling fSplash.pas
+Compiling uVersion.pas
+100 183.207/203.776 Kb Used
+200 183.316/203.776 Kb Used
+300 183.419/203.776 Kb Used
+400 183.525/203.776 Kb Used
+500 183.627/203.776 Kb Used
+600 183.737/203.776 Kb Used
+700 183.835/203.776 Kb Used
+800 183.946/203.776 Kb Used
+900 184.044/203.776 Kb Used
+1000 184.156/203.776 Kb Used
+1100 184.266/203.776 Kb Used
+1200 184.368/203.776 Kb Used
+1300 184.473/203.776 Kb Used
+1400 184.572/204.032 Kb Used
+1500 184.688/204.032 Kb Used
+1600 184.786/204.032 Kb Used
+1700 184.891/204.032 Kb Used
+1800 185.010/204.032 Kb Used
+1900 185.108/204.032 Kb Used
+2000 185.213/204.032 Kb Used
+2100 185.312/204.288 Kb Used
+2200 185.434/204.288 Kb Used
+2300 185.532/204.288 Kb Used
+2400 185.637/204.288 Kb Used
+2500 185.736/204.288 Kb Used
+2600 185.841/204.288 Kb Used
+2700 185.946/204.288 Kb Used
+2800 186.066/204.544 Kb Used
+2900 186.171/204.544 Kb Used
+3000 186.269/204.544 Kb Used
+3100 186.374/204.544 Kb Used
+3200 186.473/204.544 Kb Used
+3300 186.578/204.544 Kb Used
+3400 186.683/204.800 Kb Used
+3500 186.808/204.800 Kb Used
+3600 186.913/204.800 Kb Used
+3700 187.011/204.800 Kb Used
+3800 187.116/204.800 Kb Used
+3900 187.215/204.800 Kb Used
+4000 187.320/204.800 Kb Used
+4100 187.418/205.056 Kb Used
+4200 187.523/205.312 Kb Used
+4300 187.661/205.312 Kb Used
+4400 187.760/205.312 Kb Used
+4500 187.865/205.312 Kb Used
+4600 187.964/205.312 Kb Used
+4700 188.069/205.312 Kb Used
+4800 188.167/205.568 Kb Used
+4900 188.272/205.824 Kb Used
+5000 188.377/205.824 Kb Used
+5100 188.476/205.824 Kb Used
+5200 188.581/206.080 Kb Used
+5300 188.679/206.080 Kb Used
+5400 188.826/206.080 Kb Used
+5500 188.924/206.336 Kb Used
+5600 189.029/206.592 Kb Used
+5700 189.128/206.592 Kb Used
+5800 189.233/206.592 Kb Used
+5900 189.338/206.592 Kb Used
+6000 189.436/206.592 Kb Used
+6100 189.541/206.592 Kb Used
+6200 189.639/207.104 Kb Used
+6300 189.744/207.360 Kb Used
+6400 189.843/207.360 Kb Used
+6500 189.948/207.360 Kb Used
+6600 190.053/207.360 Kb Used
+6700 190.151/207.360 Kb Used
+6800 190.308/207.360 Kb Used
+Compiling fDXCluster.pas
+100 190.576/208.384 Kb Used
+Compiling fDXClusterList.pas
+Compiling fNewDXCluster.pas
+100 191.119/208.896 Kb Used
+fDXCluster.pas(141,21) Warning: Symbol "Resume" is deprecated
+200 191.073/208.896 Kb Used
+fDXCluster.pas(234,21) Warning: Symbol "Resume" is deprecated
+fDXCluster.pas(273,1) Warning: Symbol "Resume" is deprecated
+300 191.347/208.896 Kb Used
+400 192.014/208.896 Kb Used
+500 192.364/208.896 Kb Used
+600 193.007/208.896 Kb Used
+fDXCluster.pas(643,34) Warning: Symbol "DecimalSeparator" is deprecated
+fDXCluster.pas(646,34) Warning: Symbol "DecimalSeparator" is deprecated
+700 193.213/208.896 Kb Used
+800 193.352/208.896 Kb Used
+900 194.900/209.408 Kb Used
+1000 195.672/209.664 Kb Used
+100 195.818/209.664 Kb Used
+200 195.928/209.664 Kb Used
+Compiling fSendSpot.pas
+100 191.399/209.664 Kb Used
+Compiling fQSODetails.pas
+100 191.486/209.664 Kb Used
+200 191.809/209.664 Kb Used
+300 192.237/209.920 Kb Used
+400 192.689/209.920 Kb Used
+500 192.899/210.176 Kb Used
+100 194.032/210.432 Kb Used
+Compiling fCWType.pas
+100 191.992/210.432 Kb Used
+100 192.392/210.432 Kb Used
+Compiling fCWKeys.pas
+100 192.357/210.432 Kb Used
+Compiling fLogList.pas
+Compiling fNewTestLog.pas
+100 192.328/210.432 Kb Used
+100 192.593/210.432 Kb Used
+100 192.556/210.432 Kb Used
+200 192.564/210.432 Kb Used
+Compiling fPropagation.pas
+100 192.654/210.432 Kb Used
+fPropagation.pas(181,1) Warning: Symbol "Resume" is deprecated
+Compiling fSCP.pas
+Compiling fEditTestQSO.pas
+Compiling fKeysPref.pas
+fKeysPref.pas(52,27) Warning: Symbol "TNotebook" is deprecated
+fKeysPref.pas(53,16) Warning: Symbol "TPage" is deprecated
+fKeysPref.pas(54,17) Warning: Symbol "TPage" is deprecated
+100 193.006/210.944 Kb Used
+100 193.769/211.200 Kb Used
+200 193.788/211.200 Kb Used
+400 193.601/211.200 Kb Used
+500 193.849/211.200 Kb Used
+600 194.533/211.200 Kb Used
+700 194.667/211.200 Kb Used
+800 195.084/211.200 Kb Used
+900 195.156/211.200 Kb Used
+1000 195.227/211.200 Kb Used
+1100 195.537/211.200 Kb Used
+1200 195.852/211.456 Kb Used
+1300 196.107/211.456 Kb Used
+1400 196.287/211.456 Kb Used
+1500 196.370/211.456 Kb Used
+1600 197.270/212.224 Kb Used
+1700 197.722/212.224 Kb Used
+1800 198.010/212.480 Kb Used
+1900 198.093/212.480 Kb Used
+2000 198.369/212.480 Kb Used
+2100 198.535/212.480 Kb Used
+2200 198.698/212.480 Kb Used
+2300 199.304/212.736 Kb Used
+2400 199.304/212.736 Kb Used
+100 199.412/212.736 Kb Used
+200 199.521/212.736 Kb Used
+300 199.625/212.736 Kb Used
+400 199.734/212.736 Kb Used
+500 199.837/212.992 Kb Used
+600 199.945/213.248 Kb Used
+700 200.048/213.248 Kb Used
+800 200.156/213.248 Kb Used
+900 200.269/213.248 Kb Used
+1000 200.367/213.504 Kb Used
+1100 200.473/213.504 Kb Used
+1200 200.581/213.504 Kb Used
+1300 200.686/213.760 Kb Used
+1400 200.785/213.760 Kb Used
+1500 200.894/213.760 Kb Used
+100 194.943/214.528 Kb Used
+fBandMap.pas(119,40) Warning: Symbol "DecimalSeparator" is deprecated
+fBandMap.pas(127,40) Warning: Symbol "DecimalSeparator" is deprecated
+200 195.061/214.528 Kb Used
+300 195.232/214.528 Kb Used
+fBandMap.pas(328,3) Note: Local variable "colo" not used
+400 196.895/214.784 Kb Used
+fBandMap.pas(408,1) Warning: Symbol "Resume" is deprecated
+500 197.452/214.784 Kb Used
+100 198.246/214.784 Kb Used
+200 195.106/214.784 Kb Used
+fTRXControl.pas(188,3) Note: Local variable "rel" not used
+fTRXControl.pas(189,3) Note: Local variable "mode" not used
+300 195.213/214.784 Kb Used
+400 195.957/214.784 Kb Used
+500 196.523/214.784 Kb Used
+600 196.876/214.784 Kb Used
+fTRXControl.pas(593,3) Note: Local variable "n" is assigned but never used
+fTRXControl.pas(594,3) Note: Local variable "id" is assigned but never used
+fTRXControl.pas(595,3) Note: Local variable "Resume" is assigned but never used
+700 196.958/214.784 Kb Used
+fTRXControl.pas(664,25) Warning: Function result does not seem to be set
+fTRXControl.pas(668,3) Note: Local variable "Resume" is assigned but never used
+800 197.325/214.784 Kb Used
+900 197.555/214.784 Kb Used
+1000 198.470/215.040 Kb Used
+1100 198.769/215.040 Kb Used
+100 198.866/215.040 Kb Used
+200 198.976/215.040 Kb Used
+400 195.840/214.784 Kb Used
+500 196.406/214.784 Kb Used
+600 197.143/214.784 Kb Used
+dData.pas(598,3) Note: Local variable "v" not used
+700 197.682/214.784 Kb Used
+800 198.158/214.784 Kb Used
+dData.pas(807,58) Warning: Symbol "CommandLine" is deprecated
+dData.pas(808,9) Warning: Symbol "CommandLine" is deprecated
+dData.pas(809,40) Warning: Symbol "CommandLine" is deprecated
+900 199.152/214.784 Kb Used
+1000 199.780/215.040 Kb Used
+1100 199.972/215.040 Kb Used
+dData.pas(1104,19) Warning: Symbol "ShortDateFormat" is deprecated
+dData.pas(1183,16) Warning: Symbol "CommandLine" is deprecated
+dData.pas(1188,24) Warning: Symbol "CommandLine" is deprecated
+1200 200.164/215.040 Kb Used
+1300 201.527/215.296 Kb Used
+1400 201.932/215.296 Kb Used
+1500 203.972/215.552 Kb Used
+1600 204.652/216.832 Kb Used
+1700 204.816/216.832 Kb Used
+1800 205.958/217.344 Kb Used
+1900 206.805/217.600 Kb Used
+2000 207.331/217.600 Kb Used
+2100 207.948/218.112 Kb Used
+2200 208.498/218.112 Kb Used
+2300 210.143/219.136 Kb Used
+2400 211.005/219.648 Kb Used
+2500 211.005/219.648 Kb Used
+2600 211.005/219.648 Kb Used
+2700 211.168/219.648 Kb Used
+2800 211.675/219.904 Kb Used
+2900 212.677/220.672 Kb Used
+100 213.797/221.696 Kb Used
+200 213.911/221.696 Kb Used
+Compiling fEnterFreq.pas
+100 196.616/221.696 Kb Used
+100 196.734/221.696 Kb Used
+dUtils.pas(248,42) Warning: Symbol "DecimalSeparator" is deprecated
+dUtils.pas(251,42) Warning: Symbol "DecimalSeparator" is deprecated
+dUtils.pas(297,42) Warning: Symbol "DecimalSeparator" is deprecated
+300 196.948/221.696 Kb Used
+dUtils.pas(300,42) Warning: Symbol "DecimalSeparator" is deprecated
+400 197.486/221.696 Kb Used
+500 198.136/221.696 Kb Used
+dUtils.pas(593,23) Warning: Symbol "DateSeparator" is deprecated
+dUtils.pas(596,19) Warning: Symbol "DateSeparator" is deprecated
+dUtils.pas(599,19) Warning: Symbol "DateSeparator" is deprecated
+600 198.510/221.696 Kb Used
+dUtils.pas(629,25) Warning: Symbol "ShortDateFormat" is deprecated
+dUtils.pas(630,23) Warning: Symbol "DateSeparator" is deprecated
+dUtils.pas(632,21) Warning: Symbol "ShortDateFormat" is deprecated
+dUtils.pas(633,21) Warning: Symbol "DateSeparator" is deprecated
+dUtils.pas(636,21) Warning: Symbol "ShortDateFormat" is deprecated
+dUtils.pas(637,21) Warning: Symbol "DateSeparator" is deprecated
+dUtils.pas(666,22) Warning: Symbol "DateSeparator" is deprecated
+dUtils.pas(667,17) Warning: Symbol "DateSeparator" is deprecated
+dUtils.pas(669,17) Warning: Symbol "DateSeparator" is deprecated
+700 198.769/221.696 Kb Used
+800 199.298/221.696 Kb Used
+dUtils.pas(847,25) Warning: Symbol "ShortDateFormat" is deprecated
+dUtils.pas(848,19) Warning: Symbol "ShortDateFormat" is deprecated
+dUtils.pas(856,21) Warning: Symbol "ShortDateFormat" is deprecated
+900 199.941/221.696 Kb Used
+1000 200.400/221.696 Kb Used
+dUtils.pas(1037,25) Warning: Symbol "ShortDateFormat" is deprecated
+dUtils.pas(1038,19) Warning: Symbol "ShortDateFormat" is deprecated
+dUtils.pas(1046,21) Warning: Symbol "ShortDateFormat" is deprecated
+1100 200.997/221.696 Kb Used
+1200 201.076/221.696 Kb Used
+1300 201.615/221.696 Kb Used
+1400 202.181/221.696 Kb Used
+1500 202.693/221.696 Kb Used
+dUtils.pas(1519,42) Warning: Symbol "DecimalSeparator" is deprecated
+1600 203.126/221.952 Kb Used
+1700 203.568/221.952 Kb Used
+1800 204.009/221.952 Kb Used
+dUtils.pas(1872,38) Warning: Symbol "DecimalSeparator" is deprecated
+dUtils.pas(1880,38) Warning: Symbol "DecimalSeparator" is deprecated
+1900 204.707/222.976 Kb Used
+2000 205.288/222.976 Kb Used
+2100 205.795/222.976 Kb Used
+2200 205.910/222.976 Kb Used
+dUtils.pas(2244,14) Warning: Symbol "CommandLine" is deprecated
+dUtils.pas(2245,68) Warning: Symbol "CommandLine" is deprecated
+dUtils.pas(2246,18) Warning: Symbol "CommandLine" is deprecated
+dUtils.pas(2260,14) Warning: Symbol "CommandLine" is deprecated
+dUtils.pas(2262,68) Warning: Symbol "CommandLine" is deprecated
+2300 206.793/222.976 Kb Used
+dUtils.pas(2333,14) Warning: Symbol "CommandLine" is deprecated
+dUtils.pas(2335,68) Warning: Symbol "CommandLine" is deprecated
+2400 207.407/222.976 Kb Used
+2500 207.979/222.976 Kb Used
+2600 208.498/222.976 Kb Used
+2700 208.591/222.976 Kb Used
+dUtils.pas(2726,14) Warning: Symbol "CommandLine" is deprecated
+dUtils.pas(2727,69) Warning: Symbol "CommandLine" is deprecated
+dUtils.pas(2793,14) Warning: Symbol "CommandLine" is deprecated
+dUtils.pas(2794,68) Warning: Symbol "CommandLine" is deprecated
+dUtils.pas(2795,18) Warning: Symbol "CommandLine" is deprecated
+2800 209.279/222.976 Kb Used
+2900 210.141/222.976 Kb Used
+3000 210.487/222.976 Kb Used
+3100 211.220/222.976 Kb Used
+dUtils.pas(3190,14) Warning: Symbol "CommandLine" is deprecated
+dUtils.pas(3192,40) Warning: Symbol "CommandLine" is deprecated
+3200 212.111/223.232 Kb Used
+3300 212.243/223.232 Kb Used
+3400 212.614/223.488 Kb Used
+3500 213.364/224.000 Kb Used
+dUtils.pas(3506,3) Note: Local variable "epos" not used
+dUtils.pas(3507,3) Note: Local variable "kpos" not used
+3600 213.784/224.000 Kb Used
+dUtils.pas(3636,14) Warning: Symbol "CommandLine" is deprecated
+dUtils.pas(3638,40) Warning: Symbol "CommandLine" is deprecated
+dUtils.pas(3649,23) Warning: Symbol "DateSeparator" is deprecated
+dUtils.pas(3651,19) Warning: Symbol "DateSeparator" is deprecated
+dUtils.pas(3654,19) Warning: Symbol "DateSeparator" is deprecated
+3700 214.769/224.256 Kb Used
+3800 215.474/224.512 Kb Used
+Compiling fChangeLocator.pas
+Compiling fDXCCStat.pas
+100 197.588/223.232 Kb Used
+200 198.060/223.232 Kb Used
+300 198.359/223.232 Kb Used
+400 198.644/223.232 Kb Used
+500 201.182/223.744 Kb Used
+600 201.293/223.744 Kb Used
+700 202.264/223.744 Kb Used
+800 202.408/223.744 Kb Used
+900 202.512/223.744 Kb Used
+1000 203.623/223.744 Kb Used
+1100 204.456/223.744 Kb Used
+100 205.006/223.744 Kb Used
+200 205.116/223.744 Kb Used
+Compiling fQSLMgr.pas
+100 198.439/223.488 Kb Used
+100 198.564/223.488 Kb Used
+Compiling fWAZITUStat.pas
+Compiling fShowStations.pas
+100 198.552/223.488 Kb Used
+200 199.067/223.744 Kb Used
+fWAZITUStat.pas(187,3) Note: Local variable "old_zone" not used
+fWAZITUStat.pas(192,3) Note: Local variable "where" not used
+fWAZITUStat.pas(251,3) Note: Local variable "where" not used
+300 199.556/223.744 Kb Used
+400 199.556/223.744 Kb Used
+500 199.947/223.744 Kb Used
+600 200.469/223.744 Kb Used
+700 201.067/223.744 Kb Used
+800 201.353/223.744 Kb Used
+900 202.758/224.000 Kb Used
+fWAZITUStat.pas(944,3) Note: Local variable "cont" not used
+fWAZITUStat.pas(949,3) Note: Local variable "where" not used
+1000 203.377/224.000 Kb Used
+1100 203.530/224.000 Kb Used
+1200 204.045/224.000 Kb Used
+100 204.316/224.000 Kb Used
+200 204.426/224.000 Kb Used
+Compiling fIOTAStat.pas
+100 199.380/223.744 Kb Used
+fIOTAStat.pas(134,3) Note: Local variable "EUcount" is assigned but never used
+fIOTAStat.pas(135,3) Note: Local variable "AFcount" is assigned but never used
+fIOTAStat.pas(136,3) Note: Local variable "ANcount" is assigned but never used
+fIOTAStat.pas(137,3) Note: Local variable "AScount" is assigned but never used
+fIOTAStat.pas(138,3) Note: Local variable "NAcount" is assigned but never used
+fIOTAStat.pas(139,3) Note: Local variable "OCcount" is assigned but never used
+fIOTAStat.pas(140,3) Note: Local variable "SAcount" is assigned but never used
+fIOTAStat.pas(141,3) Note: Local variable "iota" is assigned but never used
+fIOTAStat.pas(142,3) Note: Local variable "call" is assigned but never used
+100 200.082/224.000 Kb Used
+200 200.201/224.000 Kb Used
+Compiling fGraphStat.pas
+Compiling fLongNote.pas
+100 200.683/225.280 Kb Used
+Compiling fRefCall.pas
+Compiling fExportProgress.pas
+100 200.940/225.280 Kb Used
+200 201.315/225.280 Kb Used
+300 201.439/225.280 Kb Used
+400 201.553/225.280 Kb Used
+500 201.721/225.280 Kb Used
+600 201.945/225.536 Kb Used
+700 205.180/226.048 Kb Used
+800 205.334/226.048 Kb Used
+900 205.466/226.048 Kb Used
+1000 205.711/226.048 Kb Used
+1100 205.952/226.048 Kb Used
+1200 206.152/226.048 Kb Used
+100 210.206/227.328 Kb Used
+Compiling fCallAttachment.pas
+Compiling fQSLViewer.pas
+Compiling fDBConnect.pas
+Compiling fNewLog.pas
+100 201.785/226.048 Kb Used
+fDBConnect.pas(149,3) Note: Local variable "log_nr" is assigned but never used
+200 202.328/226.048 Kb Used
+300 202.767/226.048 Kb Used
+400 203.237/226.048 Kb Used
+Compiling fAbout.pas
+Compiling fChangelog.pas
+Compiling fBigSquareStat.pas
+fBigSquareStat.pas(9,63) Warning: Unit "dbf" is deprecated: "Abandoned by maintainer, no longer supported by FPC team. Help may be available at http://tdbf.sourceforge.net and http://sourceforge.net/projects/tdbf/forums/forum/107245"
+100 214.239/233.472 Kb Used
+200 214.471/233.472 Kb Used
+300 216.112/234.240 Kb Used
+600 214.418/234.496 Kb Used
+700 214.882/234.496 Kb Used
+800 215.442/234.496 Kb Used
+900 216.124/234.496 Kb Used
+1000 216.316/235.008 Kb Used
+1100 217.095/235.008 Kb Used
+fNewQSO.pas(1105,3) Warning: Symbol "Resume" is deprecated
+fNewQSO.pas(1112,3) Warning: Symbol "Resume" is deprecated
+1200 217.687/235.264 Kb Used
+1300 218.038/235.520 Kb Used
+1400 218.513/235.520 Kb Used
+1500 218.687/235.520 Kb Used
+1600 218.887/235.776 Kb Used
+1700 220.440/235.776 Kb Used
+1800 220.566/235.776 Kb Used
+1900 220.721/236.032 Kb Used
+fNewQSO.pas(1706,3) Note: Local variable "freq" not used
+2000 222.211/237.312 Kb Used
+2100 222.644/237.568 Kb Used
+2200 222.956/237.568 Kb Used
+2300 223.217/237.568 Kb Used
+2400 223.445/237.568 Kb Used
+2500 223.739/237.824 Kb Used
+2600 224.086/238.080 Kb Used
+2700 224.712/238.336 Kb Used
+2800 225.077/238.592 Kb Used
+2900 225.513/238.592 Kb Used
+3000 225.912/238.848 Kb Used
+3100 226.143/238.848 Kb Used
+fNewQSO.pas(3139,14) Warning: Symbol "CommandLine" is deprecated
+fNewQSO.pas(3142,39) Warning: Symbol "CommandLine" is deprecated
+fNewQSO.pas(3155,14) Warning: Symbol "CommandLine" is deprecated
+fNewQSO.pas(3158,39) Warning: Symbol "CommandLine" is deprecated
+3200 226.574/239.104 Kb Used
+3300 226.863/239.104 Kb Used
+3400 227.149/239.104 Kb Used
+3500 227.325/239.104 Kb Used
+fNewQSO.pas(3559,7) Warning: Symbol "Resume" is deprecated
+3600 228.572/240.128 Kb Used
+3700 228.761/240.128 Kb Used
+fNewQSO.pas(3726,5) Warning: Symbol "Resume" is deprecated
+3800 228.853/240.384 Kb Used
+fNewQSO.pas(3845,3) Note: Local variable "tmp" is assigned but never used
+fNewQSO.pas(3846,3) Note: Local variable "f" is assigned but never used
+fNewQSO.pas(3847,3) Note: Local variable "call" is assigned but never used
+fNewQSO.pas(3848,3) Note: Local variable "freq" is assigned but never used
+3900 229.787/240.384 Kb Used
+4000 230.224/240.384 Kb Used
+4100 230.533/240.896 Kb Used
+4200 231.878/241.920 Kb Used
+4300 232.027/241.920 Kb Used
+4400 232.528/241.920 Kb Used
+4500 233.144/242.432 Kb Used
+4600 234.899/244.224 Kb Used
+fNewQSO.pas(4572,3) Note: Local variable "tmp" is assigned but never used
+fNewQSO.pas(4577,3) Note: Local variable "call" not used
+4700 235.521/244.480 Kb Used
+4800 236.233/245.248 Kb Used
+4900 236.910/246.016 Kb Used
+5000 237.329/246.272 Kb Used
+100 237.806/246.528 Kb Used
+200 237.918/246.528 Kb Used
+300 238.018/246.528 Kb Used
+400 238.129/246.528 Kb Used
+500 238.229/246.528 Kb Used
+600 238.337/246.784 Kb Used
+700 238.443/246.784 Kb Used
+800 238.551/246.784 Kb Used
+900 238.650/247.296 Kb Used
+1000 238.764/247.296 Kb Used
+1100 238.870/247.296 Kb Used
+1200 238.973/247.296 Kb Used
+1300 239.079/247.296 Kb Used
+1400 239.178/247.296 Kb Used
+1500 239.295/247.296 Kb Used
+1600 239.393/247.808 Kb Used
+1700 239.500/248.064 Kb Used
+1800 239.612/248.064 Kb Used
+1900 239.710/248.064 Kb Used
+2000 239.826/248.064 Kb Used
+2100 239.924/248.064 Kb Used
+2200 240.037/248.320 Kb Used
+2300 240.136/248.576 Kb Used
+2400 240.240/248.576 Kb Used
+2500 240.339/248.576 Kb Used
+2600 240.444/248.576 Kb Used
+2700 240.563/248.832 Kb Used
+2800 240.672/248.832 Kb Used
+2900 240.777/249.088 Kb Used
+3000 240.875/249.344 Kb Used
+3100 240.980/249.344 Kb Used
+3200 241.078/249.344 Kb Used
+3300 241.183/249.344 Kb Used
+3400 241.288/249.344 Kb Used
+Compiling fMarkQSL.pas
+100 218.455/250.624 Kb Used
+200 218.660/251.136 Kb Used
+100 219.978/251.136 Kb Used
+Compiling fSort.pas
+100 218.875/251.136 Kb Used
+Compiling fFilter.pas
+100 218.861/251.136 Kb Used
+200 219.045/251.136 Kb Used
+300 219.227/251.392 Kb Used
+400 220.953/251.392 Kb Used
+500 221.621/251.392 Kb Used
+100 222.885/251.392 Kb Used
+200 222.994/251.392 Kb Used
+300 223.099/251.392 Kb Used
+Compiling fCallbook.pas
+100 219.698/251.392 Kb Used
+100 219.810/251.392 Kb Used
+Compiling fAdifImport.pas
+100 219.790/251.392 Kb Used
+200 220.156/251.392 Kb Used
+300 220.580/251.392 Kb Used
+400 220.767/251.648 Kb Used
+500 220.975/251.648 Kb Used
+600 223.617/251.648 Kb Used
+fAdifImport.pas(660,25) Warning: Symbol "TimeSeparator" is deprecated
+fAdifImport.pas(661,19) Warning: Symbol "TimeSeparator" is deprecated
+fAdifImport.pas(664,19) Warning: Symbol "TimeSeparator" is deprecated
+700 224.313/251.648 Kb Used
+100 224.763/251.648 Kb Used
+200 224.873/251.648 Kb Used
+Compiling fSearch.pas
+100 220.228/251.648 Kb Used
+200 220.363/251.648 Kb Used
+100 221.310/251.648 Kb Used
+Compiling fDatabaseUpdate.pas
+100 220.518/251.648 Kb Used
+200 220.764/251.648 Kb Used
+300 222.400/251.904 Kb Used
+fDatabaseUpdate.pas(374,3) Warning: Symbol "Resume" is deprecated
+100 222.825/251.904 Kb Used
+Compiling fExLabelPrint.pas
+100 221.020/251.904 Kb Used
+200 221.202/251.904 Kb Used
+Compiling fImportLoTWWeb.pas
+Compiling ssl_openssl.pas
+100 220.910/252.160 Kb Used
+200 221.279/252.160 Kb Used
+300 221.409/252.160 Kb Used
+400 221.982/252.160 Kb Used
+500 222.192/252.160 Kb Used
+600 222.356/252.160 Kb Used
+700 222.659/252.160 Kb Used
+800 222.863/252.160 Kb Used
+100 221.298/252.160 Kb Used
+200 222.321/252.160 Kb Used
+100 222.710/252.160 Kb Used
+Compiling fLoTWExport.pas
+100 221.560/252.160 Kb Used
+200 222.172/252.160 Kb Used
+fLoTWExport.pas(297,12) Warning: Symbol "CommandLine" is deprecated
+fLoTWExport.pas(299,50) Warning: Symbol "CommandLine" is deprecated
+300 222.584/252.160 Kb Used
+400 223.033/252.160 Kb Used
+Compiling fGroupEdit.pas
+100 221.884/252.160 Kb Used
+200 222.033/252.160 Kb Used
+300 222.181/252.160 Kb Used
+400 222.352/252.160 Kb Used
+100 224.554/252.416 Kb Used
+Compiling fCustomStat.pas
+100 222.151/252.416 Kb Used
+200 222.525/252.416 Kb Used
+Compiling fSQLConsole.pas
+100 235.430/260.096 Kb Used
+200 236.180/260.608 Kb Used
+300 236.868/260.608 Kb Used
+100 237.101/260.608 Kb Used
+200 237.212/260.608 Kb Used
+300 237.312/260.608 Kb Used
+400 237.422/260.608 Kb Used
+500 237.521/260.608 Kb Used
+Compiling fEditDetails.pas
+100 236.268/261.120 Kb Used
+100 236.952/261.120 Kb Used
+200 237.061/261.120 Kb Used
+Compiling fRebuildMembStat.pas
+100 236.433/261.376 Kb Used
+200 236.743/261.376 Kb Used
+Compiling feQSLUpload.pas
+100 236.686/261.632 Kb Used
+feQSLUpload.pas(71,3) Note: Local variable "qsodate" not used
+feQSLUpload.pas(72,3) Note: Local variable "time_on" not used
+feQSLUpload.pas(73,3) Note: Local variable "call" not used
+feQSLUpload.pas(74,3) Note: Local variable "mode" not used
+feQSLUpload.pas(75,3) Note: Local variable "band" not used
+feQSLUpload.pas(76,3) Note: Local variable "freq" not used
+feQSLUpload.pas(77,3) Note: Local variable "rst_sent" not used
+feQSLUpload.pas(78,3) Note: Local variable "rst_rcvd" not used
+feQSLUpload.pas(79,3) Note: Local variable "id_cqrlog" not used
+200 237.924/261.888 Kb Used
+feQSLUpload.pas(284,3) Note: Local variable "tmp" not used
+300 238.590/261.888 Kb Used
+feQSLUpload.pas(35,5) Note: Private field "TfrmeQSLUpload.OrigFileSize" is never used
+Compiling feQSLDownload.pas
+100 236.953/261.632 Kb Used
+200 237.163/261.632 Kb Used
+Compiling fSOTAExport.pas
+100 237.274/261.888 Kb Used
+200 238.030/261.888 Kb Used
+500 237.400/261.888 Kb Used
+600 237.727/261.888 Kb Used
+700 238.173/261.888 Kb Used
+800 238.559/261.888 Kb Used
+900 238.953/261.888 Kb Used
+1000 239.348/261.888 Kb Used
+1100 239.656/261.888 Kb Used
+fMain.pas(1108,14) Warning: Symbol "CommandLine" is deprecated
+fMain.pas(1111,40) Warning: Symbol "CommandLine" is deprecated
+1200 240.058/261.888 Kb Used
+1300 240.513/261.888 Kb Used
+1400 240.669/261.888 Kb Used
+1500 242.162/262.912 Kb Used
+1600 242.505/262.912 Kb Used
+1700 242.975/263.168 Kb Used
+1800 243.459/263.168 Kb Used
+1900 243.758/263.168 Kb Used
+fMain.pas(1805,5) Note: Local variable "T" not used
+2000 245.312/264.704 Kb Used
+100 245.962/264.704 Kb Used
+200 246.071/264.704 Kb Used
+300 246.174/264.704 Kb Used
+400 246.283/264.704 Kb Used
+500 246.383/264.704 Kb Used
+600 246.497/264.704 Kb Used
+700 246.596/264.960 Kb Used
+800 246.709/264.960 Kb Used
+900 246.807/264.960 Kb Used
+1000 246.913/264.960 Kb Used
+1100 247.025/265.216 Kb Used
+1200 247.128/265.472 Kb Used
+1300 247.233/265.472 Kb Used
+1400 247.333/265.728 Kb Used
+1500 247.450/265.728 Kb Used
+1600 247.549/265.728 Kb Used
+1700 247.657/265.728 Kb Used
+1800 247.764/265.728 Kb Used
+1900 247.871/265.984 Kb Used
+2000 247.976/265.984 Kb Used
+2100 248.075/266.496 Kb Used
+2200 248.188/266.496 Kb Used
+2300 248.286/266.496 Kb Used
+2400 248.391/266.496 Kb Used
+2500 248.501/266.496 Kb Used
+2600 248.605/266.752 Kb Used
+2700 248.710/266.752 Kb Used
+2800 248.819/267.008 Kb Used
+2900 248.924/267.008 Kb Used
+3000 249.023/267.008 Kb Used
+3100 249.128/267.264 Kb Used
+3200 249.239/267.264 Kb Used
+3300 249.344/267.520 Kb Used
+3400 249.449/267.520 Kb Used
+3500 249.561/267.776 Kb Used
+3600 249.666/267.776 Kb Used
+3700 249.763/267.776 Kb Used
+3800 249.868/267.776 Kb Used
+Compiling resource cqrlog.or
+Linking cqrlog
+/usr/bin/ld: warning: link.res contains output sections; did you forget -T?
+109780 lines compiled, 5.9 sec 
+131 warning(s) issued
+70 note(s) issued
+[TCompiler.Compile] end
+gzip tools/cqrlog.1 -c > tools/cqrlog.1.gz
++ exit 0
+Executing(%install): /bin/sh -e /var/tmp/rpm-tmp.8Lsayp
++ umask 022
++ cd /builddir/build/BUILD
++ '[' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64 '!=' / ']'
++ rm -rf /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64
+++ dirname /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64
++ mkdir -p /builddir/build/BUILDROOT
++ mkdir /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64
++ cd cqrlog-1.5.2
++ make install DESTDIR=/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64
+install -d -v         /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/bin
+install: creating directory '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr'
+install: creating directory '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/bin'
+install -d -v         /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog
+install: creating directory '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share'
+install: creating directory '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog'
+install -d -v         /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/ctyfiles
+install: creating directory '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/ctyfiles'
+install -d -v         /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help
+install: creating directory '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help'
+install -d -v         /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img
+install: creating directory '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img'
+install -d -v         /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members
+install: creating directory '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members'
+install -d -v         /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/xplanet
+install: creating directory '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/xplanet'
+install -d -v         /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/zipcodes
+install: creating directory '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/zipcodes'
+install -d -v         /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/images 
+install: creating directory '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/images'
+install -d -v         /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/pixmaps/cqrlog
+install: creating directory '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/pixmaps'
+install: creating directory '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/pixmaps/cqrlog'
+install -d -v         /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/icons
+install: creating directory '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/icons'
+install -d -v         /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/applications
+install: creating directory '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/applications'
+install -d -v         /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/man/man1
+install: creating directory '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/man'
+install: creating directory '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/man/man1'
+install    -v -m 0755 src/cqrlog /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/bin
+'src/cqrlog' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/bin/cqrlog'
+install    -v -m 0755 tools/cqrlog-apparmor-fix /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/cqrlog-apparmor-fix
+'tools/cqrlog-apparmor-fix' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/cqrlog-apparmor-fix'
+install    -v -m 0644 ctyfiles/* /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/ctyfiles/
+'ctyfiles/Ambiguous.tbl' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/ctyfiles/Ambiguous.tbl'
+'ctyfiles/AreaOK1RR.tbl' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/ctyfiles/AreaOK1RR.tbl'
+'ctyfiles/CallResolution.tbl' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/ctyfiles/CallResolution.tbl'
+'ctyfiles/Country.tab' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/ctyfiles/Country.tab'
+'ctyfiles/CountryDel.tab' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/ctyfiles/CountryDel.tab'
+'ctyfiles/Exceptions.tbl' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/ctyfiles/Exceptions.tbl'
+'ctyfiles/README' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/ctyfiles/README'
+'ctyfiles/eqsl.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/ctyfiles/eqsl.txt'
+'ctyfiles/iota.tbl' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/ctyfiles/iota.tbl'
+'ctyfiles/lotw1.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/ctyfiles/lotw1.txt'
+'ctyfiles/qslmgr.csv' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/ctyfiles/qslmgr.csv'
+install    -v -m 0644 help/img/* /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/
+'help/img/bulb.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/bulb.png'
+'help/img/c03.jpg' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/c03.jpg'
+'help/img/cwdaem.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/cwdaem.png'
+'help/img/exc.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/exc.png'
+'help/img/h1.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h1.png'
+'help/img/h10.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h10.png'
+'help/img/h100.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h100.png'
+'help/img/h101.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h101.png'
+'help/img/h102.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h102.png'
+'help/img/h103.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h103.png'
+'help/img/h104.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h104.png'
+'help/img/h105.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h105.png'
+'help/img/h106.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h106.png'
+'help/img/h107.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h107.png'
+'help/img/h108.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h108.png'
+'help/img/h109.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h109.png'
+'help/img/h11.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h11.png'
+'help/img/h110.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h110.png'
+'help/img/h111.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h111.png'
+'help/img/h112.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h112.png'
+'help/img/h113.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h113.png'
+'help/img/h114.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h114.png'
+'help/img/h115.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h115.png'
+'help/img/h116.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h116.png'
+'help/img/h12.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h12.png'
+'help/img/h13.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h13.png'
+'help/img/h14.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h14.png'
+'help/img/h15.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h15.png'
+'help/img/h16.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h16.png'
+'help/img/h17.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h17.png'
+'help/img/h18.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h18.png'
+'help/img/h19.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h19.png'
+'help/img/h2.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h2.png'
+'help/img/h20.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h20.png'
+'help/img/h21.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h21.png'
+'help/img/h22.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h22.png'
+'help/img/h23.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h23.png'
+'help/img/h24.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h24.png'
+'help/img/h25.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h25.png'
+'help/img/h26.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h26.png'
+'help/img/h27.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h27.png'
+'help/img/h28.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h28.png'
+'help/img/h29.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h29.png'
+'help/img/h3.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h3.png'
+'help/img/h30.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h30.png'
+'help/img/h31.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h31.png'
+'help/img/h32.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h32.png'
+'help/img/h33.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h33.png'
+'help/img/h34.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h34.png'
+'help/img/h35.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h35.png'
+'help/img/h36.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h36.png'
+'help/img/h37.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h37.png'
+'help/img/h38.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h38.png'
+'help/img/h39.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h39.png'
+'help/img/h4.html' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h4.html'
+'help/img/h4.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h4.png'
+'help/img/h40.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h40.png'
+'help/img/h41.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h41.png'
+'help/img/h42.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h42.png'
+'help/img/h43.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h43.png'
+'help/img/h44.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h44.png'
+'help/img/h45.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h45.png'
+'help/img/h46.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h46.png'
+'help/img/h47.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h47.png'
+'help/img/h48.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h48.png'
+'help/img/h49.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h49.png'
+'help/img/h5.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h5.png'
+'help/img/h50.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h50.png'
+'help/img/h51.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h51.png'
+'help/img/h52.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h52.png'
+'help/img/h53.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h53.png'
+'help/img/h54.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h54.png'
+'help/img/h55.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h55.png'
+'help/img/h56.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h56.png'
+'help/img/h57.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h57.png'
+'help/img/h58.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h58.png'
+'help/img/h59.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h59.png'
+'help/img/h6.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h6.png'
+'help/img/h60.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h60.png'
+'help/img/h61.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h61.png'
+'help/img/h62.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h62.png'
+'help/img/h63.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h63.png'
+'help/img/h64.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h64.png'
+'help/img/h65.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h65.png'
+'help/img/h66.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h66.png'
+'help/img/h67.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h67.png'
+'help/img/h68.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h68.png'
+'help/img/h69.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h69.png'
+'help/img/h7.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h7.png'
+'help/img/h70.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h70.png'
+'help/img/h71.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h71.png'
+'help/img/h72.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h72.png'
+'help/img/h73.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h73.png'
+'help/img/h74.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h74.png'
+'help/img/h75.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h75.png'
+'help/img/h76.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h76.png'
+'help/img/h77.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h77.png'
+'help/img/h78.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h78.png'
+'help/img/h79.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h79.png'
+'help/img/h8.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h8.png'
+'help/img/h80.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h80.png'
+'help/img/h81.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h81.png'
+'help/img/h82.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h82.png'
+'help/img/h83.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h83.png'
+'help/img/h84.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h84.png'
+'help/img/h85.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h85.png'
+'help/img/h86.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h86.png'
+'help/img/h87.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h87.png'
+'help/img/h88.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h88.png'
+'help/img/h89.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h89.png'
+'help/img/h9.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h9.png'
+'help/img/h90.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h90.png'
+'help/img/h91.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h91.png'
+'help/img/h92.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h92.png'
+'help/img/h93.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h93.png'
+'help/img/h94.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h94.png'
+'help/img/h95.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h95.png'
+'help/img/h96.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h96.png'
+'help/img/h97.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h97.png'
+'help/img/h98.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h98.png'
+'help/img/h99.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/h99.png'
+'help/img/line.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/line.png'
+'help/img/note.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/img/note.png'
+install    -v -m 0644 help/*.*   /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/
+'help/cwd.html' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/cwd.html'
+'help/h1.html' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/h1.html'
+'help/h20.html' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/h20.html'
+'help/h21.html' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/h21.html'
+'help/h22.html' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/h22.html'
+'help/h23.html' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/h23.html'
+'help/h24.html' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/h24.html'
+'help/h25.html' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/h25.html'
+'help/h26.html' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/h26.html'
+'help/h27.html' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/h27.html'
+'help/h3.html' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/h3.html'
+'help/h4.html' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/h4.html'
+'help/h5.html' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/h5.html'
+'help/h6.html' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/h6.html'
+'help/h7.html' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/h7.html'
+'help/h8.html' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/h8.html'
+'help/index.html' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/index.html'
+'help/sql_console.html' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/sql_console.html'
+'help/wkusb.html' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/help/wkusb.html'
+install    -v -m 0644 members/*  /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/
+'members/070-club.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/070-club.txt'
+'members/9acwg.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/9acwg.txt'
+'members/a1-club.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/a1-club.txt'
+'members/a1-op.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/a1-op.txt'
+'members/afm.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/afm.txt'
+'members/agcw.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/agcw.txt'
+'members/arktika.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/arktika.txt'
+'members/armi.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/armi.txt'
+'members/bcc.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/bcc.txt'
+'members/bmars.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/bmars.txt'
+'members/bscc.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/bscc.txt'
+'members/cav.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/cav.txt'
+'members/cct.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/cct.txt'
+'members/cdxc.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/cdxc.txt'
+'members/cfo.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/cfo.txt'
+'members/cft.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/cft.txt'
+'members/conveniat.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/conveniat.txt'
+'members/ctc.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/ctc.txt'
+'members/cwjf.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/cwjf.txt'
+'members/cwops.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/cwops.txt'
+'members/cwsp.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/cwsp.txt'
+'members/dig.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/dig.txt'
+'members/dtc.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/dtc.txt'
+'members/ehsc.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/ehsc.txt'
+'members/epc.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/epc.txt'
+'members/ffr.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/ffr.txt'
+'members/firac.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/firac.txt'
+'members/fists.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/fists.txt'
+'members/fmc.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/fmc.txt'
+'members/fnars.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/fnars.txt'
+'members/foc.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/foc.txt'
+'members/foc_names.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/foc_names.txt'
+'members/fog.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/fog.txt'
+'members/gacw.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/gacw.txt'
+'members/gdxf.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/gdxf.txt'
+'members/gqrpc.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/gqrpc.txt'
+'members/hacwg.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/hacwg.txt'
+'members/hh.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/hh.txt'
+'members/hhc.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/hhc.txt'
+'members/hsc.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/hsc.txt'
+'members/htc.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/htc.txt'
+'members/inorc.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/inorc.txt'
+'members/jaig.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/jaig.txt'
+'members/marac.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/marac.txt'
+'members/marconista.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/marconista.txt'
+'members/mcl.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/mcl.txt'
+'members/mcwg.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/mcwg.txt'
+'members/mdxg.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/mdxg.txt'
+'members/mf.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/mf.txt'
+'members/mfca.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/mfca.txt'
+'members/naqcc.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/naqcc.txt'
+'members/nra.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/nra.txt'
+'members/okdxc.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/okdxc.txt'
+'members/okdxf.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/okdxf.txt'
+'members/okqrp.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/okqrp.txt'
+'members/omiss.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/omiss.txt'
+'members/ootc.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/ootc.txt'
+'members/otc-sara.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/otc-sara.txt'
+'members/prc.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/prc.txt'
+'members/prl.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/prl.txt'
+'members/pro.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/pro.txt'
+'members/qcwa.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/qcwa.txt'
+'members/qthloc.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/qthloc.txt'
+'members/rafars.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/rafars.txt'
+'members/ria.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/ria.txt'
+'members/rnars.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/rnars.txt'
+'members/rrdxa.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/rrdxa.txt'
+'members/rsars.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/rsars.txt'
+'members/rtc.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/rtc.txt'
+'members/sdxg.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/sdxg.txt'
+'members/shsc.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/shsc.txt'
+'members/skcc.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/skcc.txt'
+'members/spar-rcc.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/spar-rcc.txt'
+'members/spar.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/spar.txt'
+'members/spcwc.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/spcwc.txt'
+'members/spdxc.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/spdxc.txt'
+'members/ten-ten.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/ten-ten.txt'
+'members/tenten.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/tenten.txt'
+'members/tfc.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/tfc.txt'
+'members/trc.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/trc.txt'
+'members/udxc.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/udxc.txt'
+'members/uft.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/uft.txt'
+'members/uksmg.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/uksmg.txt'
+'members/vhsc.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/vhsc.txt'
+'members/vrk.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/vrk.txt'
+'members/wap.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/wap.txt'
+'members/was.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/was.txt'
+'members/wcc.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/wcc.txt'
+'members/wff.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/wff.txt'
+'members/wwyc.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/wwyc.txt'
+'members/yasme.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/yasme.txt'
+install    -v -m 0644 xplanet/*  /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/xplanet/
+'xplanet/geoconfig' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/xplanet/geoconfig'
+install    -v -m 0644 zipcodes/* /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/zipcodes/
+'zipcodes/italy-prov.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/zipcodes/italy-prov.txt'
+'zipcodes/usa-ca.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/zipcodes/usa-ca.txt'
+'zipcodes/usa-states.txt' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/zipcodes/usa-states.txt'
+install    -v -m 0644 images/*   /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/images/
+'images/BigEarth.bmp' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/images/BigEarth.bmp'
+'images/HamQTH.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/images/HamQTH.png'
+'images/bck.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/images/bck.png'
+'images/cqrlog.ico' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/images/cqrlog.ico'
+'images/cqrlog.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/images/cqrlog.png'
+'images/delete.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/images/delete.png'
+'images/dxcc_stat.xpm' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/images/dxcc_stat.xpm'
+'images/edit.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/images/edit.png'
+'images/edwn.xpm' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/images/edwn.xpm'
+'images/eqsl_dwn.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/images/eqsl_dwn.png'
+'images/eqsl_up.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/images/eqsl_up.png'
+'images/eupl.xpm' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/images/eupl.xpm'
+'images/filter.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/images/filter.png'
+'images/grayline.bmp' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/images/grayline.bmp'
+'images/menu_new.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/images/menu_new.png'
+'images/my_view.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/images/my_view.png'
+'images/options.xpm' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/images/options.xpm'
+'images/properties.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/images/properties.png'
+'images/quit.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/images/quit.png'
+'images/quit.xpm' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/images/quit.xpm'
+'images/radio.bmp' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/images/radio.bmp'
+'images/search.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/images/search.png'
+'images/sort.xpm' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/images/sort.xpm'
+'images/splash.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/images/splash.png'
+'images/sun.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/images/sun.png'
+'images/sunrise.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/images/sunrise.png'
+'images/sunrise_small.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/images/sunrise_small.png'
+'images/sunset.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/images/sunset.png'
+'images/sunset_small.bmp' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/images/sunset_small.bmp'
+'images/sunset_small.jpg' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/images/sunset_small.jpg'
+'images/sunset_small.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/images/sunset_small.png'
+'images/sunset_small_.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/images/sunset_small_.png'
+'images/uses_eqsl.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/images/uses_eqsl.png'
+'images/view.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/images/view.png'
+install    -v -m 0644 tools/cqrlog.desktop /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/applications/cqrlog.desktop
+'tools/cqrlog.desktop' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/applications/cqrlog.desktop'
+install    -v -m 0644 images/cqrlog.png /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/pixmaps/cqrlog/cqrlog.png
+'images/cqrlog.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/pixmaps/cqrlog/cqrlog.png'
+install    -v -m 0644 images/cqrlog.png /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/icons/cqrlog.png  
+'images/cqrlog.png' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/icons/cqrlog.png'
+install    -v -m 0644 src/changelog.html /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/changelog.html
+'src/changelog.html' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/changelog.html'
+install    -v -m 0644 tools/cqrlog.1.gz /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/man/man1/cqrlog.1.gz
+'tools/cqrlog.1.gz' -> '/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/man/man1/cqrlog.1.gz'
++ desktop-file-validate /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/applications/cqrlog.desktop
+/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/applications/cqrlog.desktop: error: (will be fatal in the future): value "cqrlog.png" for key "Icon" in group "Desktop Entry" is an icon name with an extension, but there should be no extension as described in the Icon Theme Specification if the value is not an absolute path
+/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/applications/cqrlog.desktop: error: (will be fatal in the future): value "Database" in key "Categories" in group "Desktop Entry" requires another category to be present among the following categories: Office, or Development, or AudioVideo
+/builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/applications/cqrlog.desktop: error: (will be fatal in the future): value "HamRadio" in key "Categories" in group "Desktop Entry" requires another category to be present among the following categories: Network, or Audio
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/ctyfiles/lotw1.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/ria.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/okdxf.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/htc.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/pro.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/9acwg.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/gqrpc.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/prl.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/ctyfiles/iota.tbl
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/ffr.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/ctyfiles/eqsl.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/mfca.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/firac.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/cwsp.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/gacw.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/conveniat.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/was.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/jaig.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/mcl.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/cft.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/epc.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/tfc.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/fmc.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/hh.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/okdxc.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/ctyfiles/CountryDel.tab
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/qthloc.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/070-club.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/dtc.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/afm.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/prc.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/rtc.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/rnars.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/okqrp.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/a1-op.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/mcwg.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/rsars.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/fnars.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/trc.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/mf.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/hacwg.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/wff.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/udxc.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/marac.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/nra.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/wwyc.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/bcc.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/ctc.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/bscc.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/ehsc.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/tenten.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/spcwc.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/armi.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/ten-ten.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/vhsc.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/cwjf.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/spar.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/cav.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/vrk.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/wap.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/wcc.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/uksmg.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/inorc.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/fists.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/yasme.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/uft.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/mdxg.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/shsc.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/rafars.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/gdxf.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/cfo.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/cct.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/cdxc.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/spar-rcc.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/marconista.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/fog.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/sdxg.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/spdxc.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/bmars.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/qcwa.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/hhc.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/rrdxa.txt
++ sed -i 's/\r//' /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/members/arktika.txt
++ iconv -f iso8859-1 -t utf-8 /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/ctyfiles/eqsl.txt
++ mv -f /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/ctyfiles/eqsl.txt.conv /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/share/cqrlog/ctyfiles/eqsl.txt
++ /usr/lib/rpm/find-debuginfo.sh --strict-build-id -m --run-dwz --dwz-low-mem-die-limit 10000000 --dwz-max-die-limit 110000000 /builddir/build/BUILD/cqrlog-1.5.2
+extracting debug info from /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64/usr/bin/cqrlog
+dwz: Too few files for multifile optimization
+cpio: lazarus-0.9.30.4/lazarus/components/memds/: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/memds/frmselectdataset.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/memds/memdsicons.lrs: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/memds/memdslaz.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/printers/: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/printers/osprinters.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/printers/printersdlgs.lrs: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/printers/printersdlgs.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/printers/unix/cupsdyn.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/printers/unix/cupslcl.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/printers/unix/cupsprinters.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/printers/unix/cupsprndialogs.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/printers/unix/framepagesetup.lrs: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/printers/unix/framepagesetup.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/printers/unix/printerprop.lrs: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/printers/unix/selectprinter.lrs: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/printers/unix/udlgpagesetup.lrs: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/printers/unix/udlgpagesetup.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/printers/unix/udlgpropertiesprinter.lrs: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/printers/unix/udlgpropertiesprinter.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/printers/unix/udlgselectprinter.lrs: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/printers/unix/udlgselectprinter.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/rtticontrols/: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/rtticontrols/rttictrls.lrs: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/rtticontrols/rttictrls.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/rtticontrols/rttigrids.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/rtticontrols/runtimetypeinfocontrols.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/sdf/: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/sdf/registersdf.lrs: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/sdf/registersdf.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/sdf/sdflaz.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/synedit/: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/synedit/synbeautifier.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/synedit/syncompletion.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/synedit/synedit.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/synedit/syneditfoldedview.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/synedit/synedithighlighter.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/synedit/synedithighlighterfoldbase.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/synedit/syneditkeycmds.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/synedit/syneditlines.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/synedit/syneditmarks.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/synedit/syneditmarkup.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/synedit/syneditmarkupbracket.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/synedit/syneditmarkupctrlmouselink.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/synedit/syneditmarkuphighall.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/synedit/syneditmarkupselection.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/synedit/syneditmarkupspecialline.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/synedit/syneditmarkupwordgroup.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/synedit/syneditmiscclasses.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/synedit/syneditmiscprocs.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/synedit/syneditmousecmds.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/synedit/syneditpointclasses.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/synedit/syneditsearch.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/synedit/synedittextbase.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/synedit/synedittextbuffer.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/synedit/synedittextdoublewidthchars.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/synedit/synedittexttabexpander.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/synedit/synedittexttrimmer.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/synedit/synedittypes.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/synedit/syngutter.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/synedit/syngutterbase.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/synedit/syngutterchanges.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/synedit/synguttercodefolding.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/synedit/syngutterlinenumber.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/synedit/syngutterlineoverview.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/synedit/synguttermarks.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/synedit/synhighlighterhashentries.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/synedit/synhighlightersql.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/synedit/synmemo.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/synedit/synregexpr.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/synedit/syntextdrawer.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/tachart/: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/tachart/tachartaxis.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/tachart/tachartlazaruspkg.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/tachart/tachartutils.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/tachart/tacustomseries.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/tachart/tacustomsource.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/tachart/tadbsource.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/tachart/tadrawutils.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/tachart/tafuncseries.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/tachart/tagraph.lrs: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/tachart/tagraph.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/tachart/talegend.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/tachart/talegendpanel.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/tachart/tamultiseries.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/tachart/taradialseries.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/tachart/taseries.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/tachart/taserieseditor.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/tachart/tasources.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/tachart/tastyles.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/tachart/tasubcomponentseditor.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/tachart/tatools.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/tachart/tatransformations.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/tachart/tatypes.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/turbopower_ipro/: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/turbopower_ipro/ipanim.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/turbopower_ipro/ipconst.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/turbopower_ipro/ipcss.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/turbopower_ipro/ipfilebroker.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/turbopower_ipro/iphtml.lrs: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/turbopower_ipro/iphtml.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/turbopower_ipro/iphtmlpv.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/turbopower_ipro/ipmsg.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/turbopower_ipro/ipstrms.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/turbopower_ipro/iputils.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/components/turbopower_ipro/turbopoweripro.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/ideintf/: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/ideintf/checkgroupeditordlg.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/ideintf/checklistboxeditordlg.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/ideintf/collectionpropeditform.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/ideintf/columndlg.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/ideintf/componenteditors.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/ideintf/componenttreeview.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/ideintf/frmselectprops.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/ideintf/graphicpropedit.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/ideintf/graphpropedits.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/ideintf/idedialogs.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/ideintf/ideimagesintf.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/ideintf/idewindowintf.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/ideintf/imagelisteditor.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/ideintf/lazstringgridedit.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/ideintf/listviewpropedit.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/ideintf/objectinspector.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/ideintf/objectinspector_img.lrs: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/ideintf/objinspstrconsts.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/ideintf/oifavouriteproperties.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/ideintf/propedits.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/ideintf/propeditutils.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/ideintf/stringspropeditdlg.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/ideintf/texttools.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/images/componenttreeview.lrs: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/actnlist.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/arrow.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/avglvltree.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/btn_icons.lrs: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/buttonpanel.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/buttons.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/calendar.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/chart.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/checklst.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/clipbrd.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/colorbox.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/comctrls.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/controls.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/cursors.lrs: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/customtimer.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/dbctrls.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/dbgrids.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/dialog_icons.lrs: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/dialogs.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/dynamicarray.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/dynhasharray.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/dynqueue.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/editbtn.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/extctrls.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/extdlgs.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/extendedstrings.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/filectrl.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/fileutil.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/forms.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/forms/calendarpopup.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/fpcadds.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/graphics.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/graphmath.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/graphtype.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/graphutil.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/grids.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/helpintfs.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/icnstypes.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/imagelistcache.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/actionlink.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/application.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/applicationproperties.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/asiancodepagefunctions.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/asiancodepages.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/bevel.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/bitbtn.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/bitmap.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/bitmapcanvas.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/boundlabel.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/brush.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/buttoncontrol.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/buttonglyph.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/buttons.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/canvas.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/checkbox.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/clipbrd.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/colorbutton.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/colordialog.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/commondialog.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/containedaction.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/control.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/controlactionlink.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/controlcanvas.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/controlscrollbar.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/controlsproc.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/cursorimage.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/customaction.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/customactionlist.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/custombitmap.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/customcheckbox.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/customcheckgroup.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/customcombobox.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/customcontrol.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/customdbcombobox.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/customdblistbox.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/customdockform.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/customedit.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/customform.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/customframe.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/customgroupbox.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/customimage.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/customlabel.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/customlabelededit.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/customlistbox.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/customlistview.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/custommemo.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/customnotebook.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/custompage.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/custompanel.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/customsplitter.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/customstatictext.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/customtrayicon.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/customupdown.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/dbcalendar.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/dbcheckbox.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/dbcombobox.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/dbcustomnavigator.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/dbedit.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/dbgroupbox.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/dbimage.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/dblistbox.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/dblookup.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/dblookupcombobox.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/dblookuplistbox.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/dbmemo.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/dbradiogroup.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/dbtext.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/docktree.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/dockzone.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/dragdock.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/dragimagelist.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/dragmanager.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/dragobject.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/filedialog.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/fileutil.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/finddialog.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/font.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/fontdialog.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/fpimagebitmap.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/gifimage.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/graphic.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/graphiccontrol.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/graphicsobject.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/headercontrol.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/hintwindow.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/icnsicon.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/icon.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/idletimer.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/imglist.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/inputdialog.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/interfacebase.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/intfbaselcl.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/intfbasewinapi.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/jpegimage.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/lclaction.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/lclintf.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/listcolumn.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/listcolumns.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/listitem.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/listitems.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/mainmenu.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/memoscrollbar.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/memostrings.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/menu.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/menuactionlink.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/menuitem.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/messagedialogs.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/monitor.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/mouse.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/notebook.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/page.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/pagecontrol.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/paintbox.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/pen.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/picture.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/pixmap.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/png.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/pnm.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/popupmenu.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/progressbar.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/promptdialog.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/radiobutton.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/radiogroup.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/rasterimage.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/region.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/replacedialog.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/screen.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/scrollbar.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/scrollbox.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/scrollingwincontrol.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/shape.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/sharedcustombitmap.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/sharedimage.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/sharedrasterimage.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/shortcutlist.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/sizeconstraints.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/speedbutton.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/spinedit.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/statusbar.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/statuspanel.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/statuspanels.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/sysenvapis.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/sysenvapis_unix.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/tabcontrol.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/tabsheet.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/tiffimage.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/togglebox.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/toolbar.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/toolbutton.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/toolwindow.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/trackbar.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/treeview.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/unixfileutil.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/untabbednotebook.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/winapi.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/include/wincontrol.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/interfacebase.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/interfaces/gtk2/: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/interfaces/gtk2/gtk2callback.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/interfaces/gtk2/gtk2cellrenderer.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/interfaces/gtk2/gtk2comboboxcallback.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/interfaces/gtk2/gtk2debug.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/interfaces/gtk2/gtk2def.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/interfaces/gtk2/gtk2devicecontext.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/interfaces/gtk2/gtk2dragcallback.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/interfaces/gtk2/gtk2extra.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/interfaces/gtk2/gtk2extra.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/interfaces/gtk2/gtk2fontcache.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/interfaces/gtk2/gtk2globals.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/interfaces/gtk2/gtk2int.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/interfaces/gtk2/gtk2lclintf.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/interfaces/gtk2/gtk2listsl.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/interfaces/gtk2/gtk2listviewtreemodel.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/interfaces/gtk2/gtk2memostrings.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/interfaces/gtk2/gtk2msgqueue.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/interfaces/gtk2/gtk2pagecallback.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/interfaces/gtk2/gtk2privatelist.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/interfaces/gtk2/gtk2privatewidget.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/interfaces/gtk2/gtk2proc.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/interfaces/gtk2/gtk2proc.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/interfaces/gtk2/gtk2themes.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/interfaces/gtk2/gtk2trayicon.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/interfaces/gtk2/gtk2widgetset.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/interfaces/gtk2/gtk2winapi.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/interfaces/gtk2/gtk2winapiwindow.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/interfaces/gtk2/gtk2wsarrow.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/interfaces/gtk2/gtk2wsbuttons.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/interfaces/gtk2/gtk2wscalendar.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/interfaces/gtk2/gtk2wschecklst.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/interfaces/gtk2/gtk2wscomctrls.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/interfaces/gtk2/gtk2wscontrols.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/interfaces/gtk2/gtk2wscustomlistview.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/interfaces/gtk2/gtk2wscustommemo.inc: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/interfaces/gtk2/gtk2wsdialogs.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/interfaces/gtk2/gtk2wsextctrls.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/interfaces/gtk2/gtk2wsextdlgs.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/interfaces/gtk2/gtk2wsfactory.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/interfaces/gtk2/gtk2wsforms.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/interfaces/gtk2/gtk2wsgrids.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/interfaces/gtk2/gtk2wsimglist.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/interfaces/gtk2/gtk2wsmenus.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/interfaces/gtk2/gtk2wspairsplitter.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/interfaces/gtk2/gtk2wsprivate.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/interfaces/gtk2/gtk2wsspin.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/interfaces/gtk2/gtk2wsstdctrls.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/interfaces/gtk2/interfaces.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/intfgraphics.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/lazconfigstorage.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/lazhelphtml.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/lazhelpintf.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/lazlinkedlist.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/lcl_calc_images.lrs: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/lcl_dbgrid_images.lrs: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/lcl_dbnav_images.lrs: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/lcl_edbtnimg.lrs: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/lclclasses.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/lclintf.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/lclmemmanager.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/lclmessageglue.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/lclproc.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/lclrescache.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/lclstrconsts.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/lcltype.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/lclversion.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/lconvencoding.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/lmessages.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/lresources.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/maps.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/maskedit.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/masks.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/menus.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/nonwin32/messages.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/pairsplitter.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/popupnotifier.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/postscriptcanvas.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/postscriptunicode.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/printers.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/propertystorage.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/shellctrls.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/spin.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/stdactns.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/stdctrls.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/stringhashlist.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/textstrings.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/themes.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/tmschema.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/translations.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/utf8process.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/utrace.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/widgetset/wsarrow.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/widgetset/wsbuttons.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/widgetset/wscalendar.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/widgetset/wschecklst.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/widgetset/wscomctrls.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/widgetset/wscontrols.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/widgetset/wsdialogs.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/widgetset/wsextctrls.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/widgetset/wsextdlgs.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/widgetset/wsfactory.pas: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/widgetset/wsforms.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/widgetset/wsgrids.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/widgetset/wsimglist.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/widgetset/wslclclasses.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/widgetset/wsmenus.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/widgetset/wspairsplitter.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/widgetset/wsproc.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/widgetset/wsreferences.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/widgetset/wsspin.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/widgetset/wsstdctrls.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/lcl/widgetset/wstoolwin.pp: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/packager/registration/: Cannot stat: No such file or directory
+cpio: lazarus-0.9.30.4/lazarus/packager/registration/lazaruspackageintf.pas: Cannot stat: No such file or directory
+9151 blocks
++ /usr/lib/rpm/check-buildroot
++ /usr/lib/rpm/redhat/brp-compress
++ /usr/lib/rpm/redhat/brp-strip-static-archive /usr/bin/strip
++ /usr/lib/rpm/brp-python-bytecompile /usr/bin/python 1
++ /usr/lib/rpm/redhat/brp-python-hardlink
++ /usr/lib/rpm/redhat/brp-java-repack-jars
+Processing files: cqrlog-1.5.2-1.fc19.x86_64
+Provides: cqrlog = 1.5.2-1.fc19 cqrlog(x86-64) = 1.5.2-1.fc19
+Requires(rpmlib): rpmlib(CompressedFileNames) <= 3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
+Requires: /bin/bash libX11.so.6()(64bit) libatk-1.0.so.0()(64bit) libc.so.6()(64bit) libc.so.6(GLIBC_2.2.5)(64bit) libcairo.so.2()(64bit) libdl.so.2()(64bit) libdl.so.2(GLIBC_2.2.5)(64bit) libgdk-x11-2.0.so.0()(64bit) libgdk_pixbuf-2.0.so.0()(64bit) libglib-2.0.so.0()(64bit) libgmodule-2.0.so.0()(64bit) libgobject-2.0.so.0()(64bit) libgthread-2.0.so.0()(64bit) libgtk-x11-2.0.so.0()(64bit) libpango-1.0.so.0()(64bit) libpthread.so.0()(64bit) libpthread.so.0(GLIBC_2.2.5)(64bit)
+Processing files: cqrlog-debuginfo-1.5.2-1.fc19.x86_64
+Provides: cqrlog-debuginfo = 1.5.2-1.fc19 cqrlog-debuginfo(x86-64) = 1.5.2-1.fc19
+Requires(rpmlib): rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1 rpmlib(CompressedFileNames) <= 3.0.4-1
+Checking for unpackaged file(s): /usr/lib/rpm/check-files /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64
+Wrote: /builddir/build/RPMS/cqrlog-1.5.2-1.fc19.x86_64.rpm
+Wrote: /builddir/build/RPMS/cqrlog-debuginfo-1.5.2-1.fc19.x86_64.rpm
+Executing(%clean): /bin/sh -e /var/tmp/rpm-tmp.sCpxBl
++ umask 022
++ cd /builddir/build/BUILD
++ cd cqrlog-1.5.2
++ /usr/bin/rm -rf /builddir/build/BUILDROOT/cqrlog-1.5.2-1.fc19.x86_64
++ exit 0
+Child return code was: 0
+LEAVE do --> 
+
