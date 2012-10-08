@@ -1,0 +1,14 @@
+added CTRL+W hotkey to send spots to dxcluster
+
+- DX cluster shows also country name next to the spot (must be enabled in Prefereces)
+- international characters in New QSO window should work again
+- DX spots with freq eqauls to the start of the band (21.000, 14.000 etc., usually notes) are ignored
+- HamQTH added to dx clusters list
+- fixed reading A-index (was 1 even when actually was 10)
+- /MM, /AM and stations with unknown DXCC country didn't appear in bandmap
+- database update hangs
+- fixed xml request address of qrz.com
+- DXCC CFM count function didn't uses eQSL cfm QSO
+- fixed reading mode from FT-920 (returned MEMO as VFO)
+- fixed bug in dxcluster caused program crashed randomly
+- program didn't apply eQSL rcvd when the band was in lowercase
