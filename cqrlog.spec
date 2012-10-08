@@ -1,5 +1,5 @@
 Name:		cqrlog
-Version:	1.5.1
+Version:	1.5.2
 Release:	1%{?dist}
 Summary:	An amateur radio contact logging program
 
@@ -85,6 +85,57 @@ sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/afm.txt
 sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/prc.txt
 sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/rtc.txt
 sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/rnars.txt
+sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/okqrp.txt
+sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/a1-op.txt
+sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/mcwg.txt
+sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/rsars.txt
+sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/fnars.txt
+sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/trc.txt
+sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/mf.txt
+sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/hacwg.txt
+sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/wff.txt
+sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/udxc.txt
+sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/marac.txt
+sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/nra.txt
+sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/wwyc.txt
+sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/bcc.txt
+sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/ctc.txt
+sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/bscc.txt
+sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/ehsc.txt
+sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/tenten.txt
+sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/spcwc.txt
+sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/armi.txt
+sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/ten-ten.txt
+sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/vhsc.txt
+sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/cwjf.txt
+sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/spar.txt
+sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/cav.txt
+sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/vrk.txt
+sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/wap.txt
+sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/wcc.txt
+sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/uksmg.txt
+sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/inorc.txt
+sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/fists.txt
+sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/yasme.txt
+sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/uft.txt
+sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/mdxg.txt
+sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/shsc.txt
+sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/rafars.txt
+sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/gdxf.txt
+sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/cfo.txt
+sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/cct.txt
+sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/cdxc.txt
+sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/spar-rcc.txt
+sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/marconista.txt
+sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/fog.txt
+sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/sdxg.txt
+sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/spdxc.txt
+sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/bmars.txt
+sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/qcwa.txt
+sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/hhc.txt
+sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/rrdxa.txt
+sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/arktika.txt
+
 iconv -f iso8859-1 -t utf-8 %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt > %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt.conv && mv -f %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt.conv %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt
 
 %files
@@ -96,5 +147,20 @@ iconv -f iso8859-1 -t utf-8 %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt > 
 %{_mandir}/man1/cqrlog.1.gz
 
 %changelog
+* Mon Oct 8 2012 Eric "Sparks" Christensen <sparks@fedoraproject.org> - 1.5.2-1
+- added CTRL+W hotkey to send spots to dxcluster
+- DX cluster shows also country name next to the spot (must be enabled in Prefereces)
+- international characters in New QSO window should work again
+- DX spots with freq eqauls to the start of the band (21.000, 14.000 etc., usually notes) are ignored
+- HamQTH added to dx clusters list
+- fixed reading A-index (was 1 even when actually was 10)
+- /MM, /AM and stations with unknown DXCC country didn't appear in bandmap
+- database update hangs
+- fixed xml request address of qrz.com
+- DXCC CFM count function didn't uses eQSL cfm QSO
+- fixed reading mode from FT-920 (returned MEMO as VFO)
+- fixed bug in dxcluster caused program crashed randomly
+- program didn't apply eQSL rcvd when the band was in lowercase
+
 * Tue Aug 14 2012 Eric "Sparks" Christensen <sparks@fedoraproject.org> - 1.5.1-1
 - Initial package
