@@ -1,6 +1,6 @@
 Name:		cqrlog
 Version:	1.5.2
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	An amateur radio contact logging program
 
 Group:		Applications/Databases
@@ -10,6 +10,9 @@ Source0:	http://www.cqrlog.com/files/%{name}_%{version}/%{name}_%{version}.deb.s
 Patch0:		cqrlog.makefile.patch
 Patch1:		cqrlog.desktop.patch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
+
+# fpc not available on these arches
+ExcludeArch:	s390 s390x
 
 BuildRequires:	fpc
 BuildRequires:	lazarus
@@ -147,6 +150,9 @@ iconv -f iso8859-1 -t utf-8 %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt > 
 %{_mandir}/man1/cqrlog.1.gz
 
 %changelog
+* Tue Oct 9 2012 Dan Horák <dan[at]danny.cz> - 1.5.2-2
+- set ExcludeArch to match fpc
+
 * Mon Oct 8 2012 Eric "Sparks" Christensen <sparks@fedoraproject.org> - 1.5.2-1
 - added CTRL+W hotkey to send spots to dxcluster
 - DX cluster shows also country name next to the spot (must be enabled in Prefereces)
