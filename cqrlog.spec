@@ -1,6 +1,6 @@
 Name:		cqrlog
 Version:	1.5.2
-Release:	2%{?dist}
+Release:	3%{?dist}
 Summary:	An amateur radio contact logging program
 
 Group:		Applications/Databases
@@ -150,6 +150,9 @@ iconv -f iso8859-1 -t utf-8 %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt > 
 %{_mandir}/man1/cqrlog.1.gz
 
 %changelog
+* Wed Feb 13 2013 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.5.2-3
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_19_Mass_Rebuild
+
 * Tue Oct 9 2012 Dan Horák <dan[at]danny.cz> - 1.5.2-2
 - set ExcludeArch to match fpc
 
