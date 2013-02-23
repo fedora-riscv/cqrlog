@@ -1,6 +1,6 @@
 Name:		cqrlog
 Version:	1.5.2
-Release:	4%{?dist}
+Release:	5%{?dist}
 Summary:	An amateur radio contact logging program
 
 Group:		Applications/Databases
@@ -150,7 +150,10 @@ iconv -f iso8859-1 -t utf-8 %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt > 
 %{_mandir}/man1/cqrlog.1.gz
 
 %changelog
-* Fri Feb 22 2013 Eric "Sparks" Christensne - 1.5.2-4
+* Fri Feb 22 2013 Eric "Sparks" Christensen - 1.5.2-5
+- Repaired desktop category
+
+* Fri Feb 22 2013 Eric "Sparks" Christensen - 1.5.2-4
 - Changed openssl-devel from BuildRequires to Requires as it is needed for LoTW functionality
 
 * Wed Feb 13 2013 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.5.2-3

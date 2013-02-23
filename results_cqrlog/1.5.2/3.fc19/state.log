@@ -1,0 +1,21 @@
+2012-12-20 21:39:26,452 - Mock Version: 1.1.28
+2012-12-20 21:39:26,461 - Start: cleaning yum metadata
+2012-12-20 21:39:26,720 - Finish: cleaning yum metadata
+2012-12-20 21:39:26,733 - Start: device setup
+2012-12-20 21:39:26,735 - Finish: device setup
+2012-12-20 21:39:26,735 - Start: yum update
+2012-12-20 21:49:56,777 - Finish: yum update
+2012-12-20 21:50:03,026 - Start: creating cache
+2012-12-20 21:50:07,887 - Finish: creating cache
+2012-12-20 21:50:08,001 - Finish: lock buildroot
+2012-12-20 21:50:08,001 - Finish: chroot init
+2012-12-20 21:50:08,058 - Start: build phase for cqrlog-1.5.2-3.fc19.src.rpm
+2012-12-20 21:50:08,059 - Start: device setup
+2012-12-20 21:50:08,063 - Finish: device setup
+2012-12-20 21:50:08,132 - Start: build setup for cqrlog-1.5.2-3.fc19.src.rpm
+2012-12-20 22:03:12,889 - Finish: build setup for cqrlog-1.5.2-3.fc19.src.rpm
+2012-12-20 22:03:12,890 - Start: rpmbuild -bb cqrlog-1.5.2-3.fc19.src.rpm
+2012-12-20 22:03:13,552 - Start: lock buildroot
+2012-12-20 22:03:13,552 - Start: clean chroot
+2012-12-20 22:03:14,763 - Finish: clean chroot
+2012-12-20 22:03:14,763 - Finish: lock buildroot

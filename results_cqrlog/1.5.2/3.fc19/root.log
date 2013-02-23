@@ -1,0 +1,905 @@
+INFO backend.py:980:  Mock Version: 1.1.28
+DEBUG backend.py:311:  rootdir = /var/lib/mock/fedora-rawhide-x86_64/root/
+DEBUG backend.py:312:  resultdir = /home/christensene/Projects/Fedora/cqrlog/results_cqrlog/1.5.2/3.fc19
+INFO backend.py:315:  calling preinit hooks
+DEBUG util.py:62:  ensuring that dir exists: /var/cache/mock/fedora-rawhide-x86_64/root_cache/
+DEBUG util.py:62:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/var/cache/yum
+DEBUG util.py:65:  creating dir: /var/lib/mock/fedora-rawhide-x86_64/root/var/cache/yum
+DEBUG util.py:62:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/tmp/ccache
+DEBUG util.py:65:  creating dir: /var/lib/mock/fedora-rawhide-x86_64/root/tmp/ccache
+DEBUG util.py:62:  ensuring that dir exists: /var/cache/mock/fedora-rawhide-x86_64/ccache/
+DEBUG backend.py:482:  create skeleton dirs
+DEBUG util.py:62:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/var/lib/rpm
+DEBUG util.py:65:  creating dir: /var/lib/mock/fedora-rawhide-x86_64/root/var/lib/rpm
+DEBUG util.py:62:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/var/lib/yum
+DEBUG util.py:65:  creating dir: /var/lib/mock/fedora-rawhide-x86_64/root/var/lib/yum
+DEBUG util.py:62:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/var/lib/dbus
+DEBUG util.py:65:  creating dir: /var/lib/mock/fedora-rawhide-x86_64/root/var/lib/dbus
+DEBUG util.py:62:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/var/log
+DEBUG util.py:65:  creating dir: /var/lib/mock/fedora-rawhide-x86_64/root/var/log
+DEBUG util.py:62:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/var/lock/rpm
+DEBUG util.py:65:  creating dir: /var/lib/mock/fedora-rawhide-x86_64/root/var/lock/rpm
+DEBUG util.py:62:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/var/cache/yum
+DEBUG util.py:62:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/etc/rpm
+DEBUG util.py:65:  creating dir: /var/lib/mock/fedora-rawhide-x86_64/root/etc/rpm
+DEBUG util.py:62:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/tmp
+DEBUG util.py:62:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/tmp/ccache
+DEBUG util.py:62:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/var/tmp
+DEBUG util.py:65:  creating dir: /var/lib/mock/fedora-rawhide-x86_64/root/var/tmp
+DEBUG util.py:62:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/etc/yum.repos.d
+DEBUG util.py:65:  creating dir: /var/lib/mock/fedora-rawhide-x86_64/root/etc/yum.repos.d
+DEBUG util.py:62:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/etc/yum
+DEBUG util.py:65:  creating dir: /var/lib/mock/fedora-rawhide-x86_64/root/etc/yum
+DEBUG util.py:62:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/proc
+DEBUG util.py:65:  creating dir: /var/lib/mock/fedora-rawhide-x86_64/root/proc
+DEBUG util.py:62:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/sys
+DEBUG util.py:65:  creating dir: /var/lib/mock/fedora-rawhide-x86_64/root/sys
+DEBUG backend.py:504:  touch required files
+DEBUG util.py:73:  touching file: /var/lib/mock/fedora-rawhide-x86_64/root/etc/mtab
+DEBUG util.py:73:  touching file: /var/lib/mock/fedora-rawhide-x86_64/root/etc/fstab
+DEBUG util.py:73:  touching file: /var/lib/mock/fedora-rawhide-x86_64/root/var/log/yum.log
+DEBUG backend.py:330:  configure yum
+DEBUG backend.py:345:  configure yum priorities
+DEBUG util.py:62:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/etc/yum/pluginconf.d
+DEBUG util.py:65:  creating dir: /var/lib/mock/fedora-rawhide-x86_64/root/etc/yum/pluginconf.d
+DEBUG backend.py:354:  configure yum rhnplugin
+DEBUG util.py:62:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/etc/yum/pluginconf.d
+DEBUG util.py:88:  remove tree: /var/lib/mock/fedora-rawhide-x86_64/root/dev
+DEBUG util.py:62:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/dev/pts
+DEBUG util.py:65:  creating dir: /var/lib/mock/fedora-rawhide-x86_64/root/dev/pts
+DEBUG util.py:62:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/dev/shm
+DEBUG util.py:65:  creating dir: /var/lib/mock/fedora-rawhide-x86_64/root/dev/shm
+DEBUG backend.py:449:  kver == 3.6.10-2.fc17.x86_64
+DEBUG util.py:314:  Executing command: ['/bin/mount', '-n', '-t', 'proc', 'proc', '/var/lib/mock/fedora-rawhide-x86_64/root/proc'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:354:  Child return code was: 0
+DEBUG util.py:314:  Executing command: ['/bin/mount', '-n', '-t', 'sysfs', 'mock_chroot_sys', '/var/lib/mock/fedora-rawhide-x86_64/root/sys'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:354:  Child return code was: 0
+DEBUG util.py:314:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', 'mock_chroot_shmfs', '/var/lib/mock/fedora-rawhide-x86_64/root/dev/shm'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:354:  Child return code was: 0
+DEBUG util.py:314:  Executing command: ['/bin/mount', '-n', '-t', 'devpts', '-o', 'gid=5,mode=0620,ptmxmode=0666,newinstance', 'mock_chroot_devpts', '/var/lib/mock/fedora-rawhide-x86_64/root/dev/pts'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:354:  Child return code was: 0
+DEBUG util.py:314:  Executing command: ['/bin/mount', '-n', '--bind', '/var/cache/mock/fedora-rawhide-x86_64/yum_cache/', '/var/lib/mock/fedora-rawhide-x86_64/root/var/cache/yum'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:354:  Child return code was: 0
+DEBUG util.py:314:  Executing command: ['/bin/mount', '-n', '--bind', '/var/cache/mock/fedora-rawhide-x86_64/ccache/', '/var/lib/mock/fedora-rawhide-x86_64/root/tmp/ccache'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:354:  Child return code was: 0
+DEBUG util.py:314:  Executing command: ['/bin/mount', '-n', '--bind', '/tmp/mock-selinux-plugin.eaGbQT', '/var/lib/mock/fedora-rawhide-x86_64/root/proc/filesystems'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:354:  Child return code was: 0
+DEBUG backend.py:912:  ['/usr/bin/yum', '--installroot', '/var/lib/mock/fedora-rawhide-x86_64/root/', 'groupinstall', 'buildsys-build']
+DEBUG util.py:314:  Executing command: ['/usr/bin/yum', '--installroot', '/var/lib/mock/fedora-rawhide-x86_64/root/', 'groupinstall', 'buildsys-build', '--setopt=tsflags=nocontexts'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'CCACHE_DIR': '/tmp/ccache', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'CCACHE_UMASK': '002'}
+DEBUG util.py:264:  ftp://mirror.cs.princeton.edu/pub/mirrors/fedora/linux/development/rawhide/x86_64/os/repodata/9126630b367524edc430d769b45a544db334adfdb6888dc032d7b1162eb4cd37-primary.sqlite.bz2: [Errno 14] FTP Error 550 : ftp://mirror.cs.princeton.edu/pub/mirrors/fedora/linux/development/rawhide/x86_64/os/repodata/9126630b367524edc430d769b45a544db334adfdb6888dc032d7b1162eb4cd37-primary.sqlite.bz2 
+DEBUG util.py:264:  Trying other mirror.
+DEBUG util.py:264:  http://fedora.mirror.constant.com/linux/development/rawhide/x86_64/os/repodata/9126630b367524edc430d769b45a544db334adfdb6888dc032d7b1162eb4cd37-primary.sqlite.bz2: [Errno 14] HTTP Error 404 - Not Found : http://fedora.mirror.constant.com/linux/development/rawhide/x86_64/os/repodata/9126630b367524edc430d769b45a544db334adfdb6888dc032d7b1162eb4cd37-primary.sqlite.bz2
+DEBUG util.py:264:  Trying other mirror.
+DEBUG util.py:264:  ================================================================================
+DEBUG util.py:264:   Package                   Arch      Version                    Repository
+DEBUG util.py:264:                                                                             Size
+DEBUG util.py:264:  ================================================================================
+DEBUG util.py:264:  Installing:
+DEBUG util.py:264:   bash                      x86_64    4.2.39-3.fc19              fedora    992 k
+DEBUG util.py:264:   bzip2                     x86_64    1.0.6-7.fc19               fedora     50 k
+DEBUG util.py:264:   coreutils                 x86_64    8.20-4.fc19                fedora    3.2 M
+DEBUG util.py:264:   cpio                      x86_64    2.11-15.fc19               fedora    207 k
+DEBUG util.py:264:   diffutils                 x86_64    3.2-11.fc19                fedora    269 k
+DEBUG util.py:264:   fedora-release            noarch    19-0.1                     fedora     26 k
+DEBUG util.py:264:   findutils                 x86_64    1:4.5.10-7.fc19            fedora    539 k
+DEBUG util.py:264:   gawk                      x86_64    4.0.1-2.fc18               fedora    855 k
+DEBUG util.py:264:   gcc                       x86_64    4.7.2-9.fc19               fedora     14 M
+DEBUG util.py:264:   gcc-c++                   x86_64    4.7.2-9.fc19               fedora    5.9 M
+DEBUG util.py:264:   grep                      x86_64    2.14-2.fc19                fedora    328 k
+DEBUG util.py:264:   gzip                      x86_64    1.5-3.fc18                 fedora    128 k
+DEBUG util.py:264:   info                      x86_64    4.13a-19.fc19              fedora    187 k
+DEBUG util.py:264:   make                      x86_64    1:3.82-13.fc19             fedora    418 k
+DEBUG util.py:264:   patch                     x86_64    2.7.1-1.fc19               fedora    107 k
+DEBUG util.py:264:   redhat-rpm-config         noarch    9.1.0-38.fc19              fedora     69 k
+DEBUG util.py:264:   rpm-build                 x86_64    4.11.0-0.beta1.1.fc19      fedora    131 k
+DEBUG util.py:264:   sed                       x86_64    4.2.1-10.fc18              fedora    217 k
+DEBUG util.py:264:   shadow-utils              x86_64    2:4.1.5.1-1.fc19           fedora    1.1 M
+DEBUG util.py:264:   tar                       x86_64    2:1.26-15.fc19             fedora    839 k
+DEBUG util.py:264:   unzip                     x86_64    6.0-7.fc19                 fedora    159 k
+DEBUG util.py:264:   util-linux                x86_64    2.22.2-1.fc19              fedora    1.7 M
+DEBUG util.py:264:   which                     x86_64    2.20-4.fc18                fedora     40 k
+DEBUG util.py:264:   xz                        x86_64    5.1.2-2alpha.fc18          fedora    199 k
+DEBUG util.py:264:  Installing for dependencies:
+DEBUG util.py:264:   audit-libs                x86_64    2.2.2-2.fc19               fedora     72 k
+DEBUG util.py:264:   basesystem                noarch    10.0-7.fc18                fedora    4.7 k
+DEBUG util.py:264:   binutils                  x86_64    2.23.51.0.6-1.fc19         fedora    4.4 M
+DEBUG util.py:264:   bzip2-libs                x86_64    1.0.6-7.fc19               fedora     37 k
+DEBUG util.py:264:   ca-certificates           noarch    2012.86-1.fc19             fedora    399 k
+DEBUG util.py:264:   chkconfig                 x86_64    1.3.59-2.fc18              fedora    164 k
+DEBUG util.py:264:   cloog-ppl                 x86_64    1:0.15.11-5.fc19           fedora     95 k
+DEBUG util.py:264:   cpp                       x86_64    4.7.2-9.fc19               fedora    4.8 M
+DEBUG util.py:264:   cracklib                  x86_64    2.8.22-2.fc19              fedora     76 k
+DEBUG util.py:264:   cracklib-dicts            x86_64    2.8.22-2.fc19              fedora    3.5 M
+DEBUG util.py:264:   cryptsetup-libs           x86_64    1.5.1-1.fc19               fedora    140 k
+DEBUG util.py:264:   curl                      x86_64    7.28.1-1.fc19              fedora    254 k
+DEBUG util.py:264:   cyrus-sasl-lib            x86_64    2.1.25-2.fc19              fedora    149 k
+DEBUG util.py:264:   dbus                      x86_64    1:1.6.8-2.fc18             fedora    297 k
+DEBUG util.py:264:   dbus-libs                 x86_64    1:1.6.8-2.fc18             fedora    146 k
+DEBUG util.py:264:   device-mapper             x86_64    1.02.77-4.fc19             fedora    167 k
+DEBUG util.py:264:   device-mapper-libs        x86_64    1.02.77-4.fc19             fedora    194 k
+DEBUG util.py:264:   dwz                       x86_64    0.8-1.fc19                 fedora     97 k
+DEBUG util.py:264:   elfutils                  x86_64    0.155-1.fc19               fedora    243 k
+DEBUG util.py:264:   elfutils-libelf           x86_64    0.155-1.fc19               fedora    177 k
+DEBUG util.py:264:   elfutils-libs             x86_64    0.155-1.fc19               fedora    206 k
+DEBUG util.py:264:   expat                     x86_64    2.1.0-4.fc18               fedora     80 k
+DEBUG util.py:264:   fedora-release-rawhide    noarch    19-0.1                     fedora     10 k
+DEBUG util.py:264:   file                      x86_64    5.11-7.fc19                fedora     51 k
+DEBUG util.py:264:   file-libs                 x86_64    5.11-7.fc19                fedora    331 k
+DEBUG util.py:264:   filesystem                x86_64    3.2-2.fc19                 fedora    1.0 M
+DEBUG util.py:264:   fipscheck                 x86_64    1.3.1-2.fc18               fedora     20 k
+DEBUG util.py:264:   fipscheck-lib             x86_64    1.3.1-2.fc18               fedora    8.9 k
+DEBUG util.py:264:   gdb                       x86_64    7.5.0.20120926-25.fc18     fedora    2.0 M
+DEBUG util.py:264:   gdbm                      x86_64    1.10-4.fc19                fedora     69 k
+DEBUG util.py:264:   glib2                     x86_64    2.35.2-1.fc19              fedora    2.1 M
+DEBUG util.py:264:   glibc                     x86_64    2.16.90-39.fc19            fedora    3.6 M
+DEBUG util.py:264:   glibc-common              x86_64    2.16.90-39.fc19            fedora     11 M
+DEBUG util.py:264:   glibc-devel               x86_64    2.16.90-39.fc19            fedora    1.0 M
+DEBUG util.py:264:   glibc-headers             x86_64    2.16.90-39.fc19            fedora    641 k
+DEBUG util.py:264:   gmp                       x86_64    1:5.0.5-5.fc19             fedora    268 k
+DEBUG util.py:264:   gnupg2                    x86_64    2.0.19-6.fc19              fedora    1.4 M
+DEBUG util.py:264:   gnutls                    x86_64    2.12.21-2.fc19             fedora    398 k
+DEBUG util.py:264:   groff-base                x86_64    1.21-10.fc18               fedora    845 k
+DEBUG util.py:264:   hwdata                    noarch    0.242-1.fc19               fedora    1.0 M
+DEBUG util.py:264:   kernel-headers            x86_64    3.7.0-2.fc19               fedora    873 k
+DEBUG util.py:264:   keyutils-libs             x86_64    1.5.5-3.fc18               fedora     24 k
+DEBUG util.py:264:   kmod-libs                 x86_64    12-1.fc19                  fedora     42 k
+DEBUG util.py:264:   krb5-libs                 x86_64    1.11-1.fc19                fedora    776 k
+DEBUG util.py:264:   libacl                    x86_64    2.2.51-8.fc19              fedora     25 k
+DEBUG util.py:264:   libassuan                 x86_64    2.0.3-4.fc19               fedora     59 k
+DEBUG util.py:264:   libattr                   x86_64    2.4.46-8.fc19              fedora     17 k
+DEBUG util.py:264:   libblkid                  x86_64    2.22.2-1.fc19              fedora    147 k
+DEBUG util.py:264:   libcap                    x86_64    2.22-3.fc18                fedora     44 k
+DEBUG util.py:264:   libcap-ng                 x86_64    0.7.3-2.fc19               fedora     22 k
+DEBUG util.py:264:   libcom_err                x86_64    1.42.6-2.fc19              fedora     37 k
+DEBUG util.py:264:   libcurl                   x86_64    7.28.1-1.fc19              fedora    207 k
+DEBUG util.py:264:   libdb                     x86_64    5.3.21-4.fc19              fedora    689 k
+DEBUG util.py:264:   libdb-utils               x86_64    5.3.21-4.fc19              fedora     82 k
+DEBUG util.py:264:   libdb4                    x86_64    4.8.30-5.fc18              fedora    582 k
+DEBUG util.py:264:   libffi                    x86_64    3.0.10-3.fc19              fedora     26 k
+DEBUG util.py:264:   libgcc                    x86_64    4.7.2-9.fc19               fedora     82 k
+DEBUG util.py:264:   libgcrypt                 x86_64    1.5.0-8.fc19               fedora    244 k
+DEBUG util.py:264:   libgomp                   x86_64    4.7.2-9.fc19               fedora     94 k
+DEBUG util.py:264:   libgpg-error              x86_64    1.10-3.fc18                fedora     77 k
+DEBUG util.py:264:   libidn                    x86_64    1.26-1.fc19                fedora    206 k
+DEBUG util.py:264:   libmicrohttpd             x86_64    0.9.22-1.fc19              fedora     50 k
+DEBUG util.py:264:   libmount                  x86_64    2.22.2-1.fc19              fedora    150 k
+DEBUG util.py:264:   libmpc                    x86_64    0.9-3.fc18.2               fedora     49 k
+DEBUG util.py:264:   libpwquality              x86_64    1.2.0-1.fc19               fedora     66 k
+DEBUG util.py:264:   libselinux                x86_64    2.1.12-9.fc19              fedora    134 k
+DEBUG util.py:264:   libsemanage               x86_64    2.1.9-2.fc19               fedora    115 k
+DEBUG util.py:264:   libsepol                  x86_64    2.1.8-3.fc19               fedora    148 k
+DEBUG util.py:264:   libssh2                   x86_64    1.4.3-1.fc19               fedora    131 k
+DEBUG util.py:264:   libstdc++                 x86_64    4.7.2-9.fc19               fedora    275 k
+DEBUG util.py:264:   libstdc++-devel           x86_64    4.7.2-9.fc19               fedora    1.4 M
+DEBUG util.py:264:   libtasn1                  x86_64    2.14-1.fc19                fedora    321 k
+DEBUG util.py:264:   libutempter               x86_64    1.1.6-1.fc19               fedora     23 k
+DEBUG util.py:264:   libuuid                   x86_64    2.22.2-1.fc19              fedora     66 k
+DEBUG util.py:264:   libxml2                   x86_64    2.9.0-3.fc19               fedora    650 k
+DEBUG util.py:264:   lua                       x86_64    5.1.4-11.fc18              fedora    193 k
+DEBUG util.py:264:   mpfr                      x86_64    3.1.1-1.fc18               fedora    199 k
+DEBUG util.py:264:   ncurses                   x86_64    5.9-7.20121017.fc19        fedora    297 k
+DEBUG util.py:264:   ncurses-base              x86_64    5.9-7.20121017.fc19        fedora     66 k
+DEBUG util.py:264:   ncurses-libs              x86_64    5.9-7.20121017.fc19        fedora    266 k
+DEBUG util.py:264:   nspr                      x86_64    4.9.4-1.fc19               fedora    118 k
+DEBUG util.py:264:   nss                       x86_64    3.14.1-1.fc19              fedora    821 k
+DEBUG util.py:264:   nss-myhostname            x86_64    0.3-3.fc18                 fedora     23 k
+DEBUG util.py:264:   nss-softokn               x86_64    3.14.1-2.fc19              fedora    281 k
+DEBUG util.py:264:   nss-softokn-freebl        x86_64    3.14.1-2.fc19              fedora    150 k
+DEBUG util.py:264:   nss-sysinit               x86_64    3.14.1-1.fc19              fedora     39 k
+DEBUG util.py:264:   nss-tools                 x86_64    3.14.1-1.fc19              fedora    383 k
+DEBUG util.py:264:   nss-util                  x86_64    3.14.1-1.fc19              fedora     65 k
+DEBUG util.py:264:   openldap                  x86_64    2.4.33-3.fc19              fedora    325 k
+DEBUG util.py:264:   openssl-libs              x86_64    1:1.0.1c-10.fc19           fedora    849 k
+DEBUG util.py:264:   p11-kit                   x86_64    0.14-1.fc18                fedora     43 k
+DEBUG util.py:264:   pam                       x86_64    1.1.6-3.fc19               fedora    712 k
+DEBUG util.py:264:   pcre                      x86_64    8.32-1.fc19                fedora    420 k
+DEBUG util.py:264:   perl                      x86_64    4:5.16.2-244.fc19          fedora    9.8 M
+DEBUG util.py:264:   perl-Carp                 noarch    1.26-240.fc19              fedora     18 k
+DEBUG util.py:264:   perl-Filter               x86_64    1.45-4.fc18                fedora     75 k
+DEBUG util.py:264:   perl-HTTP-Tiny            noarch    0.017-244.fc19             fedora     50 k
+DEBUG util.py:264:   perl-Module-Pluggable     noarch    1:4.00-244.fc19            fedora     51 k
+DEBUG util.py:264:   perl-PathTools            x86_64    3.39.2-244.fc19            fedora    106 k
+DEBUG util.py:264:   perl-Pod-Escapes          noarch    1:1.04-244.fc19            fedora     43 k
+DEBUG util.py:264:   perl-Pod-Parser           noarch    1.51-244.fc19              fedora    154 k
+DEBUG util.py:264:   perl-Pod-Perldoc          noarch    3.17.00-241.fc19           fedora     78 k
+DEBUG util.py:264:   perl-Pod-Simple           noarch    1:3.20-244.fc19            fedora    232 k
+DEBUG util.py:264:   perl-Scalar-List-Utils    x86_64    1.25-240.fc19              fedora     33 k
+DEBUG util.py:264:   perl-Socket               x86_64    2.007-1.fc19               fedora     47 k
+DEBUG util.py:264:   perl-libs                 x86_64    4:5.16.2-244.fc19          fedora    664 k
+DEBUG util.py:264:   perl-macros               x86_64    4:5.16.2-244.fc19          fedora     36 k
+DEBUG util.py:264:   perl-parent               noarch    1:0.225-242.fc19           fedora     11 k
+DEBUG util.py:264:   perl-podlators            noarch    2.4.2-3.fc19               fedora    107 k
+DEBUG util.py:264:   perl-srpm-macros          noarch    1-5.fc18                   fedora    4.2 k
+DEBUG util.py:264:   perl-threads              x86_64    1.86-241.fc19              fedora     48 k
+DEBUG util.py:264:   perl-threads-shared       x86_64    1.42-2.fc19                fedora     37 k
+DEBUG util.py:264:   pinentry                  x86_64    0.8.1-9.fc19               fedora     70 k
+DEBUG util.py:264:   pkgconfig                 x86_64    1:0.27-1.fc18              fedora     52 k
+DEBUG util.py:264:   popt                      x86_64    1.13-13.fc19               fedora     40 k
+DEBUG util.py:264:   ppl                       x86_64    1.0-3.fc19.2               fedora    1.5 M
+DEBUG util.py:264:   pth                       x86_64    2.0.7-17.fc18              fedora     86 k
+DEBUG util.py:264:   python-libs               x86_64    2.7.3-14.fc19              fedora    5.6 M
+DEBUG util.py:264:   qrencode-libs             x86_64    3.3.1-4.fc19               fedora     47 k
+DEBUG util.py:264:   readline                  x86_64    6.2-5.fc18                 fedora    188 k
+DEBUG util.py:264:   rpm                       x86_64    4.11.0-0.beta1.1.fc19      fedora    1.1 M
+DEBUG util.py:264:   rpm-build-libs            x86_64    4.11.0-0.beta1.1.fc19      fedora     95 k
+DEBUG util.py:264:   rpm-libs                  x86_64    4.11.0-0.beta1.1.fc19      fedora    256 k
+DEBUG util.py:264:   setup                     noarch    2.8.62-1.fc19              fedora    160 k
+DEBUG util.py:264:   shared-mime-info          x86_64    1.0-7.fc19                 fedora    352 k
+DEBUG util.py:264:   sqlite                    x86_64    3.7.15-1.fc19              fedora    374 k
+DEBUG util.py:264:   systemd                   x86_64    196-4.fc19                 fedora    2.1 M
+DEBUG util.py:264:   systemd-libs              x86_64    196-4.fc19                 fedora    126 k
+DEBUG util.py:264:   tcp_wrappers-libs         x86_64    7.6-70.fc18                fedora     64 k
+DEBUG util.py:264:   tzdata                    noarch    2012j-1.fc19               fedora    433 k
+DEBUG util.py:264:   ustr                      x86_64    1.0.4-13.fc18              fedora     88 k
+DEBUG util.py:264:   xz-libs                   x86_64    5.1.2-2alpha.fc18          fedora    100 k
+DEBUG util.py:264:   zip                       x86_64    3.0-5.fc18                 fedora    261 k
+DEBUG util.py:264:   zlib                      x86_64    1.2.7-9.fc19               fedora     87 k
+DEBUG util.py:264:  Transaction Summary
+DEBUG util.py:264:  ================================================================================
+DEBUG util.py:264:  Install  24 Packages (+134 Dependent packages)
+DEBUG util.py:264:  Total download size: 111 M
+DEBUG util.py:264:  Installed size: 424 M
+DEBUG util.py:264:  ftp://ftp.wallawalla.edu/pub/mirrors/fedora/linux/development/rawhide/x86_64/os/Packages/b/binutils-2.23.51.0.6-1.fc19.x86_64.rpm: [Errno 12] Timeout on ftp://ftp.wallawalla.edu/pub/mirrors/fedora/linux/development/rawhide/x86_64/os/Packages/b/binutils-2.23.51.0.6-1.fc19.x86_64.rpm: (28, '')
+DEBUG util.py:264:  Trying other mirror.
+DEBUG util.py:264:  ftp://ftp.nrc.ca/pub/systems/linux/redhat/fedora/linux/development/rawhide/x86_64/os/Packages/c/coreutils-8.20-4.fc19.x86_64.rpm: [Errno 14] FTP Error 530 : ftp://ftp.nrc.ca/pub/systems/linux/redhat/fedora/linux/development/rawhide/x86_64/os/Packages/c/coreutils-8.20-4.fc19.x86_64.rpm 
+DEBUG util.py:264:  Trying other mirror.
+DEBUG util.py:264:  ftp://ftp.nrc.ca/pub/systems/linux/redhat/fedora/linux/development/rawhide/x86_64/os/Packages/c/cpp-4.7.2-9.fc19.x86_64.rpm: [Errno 14] FTP Error 530 : ftp://ftp.nrc.ca/pub/systems/linux/redhat/fedora/linux/development/rawhide/x86_64/os/Packages/c/cpp-4.7.2-9.fc19.x86_64.rpm 
+DEBUG util.py:264:  Trying other mirror.
+DEBUG util.py:264:  warning: /etc/hosts created as /etc/hosts.rpmnew
+DEBUG util.py:264:  Installed:
+DEBUG util.py:264:    bash.x86_64 0:4.2.39-3.fc19                                                   
+DEBUG util.py:264:    bzip2.x86_64 0:1.0.6-7.fc19                                                   
+DEBUG util.py:264:    coreutils.x86_64 0:8.20-4.fc19                                                
+DEBUG util.py:264:    cpio.x86_64 0:2.11-15.fc19                                                    
+DEBUG util.py:264:    diffutils.x86_64 0:3.2-11.fc19                                                
+DEBUG util.py:264:    fedora-release.noarch 0:19-0.1                                                
+DEBUG util.py:264:    findutils.x86_64 1:4.5.10-7.fc19                                              
+DEBUG util.py:264:    gawk.x86_64 0:4.0.1-2.fc18                                                    
+DEBUG util.py:264:    gcc.x86_64 0:4.7.2-9.fc19                                                     
+DEBUG util.py:264:    gcc-c++.x86_64 0:4.7.2-9.fc19                                                 
+DEBUG util.py:264:    grep.x86_64 0:2.14-2.fc19                                                     
+DEBUG util.py:264:    gzip.x86_64 0:1.5-3.fc18                                                      
+DEBUG util.py:264:    info.x86_64 0:4.13a-19.fc19                                                   
+DEBUG util.py:264:    make.x86_64 1:3.82-13.fc19                                                    
+DEBUG util.py:264:    patch.x86_64 0:2.7.1-1.fc19                                                   
+DEBUG util.py:264:    redhat-rpm-config.noarch 0:9.1.0-38.fc19                                      
+DEBUG util.py:264:    rpm-build.x86_64 0:4.11.0-0.beta1.1.fc19                                      
+DEBUG util.py:264:    sed.x86_64 0:4.2.1-10.fc18                                                    
+DEBUG util.py:264:    shadow-utils.x86_64 2:4.1.5.1-1.fc19                                          
+DEBUG util.py:264:    tar.x86_64 2:1.26-15.fc19                                                     
+DEBUG util.py:264:    unzip.x86_64 0:6.0-7.fc19                                                     
+DEBUG util.py:264:    util-linux.x86_64 0:2.22.2-1.fc19                                             
+DEBUG util.py:264:    which.x86_64 0:2.20-4.fc18                                                    
+DEBUG util.py:264:    xz.x86_64 0:5.1.2-2alpha.fc18                                                 
+DEBUG util.py:264:  Dependency Installed:
+DEBUG util.py:264:    audit-libs.x86_64 0:2.2.2-2.fc19                                              
+DEBUG util.py:264:    basesystem.noarch 0:10.0-7.fc18                                               
+DEBUG util.py:264:    binutils.x86_64 0:2.23.51.0.6-1.fc19                                          
+DEBUG util.py:264:    bzip2-libs.x86_64 0:1.0.6-7.fc19                                              
+DEBUG util.py:264:    ca-certificates.noarch 0:2012.86-1.fc19                                       
+DEBUG util.py:264:    chkconfig.x86_64 0:1.3.59-2.fc18                                              
+DEBUG util.py:264:    cloog-ppl.x86_64 1:0.15.11-5.fc19                                             
+DEBUG util.py:264:    cpp.x86_64 0:4.7.2-9.fc19                                                     
+DEBUG util.py:264:    cracklib.x86_64 0:2.8.22-2.fc19                                               
+DEBUG util.py:264:    cracklib-dicts.x86_64 0:2.8.22-2.fc19                                         
+DEBUG util.py:264:    cryptsetup-libs.x86_64 0:1.5.1-1.fc19                                         
+DEBUG util.py:264:    curl.x86_64 0:7.28.1-1.fc19                                                   
+DEBUG util.py:264:    cyrus-sasl-lib.x86_64 0:2.1.25-2.fc19                                         
+DEBUG util.py:264:    dbus.x86_64 1:1.6.8-2.fc18                                                    
+DEBUG util.py:264:    dbus-libs.x86_64 1:1.6.8-2.fc18                                               
+DEBUG util.py:264:    device-mapper.x86_64 0:1.02.77-4.fc19                                         
+DEBUG util.py:264:    device-mapper-libs.x86_64 0:1.02.77-4.fc19                                    
+DEBUG util.py:264:    dwz.x86_64 0:0.8-1.fc19                                                       
+DEBUG util.py:264:    elfutils.x86_64 0:0.155-1.fc19                                                
+DEBUG util.py:264:    elfutils-libelf.x86_64 0:0.155-1.fc19                                         
+DEBUG util.py:264:    elfutils-libs.x86_64 0:0.155-1.fc19                                           
+DEBUG util.py:264:    expat.x86_64 0:2.1.0-4.fc18                                                   
+DEBUG util.py:264:    fedora-release-rawhide.noarch 0:19-0.1                                        
+DEBUG util.py:264:    file.x86_64 0:5.11-7.fc19                                                     
+DEBUG util.py:264:    file-libs.x86_64 0:5.11-7.fc19                                                
+DEBUG util.py:264:    filesystem.x86_64 0:3.2-2.fc19                                                
+DEBUG util.py:264:    fipscheck.x86_64 0:1.3.1-2.fc18                                               
+DEBUG util.py:264:    fipscheck-lib.x86_64 0:1.3.1-2.fc18                                           
+DEBUG util.py:264:    gdb.x86_64 0:7.5.0.20120926-25.fc18                                           
+DEBUG util.py:264:    gdbm.x86_64 0:1.10-4.fc19                                                     
+DEBUG util.py:264:    glib2.x86_64 0:2.35.2-1.fc19                                                  
+DEBUG util.py:264:    glibc.x86_64 0:2.16.90-39.fc19                                                
+DEBUG util.py:264:    glibc-common.x86_64 0:2.16.90-39.fc19                                         
+DEBUG util.py:264:    glibc-devel.x86_64 0:2.16.90-39.fc19                                          
+DEBUG util.py:264:    glibc-headers.x86_64 0:2.16.90-39.fc19                                        
+DEBUG util.py:264:    gmp.x86_64 1:5.0.5-5.fc19                                                     
+DEBUG util.py:264:    gnupg2.x86_64 0:2.0.19-6.fc19                                                 
+DEBUG util.py:264:    gnutls.x86_64 0:2.12.21-2.fc19                                                
+DEBUG util.py:264:    groff-base.x86_64 0:1.21-10.fc18                                              
+DEBUG util.py:264:    hwdata.noarch 0:0.242-1.fc19                                                  
+DEBUG util.py:264:    kernel-headers.x86_64 0:3.7.0-2.fc19                                          
+DEBUG util.py:264:    keyutils-libs.x86_64 0:1.5.5-3.fc18                                           
+DEBUG util.py:264:    kmod-libs.x86_64 0:12-1.fc19                                                  
+DEBUG util.py:264:    krb5-libs.x86_64 0:1.11-1.fc19                                                
+DEBUG util.py:264:    libacl.x86_64 0:2.2.51-8.fc19                                                 
+DEBUG util.py:264:    libassuan.x86_64 0:2.0.3-4.fc19                                               
+DEBUG util.py:264:    libattr.x86_64 0:2.4.46-8.fc19                                                
+DEBUG util.py:264:    libblkid.x86_64 0:2.22.2-1.fc19                                               
+DEBUG util.py:264:    libcap.x86_64 0:2.22-3.fc18                                                   
+DEBUG util.py:264:    libcap-ng.x86_64 0:0.7.3-2.fc19                                               
+DEBUG util.py:264:    libcom_err.x86_64 0:1.42.6-2.fc19                                             
+DEBUG util.py:264:    libcurl.x86_64 0:7.28.1-1.fc19                                                
+DEBUG util.py:264:    libdb.x86_64 0:5.3.21-4.fc19                                                  
+DEBUG util.py:264:    libdb-utils.x86_64 0:5.3.21-4.fc19                                            
+DEBUG util.py:264:    libdb4.x86_64 0:4.8.30-5.fc18                                                 
+DEBUG util.py:264:    libffi.x86_64 0:3.0.10-3.fc19                                                 
+DEBUG util.py:264:    libgcc.x86_64 0:4.7.2-9.fc19                                                  
+DEBUG util.py:264:    libgcrypt.x86_64 0:1.5.0-8.fc19                                               
+DEBUG util.py:264:    libgomp.x86_64 0:4.7.2-9.fc19                                                 
+DEBUG util.py:264:    libgpg-error.x86_64 0:1.10-3.fc18                                             
+DEBUG util.py:264:    libidn.x86_64 0:1.26-1.fc19                                                   
+DEBUG util.py:264:    libmicrohttpd.x86_64 0:0.9.22-1.fc19                                          
+DEBUG util.py:264:    libmount.x86_64 0:2.22.2-1.fc19                                               
+DEBUG util.py:264:    libmpc.x86_64 0:0.9-3.fc18.2                                                  
+DEBUG util.py:264:    libpwquality.x86_64 0:1.2.0-1.fc19                                            
+DEBUG util.py:264:    libselinux.x86_64 0:2.1.12-9.fc19                                             
+DEBUG util.py:264:    libsemanage.x86_64 0:2.1.9-2.fc19                                             
+DEBUG util.py:264:    libsepol.x86_64 0:2.1.8-3.fc19                                                
+DEBUG util.py:264:    libssh2.x86_64 0:1.4.3-1.fc19                                                 
+DEBUG util.py:264:    libstdc++.x86_64 0:4.7.2-9.fc19                                               
+DEBUG util.py:264:    libstdc++-devel.x86_64 0:4.7.2-9.fc19                                         
+DEBUG util.py:264:    libtasn1.x86_64 0:2.14-1.fc19                                                 
+DEBUG util.py:264:    libutempter.x86_64 0:1.1.6-1.fc19                                             
+DEBUG util.py:264:    libuuid.x86_64 0:2.22.2-1.fc19                                                
+DEBUG util.py:264:    libxml2.x86_64 0:2.9.0-3.fc19                                                 
+DEBUG util.py:264:    lua.x86_64 0:5.1.4-11.fc18                                                    
+DEBUG util.py:264:    mpfr.x86_64 0:3.1.1-1.fc18                                                    
+DEBUG util.py:264:    ncurses.x86_64 0:5.9-7.20121017.fc19                                          
+DEBUG util.py:264:    ncurses-base.x86_64 0:5.9-7.20121017.fc19                                     
+DEBUG util.py:264:    ncurses-libs.x86_64 0:5.9-7.20121017.fc19                                     
+DEBUG util.py:264:    nspr.x86_64 0:4.9.4-1.fc19                                                    
+DEBUG util.py:264:    nss.x86_64 0:3.14.1-1.fc19                                                    
+DEBUG util.py:264:    nss-myhostname.x86_64 0:0.3-3.fc18                                            
+DEBUG util.py:264:    nss-softokn.x86_64 0:3.14.1-2.fc19                                            
+DEBUG util.py:264:    nss-softokn-freebl.x86_64 0:3.14.1-2.fc19                                     
+DEBUG util.py:264:    nss-sysinit.x86_64 0:3.14.1-1.fc19                                            
+DEBUG util.py:264:    nss-tools.x86_64 0:3.14.1-1.fc19                                              
+DEBUG util.py:264:    nss-util.x86_64 0:3.14.1-1.fc19                                               
+DEBUG util.py:264:    openldap.x86_64 0:2.4.33-3.fc19                                               
+DEBUG util.py:264:    openssl-libs.x86_64 1:1.0.1c-10.fc19                                          
+DEBUG util.py:264:    p11-kit.x86_64 0:0.14-1.fc18                                                  
+DEBUG util.py:264:    pam.x86_64 0:1.1.6-3.fc19                                                     
+DEBUG util.py:264:    pcre.x86_64 0:8.32-1.fc19                                                     
+DEBUG util.py:264:    perl.x86_64 4:5.16.2-244.fc19                                                 
+DEBUG util.py:264:    perl-Carp.noarch 0:1.26-240.fc19                                              
+DEBUG util.py:264:    perl-Filter.x86_64 0:1.45-4.fc18                                              
+DEBUG util.py:264:    perl-HTTP-Tiny.noarch 0:0.017-244.fc19                                        
+DEBUG util.py:264:    perl-Module-Pluggable.noarch 1:4.00-244.fc19                                  
+DEBUG util.py:264:    perl-PathTools.x86_64 0:3.39.2-244.fc19                                       
+DEBUG util.py:264:    perl-Pod-Escapes.noarch 1:1.04-244.fc19                                       
+DEBUG util.py:264:    perl-Pod-Parser.noarch 0:1.51-244.fc19                                        
+DEBUG util.py:264:    perl-Pod-Perldoc.noarch 0:3.17.00-241.fc19                                    
+DEBUG util.py:264:    perl-Pod-Simple.noarch 1:3.20-244.fc19                                        
+DEBUG util.py:264:    perl-Scalar-List-Utils.x86_64 0:1.25-240.fc19                                 
+DEBUG util.py:264:    perl-Socket.x86_64 0:2.007-1.fc19                                             
+DEBUG util.py:264:    perl-libs.x86_64 4:5.16.2-244.fc19                                            
+DEBUG util.py:264:    perl-macros.x86_64 4:5.16.2-244.fc19                                          
+DEBUG util.py:264:    perl-parent.noarch 1:0.225-242.fc19                                           
+DEBUG util.py:264:    perl-podlators.noarch 0:2.4.2-3.fc19                                          
+DEBUG util.py:264:    perl-srpm-macros.noarch 0:1-5.fc18                                            
+DEBUG util.py:264:    perl-threads.x86_64 0:1.86-241.fc19                                           
+DEBUG util.py:264:    perl-threads-shared.x86_64 0:1.42-2.fc19                                      
+DEBUG util.py:264:    pinentry.x86_64 0:0.8.1-9.fc19                                                
+DEBUG util.py:264:    pkgconfig.x86_64 1:0.27-1.fc18                                                
+DEBUG util.py:264:    popt.x86_64 0:1.13-13.fc19                                                    
+DEBUG util.py:264:    ppl.x86_64 0:1.0-3.fc19.2                                                     
+DEBUG util.py:264:    pth.x86_64 0:2.0.7-17.fc18                                                    
+DEBUG util.py:264:    python-libs.x86_64 0:2.7.3-14.fc19                                            
+DEBUG util.py:264:    qrencode-libs.x86_64 0:3.3.1-4.fc19                                           
+DEBUG util.py:264:    readline.x86_64 0:6.2-5.fc18                                                  
+DEBUG util.py:264:    rpm.x86_64 0:4.11.0-0.beta1.1.fc19                                            
+DEBUG util.py:264:    rpm-build-libs.x86_64 0:4.11.0-0.beta1.1.fc19                                 
+DEBUG util.py:264:    rpm-libs.x86_64 0:4.11.0-0.beta1.1.fc19                                       
+DEBUG util.py:264:    setup.noarch 0:2.8.62-1.fc19                                                  
+DEBUG util.py:264:    shared-mime-info.x86_64 0:1.0-7.fc19                                          
+DEBUG util.py:264:    sqlite.x86_64 0:3.7.15-1.fc19                                                 
+DEBUG util.py:264:    systemd.x86_64 0:196-4.fc19                                                   
+DEBUG util.py:264:    systemd-libs.x86_64 0:196-4.fc19                                              
+DEBUG util.py:264:    tcp_wrappers-libs.x86_64 0:7.6-70.fc18                                        
+DEBUG util.py:264:    tzdata.noarch 0:2012j-1.fc19                                                  
+DEBUG util.py:264:    ustr.x86_64 0:1.0.4-13.fc18                                                   
+DEBUG util.py:264:    xz-libs.x86_64 0:5.1.2-2alpha.fc18                                            
+DEBUG util.py:264:    zip.x86_64 0:3.0-5.fc18                                                       
+DEBUG util.py:264:    zlib.x86_64 0:1.2.7-9.fc19                                                    
+DEBUG util.py:354:  Child return code was: 0
+DEBUG util.py:88:  remove tree: /var/lib/mock/fedora-rawhide-x86_64/root/builddir
+DEBUG util.py:314:  Executing command: ['/usr/sbin/userdel', '-r', '-f', 'mockbuild'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'CCACHE_DIR': '/tmp/ccache', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'CCACHE_UMASK': '002'}
+DEBUG util.py:264:  userdel: user 'mockbuild' does not exist
+DEBUG util.py:354:  Child return code was: 6
+DEBUG util.py:314:  Executing command: ['/usr/sbin/groupdel', 'mockbuild'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'CCACHE_DIR': '/tmp/ccache', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'CCACHE_UMASK': '002'}
+DEBUG util.py:264:  groupdel: group 'mockbuild' does not exist
+DEBUG util.py:354:  Child return code was: 6
+DEBUG util.py:314:  Executing command: ['/usr/sbin/groupadd', '-g', '990', 'mockbuild'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'CCACHE_DIR': '/tmp/ccache', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'CCACHE_UMASK': '002'}
+DEBUG util.py:354:  Child return code was: 0
+DEBUG util.py:314:  Executing command: /usr/sbin/useradd -o -m -u 1000 -g 990 -d /builddir -n mockbuild with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'CCACHE_DIR': '/tmp/ccache', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'CCACHE_UMASK': '002'}
+DEBUG util.py:354:  Child return code was: 0
+DEBUG util.py:62:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/builddir/build/RPMS
+DEBUG util.py:65:  creating dir: /var/lib/mock/fedora-rawhide-x86_64/root/builddir/build/RPMS
+DEBUG util.py:62:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/builddir/build/SRPMS
+DEBUG util.py:65:  creating dir: /var/lib/mock/fedora-rawhide-x86_64/root/builddir/build/SRPMS
+DEBUG util.py:62:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/builddir/build/SOURCES
+DEBUG util.py:65:  creating dir: /var/lib/mock/fedora-rawhide-x86_64/root/builddir/build/SOURCES
+DEBUG util.py:62:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/builddir/build/SPECS
+DEBUG util.py:65:  creating dir: /var/lib/mock/fedora-rawhide-x86_64/root/builddir/build/SPECS
+DEBUG util.py:62:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/builddir/build/BUILD
+DEBUG util.py:65:  creating dir: /var/lib/mock/fedora-rawhide-x86_64/root/builddir/build/BUILD
+DEBUG util.py:62:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/builddir/build/BUILDROOT
+DEBUG util.py:65:  creating dir: /var/lib/mock/fedora-rawhide-x86_64/root/builddir/build/BUILDROOT
+DEBUG util.py:62:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/builddir/build/originals
+DEBUG util.py:65:  creating dir: /var/lib/mock/fedora-rawhide-x86_64/root/builddir/build/originals
+DEBUG util.py:314:  Executing command: ['sync'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:354:  Child return code was: 0
+DEBUG util.py:314:  Executing command: ['tar', '--one-file-system', '--use-compress-program', 'pigz', '-cf', '/var/cache/mock/fedora-rawhide-x86_64/root_cache/cache.tar.gz', '-C', '/var/lib/mock/fedora-rawhide-x86_64/root/', '--exclude=./proc', '--exclude=./sys', '--exclude=./dev', '--exclude=./tmp/ccache', '--exclude=./var/cache/yum', '--exclude=./var/lib/mock/fedora-rawhide-x86_64/root/proc', '--exclude=./var/lib/mock/fedora-rawhide-x86_64/root/sys', '--exclude=./var/lib/mock/fedora-rawhide-x86_64/root/dev/shm', '--exclude=./var/lib/mock/fedora-rawhide-x86_64/root/dev/pts', '--exclude=./var/lib/mock/fedora-rawhide-x86_64/root/var/cache/yum', '--exclude=./var/lib/mock/fedora-rawhide-x86_64/root/tmp/ccache', '--exclude=./var/lib/mock/fedora-rawhide-x86_64/root/proc/filesystems', '.'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:354:  Child return code was: 0
+DEBUG util.py:314:  Executing command: ['/bin/umount', '-n', '/var/lib/mock/fedora-rawhide-x86_64/root/proc/filesystems'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:354:  Child return code was: 0
+DEBUG util.py:314:  Executing command: ['/bin/umount', '-n', '/var/lib/mock/fedora-rawhide-x86_64/root/tmp/ccache'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:354:  Child return code was: 0
+DEBUG util.py:314:  Executing command: ['/bin/umount', '-n', '/var/lib/mock/fedora-rawhide-x86_64/root/var/cache/yum'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:354:  Child return code was: 0
+DEBUG util.py:314:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/fedora-rawhide-x86_64/root/dev/pts'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:354:  Child return code was: 0
+DEBUG util.py:314:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/fedora-rawhide-x86_64/root/dev/shm'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:354:  Child return code was: 0
+DEBUG util.py:314:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/fedora-rawhide-x86_64/root/sys'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:354:  Child return code was: 0
+DEBUG util.py:314:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/fedora-rawhide-x86_64/root/proc'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:354:  Child return code was: 0
+INFO backend.py:589:  Installed packages:
+DEBUG util.py:314:  Executing command: ['rpm', '-q', '-a'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'CCACHE_DIR': '/tmp/ccache', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'CCACHE_UMASK': '002'}
+DEBUG util.py:264:  warning: Failed to read auxiliary vector, /proc not mounted?
+DEBUG util.py:264:  warning: Failed to read auxiliary vector, /proc not mounted?
+DEBUG util.py:264:  warning: Failed to read auxiliary vector, /proc not mounted?
+DEBUG util.py:264:  warning: Failed to read auxiliary vector, /proc not mounted?
+DEBUG util.py:264:  warning: Failed to read auxiliary vector, /proc not mounted?
+DEBUG util.py:264:  warning: Failed to read auxiliary vector, /proc not mounted?
+DEBUG util.py:264:  warning: Failed to read auxiliary vector, /proc not mounted?
+DEBUG util.py:264:  warning: Failed to read auxiliary vector, /proc not mounted?
+DEBUG util.py:264:  setup-2.8.62-1.fc19.noarch
+DEBUG util.py:264:  basesystem-10.0-7.fc18.noarch
+DEBUG util.py:264:  fedora-release-rawhide-19-0.1.noarch
+DEBUG util.py:264:  ncurses-base-5.9-7.20121017.fc19.x86_64
+DEBUG util.py:264:  tzdata-2012j-1.fc19.noarch
+DEBUG util.py:264:  glibc-common-2.16.90-39.fc19.x86_64
+DEBUG util.py:264:  ncurses-libs-5.9-7.20121017.fc19.x86_64
+DEBUG util.py:264:  libstdc++-4.7.2-9.fc19.x86_64
+DEBUG util.py:264:  libattr-2.4.46-8.fc19.x86_64
+DEBUG util.py:264:  pcre-8.32-1.fc19.x86_64
+DEBUG util.py:264:  zlib-1.2.7-9.fc19.x86_64
+DEBUG util.py:264:  xz-libs-5.1.2-2alpha.fc18.x86_64
+DEBUG util.py:264:  libacl-2.2.51-8.fc19.x86_64
+DEBUG util.py:264:  libdb-5.3.21-4.fc19.x86_64
+DEBUG util.py:264:  nspr-4.9.4-1.fc19.x86_64
+DEBUG util.py:264:  nss-util-3.14.1-1.fc19.x86_64
+DEBUG util.py:264:  popt-1.13-13.fc19.x86_64
+DEBUG util.py:264:  readline-6.2-5.fc18.x86_64
+DEBUG util.py:264:  lua-5.1.4-11.fc18.x86_64
+DEBUG util.py:264:  libuuid-2.22.2-1.fc19.x86_64
+DEBUG util.py:264:  chkconfig-1.3.59-2.fc18.x86_64
+DEBUG util.py:264:  dbus-libs-1.6.8-2.fc18.x86_64
+DEBUG util.py:264:  libcom_err-1.42.6-2.fc19.x86_64
+DEBUG util.py:264:  grep-2.14-2.fc19.x86_64
+DEBUG util.py:264:  gdbm-1.10-4.fc19.x86_64
+DEBUG util.py:264:  nss-softokn-3.14.1-2.fc19.x86_64
+DEBUG util.py:264:  pinentry-0.8.1-9.fc19.x86_64
+DEBUG util.py:264:  groff-base-1.21-10.fc18.x86_64
+DEBUG util.py:264:  perl-HTTP-Tiny-0.017-244.fc19.noarch
+DEBUG util.py:264:  perl-Pod-Escapes-1.04-244.fc19.noarch
+DEBUG util.py:264:  perl-libs-5.16.2-244.fc19.x86_64
+DEBUG util.py:264:  perl-Filter-1.45-4.fc18.x86_64
+DEBUG util.py:264:  perl-Scalar-List-Utils-1.25-240.fc19.x86_64
+DEBUG util.py:264:  perl-Module-Pluggable-4.00-244.fc19.noarch
+DEBUG util.py:264:  perl-Pod-Simple-3.20-244.fc19.noarch
+DEBUG util.py:264:  perl-Socket-2.007-1.fc19.x86_64
+DEBUG util.py:264:  perl-5.16.2-244.fc19.x86_64
+DEBUG util.py:264:  elfutils-libs-0.155-1.fc19.x86_64
+DEBUG util.py:264:  dwz-0.8-1.fc19.x86_64
+DEBUG util.py:264:  libdb-utils-5.3.21-4.fc19.x86_64
+DEBUG util.py:264:  ppl-1.0-3.fc19.2.x86_64
+DEBUG util.py:264:  bzip2-1.0.6-7.fc19.x86_64
+DEBUG util.py:264:  libxml2-2.9.0-3.fc19.x86_64
+DEBUG util.py:264:  glib2-2.35.2-1.fc19.x86_64
+DEBUG util.py:264:  xz-5.1.2-2alpha.fc18.x86_64
+DEBUG util.py:264:  libidn-1.26-1.fc19.x86_64
+DEBUG util.py:264:  cpio-2.11-15.fc19.x86_64
+DEBUG util.py:264:  diffutils-3.2-11.fc19.x86_64
+DEBUG util.py:264:  libstdc++-devel-4.7.2-9.fc19.x86_64
+DEBUG util.py:264:  libcap-ng-0.7.3-2.fc19.x86_64
+DEBUG util.py:264:  keyutils-libs-1.5.5-3.fc18.x86_64
+DEBUG util.py:264:  openssl-libs-1.0.1c-10.fc19.x86_64
+DEBUG util.py:264:  fipscheck-lib-1.3.1-2.fc18.x86_64
+DEBUG util.py:264:  libdb4-4.8.30-5.fc18.x86_64
+DEBUG util.py:264:  libsemanage-2.1.9-2.fc19.x86_64
+DEBUG util.py:264:  p11-kit-0.14-1.fc18.x86_64
+DEBUG util.py:264:  gnutls-2.12.21-2.fc19.x86_64
+DEBUG util.py:264:  device-mapper-1.02.77-4.fc19.x86_64
+DEBUG util.py:264:  cracklib-2.8.22-2.fc19.x86_64
+DEBUG util.py:264:  device-mapper-libs-1.02.77-4.fc19.x86_64
+DEBUG util.py:264:  libpwquality-1.2.0-1.fc19.x86_64
+DEBUG util.py:264:  libmount-2.22.2-1.fc19.x86_64
+DEBUG util.py:264:  pam-1.1.6-3.fc19.x86_64
+DEBUG util.py:264:  libblkid-2.22.2-1.fc19.x86_64
+DEBUG util.py:264:  util-linux-2.22.2-1.fc19.x86_64
+DEBUG util.py:264:  dbus-1.6.8-2.fc18.x86_64
+DEBUG util.py:264:  nss-3.14.1-1.fc19.x86_64
+DEBUG util.py:264:  nss-tools-3.14.1-1.fc19.x86_64
+DEBUG util.py:264:  libcurl-7.28.1-1.fc19.x86_64
+DEBUG util.py:264:  rpm-libs-4.11.0-0.beta1.1.fc19.x86_64
+DEBUG util.py:264:  python-libs-2.7.3-14.fc19.x86_64
+DEBUG util.py:264:  zip-3.0-5.fc18.x86_64
+DEBUG util.py:264:  gnupg2-2.0.19-6.fc19.x86_64
+DEBUG util.py:264:  perl-srpm-macros-1-5.fc18.noarch
+DEBUG util.py:264:  glibc-headers-2.16.90-39.fc19.x86_64
+DEBUG util.py:264:  gcc-4.7.2-9.fc19.x86_64
+DEBUG util.py:264:  redhat-rpm-config-9.1.0-38.fc19.noarch
+DEBUG util.py:264:  tar-1.26-15.fc19.x86_64
+DEBUG util.py:264:  make-3.82-13.fc19.x86_64
+DEBUG util.py:264:  libgcc-4.7.2-9.fc19.x86_64
+DEBUG util.py:264:  filesystem-3.2-2.fc19.x86_64
+DEBUG util.py:264:  fedora-release-19-0.1.noarch
+DEBUG util.py:264:  ca-certificates-2012.86-1.fc19.noarch
+DEBUG util.py:264:  hwdata-0.242-1.fc19.noarch
+DEBUG util.py:264:  nss-softokn-freebl-3.14.1-2.fc19.x86_64
+DEBUG util.py:264:  glibc-2.16.90-39.fc19.x86_64
+DEBUG util.py:264:  bash-4.2.39-3.fc19.x86_64
+DEBUG util.py:264:  libsepol-2.1.8-3.fc19.x86_64
+DEBUG util.py:264:  libcap-2.22-3.fc18.x86_64
+DEBUG util.py:264:  libselinux-2.1.12-9.fc19.x86_64
+DEBUG util.py:264:  info-4.13a-19.fc19.x86_64
+DEBUG util.py:264:  bzip2-libs-1.0.6-7.fc19.x86_64
+DEBUG util.py:264:  gmp-5.0.5-5.fc19.x86_64
+DEBUG util.py:264:  libgpg-error-1.10-3.fc18.x86_64
+DEBUG util.py:264:  elfutils-libelf-0.155-1.fc19.x86_64
+DEBUG util.py:264:  libgcrypt-1.5.0-8.fc19.x86_64
+DEBUG util.py:264:  sed-4.2.1-10.fc18.x86_64
+DEBUG util.py:264:  audit-libs-2.2.2-2.fc19.x86_64
+DEBUG util.py:264:  mpfr-3.1.1-1.fc18.x86_64
+DEBUG util.py:264:  libmpc-0.9-3.fc18.2.x86_64
+DEBUG util.py:264:  file-libs-5.11-7.fc19.x86_64
+DEBUG util.py:264:  expat-2.1.0-4.fc18.x86_64
+DEBUG util.py:264:  sqlite-3.7.15-1.fc19.x86_64
+DEBUG util.py:264:  gawk-4.0.1-2.fc18.x86_64
+DEBUG util.py:264:  libffi-3.0.10-3.fc19.x86_64
+DEBUG util.py:264:  file-5.11-7.fc19.x86_64
+DEBUG util.py:264:  cpp-4.7.2-9.fc19.x86_64
+DEBUG util.py:264:  perl-parent-0.225-242.fc19.noarch
+DEBUG util.py:264:  perl-podlators-2.4.2-3.fc19.noarch
+DEBUG util.py:264:  perl-Pod-Perldoc-3.17.00-241.fc19.noarch
+DEBUG util.py:264:  perl-macros-5.16.2-244.fc19.x86_64
+DEBUG util.py:264:  perl-threads-shared-1.42-2.fc19.x86_64
+DEBUG util.py:264:  perl-Carp-1.26-240.fc19.noarch
+DEBUG util.py:264:  perl-Pod-Parser-1.51-244.fc19.noarch
+DEBUG util.py:264:  perl-PathTools-3.39.2-244.fc19.x86_64
+DEBUG util.py:264:  perl-threads-1.86-241.fc19.x86_64
+DEBUG util.py:264:  nss-myhostname-0.3-3.fc18.x86_64
+DEBUG util.py:264:  elfutils-0.155-1.fc19.x86_64
+DEBUG util.py:264:  libassuan-2.0.3-4.fc19.x86_64
+DEBUG util.py:264:  cyrus-sasl-lib-2.1.25-2.fc19.x86_64
+DEBUG util.py:264:  cloog-ppl-0.15.11-5.fc19.x86_64
+DEBUG util.py:264:  unzip-6.0-7.fc19.x86_64
+DEBUG util.py:264:  pkgconfig-0.27-1.fc18.x86_64
+DEBUG util.py:264:  shared-mime-info-1.0-7.fc19.x86_64
+DEBUG util.py:264:  kmod-libs-12-1.fc19.x86_64
+DEBUG util.py:264:  findutils-4.5.10-7.fc19.x86_64
+DEBUG util.py:264:  libgomp-4.7.2-9.fc19.x86_64
+DEBUG util.py:264:  patch-2.7.1-1.fc19.x86_64
+DEBUG util.py:264:  ncurses-5.9-7.20121017.fc19.x86_64
+DEBUG util.py:264:  tcp_wrappers-libs-7.6-70.fc18.x86_64
+DEBUG util.py:264:  krb5-libs-1.11-1.fc19.x86_64
+DEBUG util.py:264:  libssh2-1.4.3-1.fc19.x86_64
+DEBUG util.py:264:  fipscheck-1.3.1-2.fc18.x86_64
+DEBUG util.py:264:  ustr-1.0.4-13.fc18.x86_64
+DEBUG util.py:264:  qrencode-libs-3.3.1-4.fc19.x86_64
+DEBUG util.py:264:  libtasn1-2.14-1.fc19.x86_64
+DEBUG util.py:264:  libmicrohttpd-0.9.22-1.fc19.x86_64
+DEBUG util.py:264:  gzip-1.5-3.fc18.x86_64
+DEBUG util.py:264:  cracklib-dicts-2.8.22-2.fc19.x86_64
+DEBUG util.py:264:  cryptsetup-libs-1.5.1-1.fc19.x86_64
+DEBUG util.py:264:  systemd-libs-196-4.fc19.x86_64
+DEBUG util.py:264:  coreutils-8.20-4.fc19.x86_64
+DEBUG util.py:264:  shadow-utils-4.1.5.1-1.fc19.x86_64
+DEBUG util.py:264:  libutempter-1.1.6-1.fc19.x86_64
+DEBUG util.py:264:  systemd-196-4.fc19.x86_64
+DEBUG util.py:264:  binutils-2.23.51.0.6-1.fc19.x86_64
+DEBUG util.py:264:  nss-sysinit-3.14.1-1.fc19.x86_64
+DEBUG util.py:264:  openldap-2.4.33-3.fc19.x86_64
+DEBUG util.py:264:  curl-7.28.1-1.fc19.x86_64
+DEBUG util.py:264:  rpm-4.11.0-0.beta1.1.fc19.x86_64
+DEBUG util.py:264:  gdb-7.5.0.20120926-25.fc18.x86_64
+DEBUG util.py:264:  pth-2.0.7-17.fc18.x86_64
+DEBUG util.py:264:  rpm-build-libs-4.11.0-0.beta1.1.fc19.x86_64
+DEBUG util.py:264:  kernel-headers-3.7.0-2.fc19.x86_64
+DEBUG util.py:264:  glibc-devel-2.16.90-39.fc19.x86_64
+DEBUG util.py:264:  gcc-c++-4.7.2-9.fc19.x86_64
+DEBUG util.py:264:  rpm-build-4.11.0-0.beta1.1.fc19.x86_64
+DEBUG util.py:264:  which-2.20-4.fc18.x86_64
+DEBUG util.py:354:  Child return code was: 0
+DEBUG util.py:88:  remove tree: /var/lib/mock/fedora-rawhide-x86_64/root/dev
+DEBUG util.py:62:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/dev/pts
+DEBUG util.py:65:  creating dir: /var/lib/mock/fedora-rawhide-x86_64/root/dev/pts
+DEBUG util.py:62:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/dev/shm
+DEBUG util.py:65:  creating dir: /var/lib/mock/fedora-rawhide-x86_64/root/dev/shm
+DEBUG backend.py:449:  kver == 3.6.10-2.fc17.x86_64
+DEBUG util.py:314:  Executing command: ['/bin/mount', '-n', '-t', 'proc', 'proc', '/var/lib/mock/fedora-rawhide-x86_64/root/proc'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:354:  Child return code was: 0
+DEBUG util.py:314:  Executing command: ['/bin/mount', '-n', '-t', 'sysfs', 'mock_chroot_sys', '/var/lib/mock/fedora-rawhide-x86_64/root/sys'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:354:  Child return code was: 0
+DEBUG util.py:314:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', 'mock_chroot_shmfs', '/var/lib/mock/fedora-rawhide-x86_64/root/dev/shm'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:354:  Child return code was: 0
+DEBUG util.py:314:  Executing command: ['/bin/mount', '-n', '-t', 'devpts', '-o', 'gid=5,mode=0620,ptmxmode=0666,newinstance', 'mock_chroot_devpts', '/var/lib/mock/fedora-rawhide-x86_64/root/dev/pts'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:354:  Child return code was: 0
+DEBUG util.py:314:  Executing command: ['/bin/mount', '-n', '--bind', '/var/cache/mock/fedora-rawhide-x86_64/yum_cache/', '/var/lib/mock/fedora-rawhide-x86_64/root/var/cache/yum'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:354:  Child return code was: 0
+DEBUG util.py:314:  Executing command: ['/bin/mount', '-n', '--bind', '/var/cache/mock/fedora-rawhide-x86_64/ccache/', '/var/lib/mock/fedora-rawhide-x86_64/root/tmp/ccache'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:354:  Child return code was: 0
+DEBUG util.py:314:  Executing command: ['/bin/mount', '-n', '--bind', '/tmp/mock-selinux-plugin.eaGbQT', '/var/lib/mock/fedora-rawhide-x86_64/root/proc/filesystems'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:354:  Child return code was: 0
+DEBUG util.py:314:  Executing command: ['rpm', '-Uvh', '--nodeps', '/builddir/build/originals/cqrlog-1.5.2-3.fc19.src.rpm'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'CCACHE_DIR': '/tmp/ccache', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'CCACHE_UMASK': '002'}
+DEBUG util.py:264:  Updating / installing...
+DEBUG util.py:264:  cqrlog-1.5.2-3.fc19                   ########################################
+DEBUG util.py:264:  warning: user christensene does not exist - using root
+DEBUG util.py:264:  warning: group christensene does not exist - using root
+DEBUG util.py:264:  warning: user christensene does not exist - using root
+DEBUG util.py:264:  warning: group christensene does not exist - using root
+DEBUG util.py:264:  warning: user christensene does not exist - using root
+DEBUG util.py:264:  warning: group christensene does not exist - using root
+DEBUG util.py:264:  warning: user christensene does not exist - using root
+DEBUG util.py:264:  warning: group christensene does not exist - using root
+DEBUG util.py:354:  Child return code was: 0
+DEBUG backend.py:912:  ['/usr/bin/yum', '--installroot', '/var/lib/mock/fedora-rawhide-x86_64/root/', 'resolvedep', 'ccache']
+DEBUG util.py:314:  Executing command: ['/usr/bin/yum', '--installroot', '/var/lib/mock/fedora-rawhide-x86_64/root/', 'resolvedep', 'ccache', '--setopt=tsflags=nocontexts'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'CCACHE_DIR': '/tmp/ccache', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'CCACHE_UMASK': '002'}
+DEBUG util.py:264:    ccache:
+DEBUG util.py:264:  0:ccache-3.1.8-1.fc18.x86_64 fedora
+DEBUG util.py:354:  Child return code was: 0
+DEBUG backend.py:912:  ['/usr/bin/yum', '--installroot', '/var/lib/mock/fedora-rawhide-x86_64/root/', 'install', 'ccache']
+DEBUG util.py:314:  Executing command: ['/usr/bin/yum', '--installroot', '/var/lib/mock/fedora-rawhide-x86_64/root/', 'install', 'ccache', '--setopt=tsflags=nocontexts'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'CCACHE_DIR': '/tmp/ccache', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'CCACHE_UMASK': '002'}
+DEBUG util.py:264:  ================================================================================
+DEBUG util.py:264:   Package         Arch            Version                  Repository       Size
+DEBUG util.py:264:  ================================================================================
+DEBUG util.py:264:  Installing:
+DEBUG util.py:264:   ccache          x86_64          3.1.8-1.fc18             fedora          129 k
+DEBUG util.py:264:  Transaction Summary
+DEBUG util.py:264:  ================================================================================
+DEBUG util.py:264:  Install  1 Package
+DEBUG util.py:264:  Total download size: 129 k
+DEBUG util.py:264:  Installed size: 381 k
+DEBUG util.py:264:  Installed:
+DEBUG util.py:264:    ccache.x86_64 0:3.1.8-1.fc18                                                  
+DEBUG util.py:354:  Child return code was: 0
+DEBUG backend.py:912:  ['/usr/bin/yum-builddep', '--installroot', '/var/lib/mock/fedora-rawhide-x86_64/root/', '/var/lib/mock/fedora-rawhide-x86_64/root///builddir/build/SRPMS/cqrlog-1.5.2-3.fc19.src.rpm']
+DEBUG util.py:314:  Executing command: ['/usr/bin/yum-builddep', '--installroot', '/var/lib/mock/fedora-rawhide-x86_64/root/', '/var/lib/mock/fedora-rawhide-x86_64/root///builddir/build/SRPMS/cqrlog-1.5.2-3.fc19.src.rpm'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'CCACHE_DIR': '/tmp/ccache', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'CCACHE_UMASK': '002'}
+DEBUG util.py:264:  Getting requirements for cqrlog-1.5.2-3.fc19.src
+DEBUG util.py:264:   --> fpc-2.6.2-0.1.rc1.fc19.x86_64
+DEBUG util.py:264:   --> lazarus-0.9.30.4-2.fc18.x86_64
+DEBUG util.py:264:   --> 1:openssl-devel-1.0.1c-10.fc19.x86_64
+DEBUG util.py:264:   --> desktop-file-utils-0.21-1.fc19.x86_64
+DEBUG util.py:264:  ================================================================================
+DEBUG util.py:264:   Package                    Arch      Version                   Repository
+DEBUG util.py:264:                                                                             Size
+DEBUG util.py:264:  ================================================================================
+DEBUG util.py:264:  Installing:
+DEBUG util.py:264:   desktop-file-utils         x86_64    0.21-1.fc19               fedora     66 k
+DEBUG util.py:264:   fpc                        x86_64    2.6.2-0.1.rc1.fc19        fedora     21 M
+DEBUG util.py:264:   lazarus                    x86_64    0.9.30.4-2.fc18           fedora     54 M
+DEBUG util.py:264:   openssl-devel              x86_64    1:1.0.1c-10.fc19          fedora    1.2 M
+DEBUG util.py:264:  Installing for dependencies:
+DEBUG util.py:264:   atk                        x86_64    2.6.0-1.fc18              fedora    230 k
+DEBUG util.py:264:   atk-devel                  x86_64    2.6.0-1.fc18              fedora    144 k
+DEBUG util.py:264:   autoconf                   noarch    2.69-6.fc19               fedora    695 k
+DEBUG util.py:264:   automake                   noarch    1.12.2-5.fc19             fedora    667 k
+DEBUG util.py:264:   avahi-libs                 x86_64    0.6.31-6.fc18             fedora     60 k
+DEBUG util.py:264:   cairo                      x86_64    1.12.8-2.fc19             fedora    664 k
+DEBUG util.py:264:   cairo-devel                x86_64    1.12.8-2.fc19             fedora    494 k
+DEBUG util.py:264:   cups-libs                  x86_64    1:1.6.1-17.fc19           fedora    339 k
+DEBUG util.py:264:   emacs-filesystem           noarch    1:24.2-7.fc19             fedora     54 k
+DEBUG util.py:264:   fontconfig                 x86_64    2.10.2-1.fc19             fedora    212 k
+DEBUG util.py:264:   fontconfig-devel           x86_64    2.10.2-1.fc19             fedora    208 k
+DEBUG util.py:264:   fontpackages-filesystem    noarch    1.44-5.fc18               fedora    9.4 k
+DEBUG util.py:264:   fpc-src                    x86_64    2.6.2-0.1.rc1.fc19        fedora     16 M
+DEBUG util.py:264:   freetype                   x86_64    2.4.10-2.fc18             fedora    379 k
+DEBUG util.py:264:   freetype-devel             x86_64    2.4.10-2.fc18             fedora    347 k
+DEBUG util.py:264:   gdk-pixbuf2                x86_64    2.26.5-1.fc18             fedora    529 k
+DEBUG util.py:264:   gdk-pixbuf2-devel          x86_64    2.26.5-1.fc18             fedora    205 k
+DEBUG util.py:264:   gl-manpages                noarch    1.1-3.20121009.fc19       fedora    996 k
+DEBUG util.py:264:   glib2-devel                x86_64    2.35.2-1.fc19             fedora    429 k
+DEBUG util.py:264:   gpm                        x86_64    1.20.6-25.fc19            fedora    191 k
+DEBUG util.py:264:   gpm-libs                   x86_64    1.20.6-25.fc19            fedora     29 k
+DEBUG util.py:264:   gtk2                       x86_64    2.24.13-1.fc19            fedora    3.4 M
+DEBUG util.py:264:   gtk2-devel                 x86_64    2.24.13-1.fc19            fedora    2.9 M
+DEBUG util.py:264:   harfbuzz                   x86_64    0.9.9-1.fc19              fedora    466 k
+DEBUG util.py:264:   harfbuzz-devel             x86_64    0.9.9-1.fc19              fedora     47 k
+DEBUG util.py:264:   hicolor-icon-theme         noarch    0.12-5.fc18               fedora     42 k
+DEBUG util.py:264:   jasper-libs                x86_64    1.900.1-21.fc19           fedora    143 k
+DEBUG util.py:264:   jbigkit-libs               x86_64    2.0-7.fc18                fedora     45 k
+DEBUG util.py:264:   keyutils-libs-devel        x86_64    1.5.5-3.fc18              fedora     34 k
+DEBUG util.py:264:   khrplatform-devel          noarch    9.0.1-1.fc19              fedora     20 k
+DEBUG util.py:264:   krb5-devel                 x86_64    1.11-1.fc19               fedora    589 k
+DEBUG util.py:264:   libX11                     x86_64    1.5.0-3.fc18              fedora    591 k
+DEBUG util.py:264:   libX11-common              noarch    1.5.0-3.fc18              fedora    181 k
+DEBUG util.py:264:   libX11-devel               x86_64    1.5.0-3.fc18              fedora    1.0 M
+DEBUG util.py:264:   libXau                     x86_64    1.0.6-4.fc18              fedora     25 k
+DEBUG util.py:264:   libXau-devel               x86_64    1.0.6-4.fc18              fedora     14 k
+DEBUG util.py:264:   libXcomposite              x86_64    0.4.3-4.fc18              fedora     21 k
+DEBUG util.py:264:   libXcomposite-devel        x86_64    0.4.3-4.fc18              fedora     15 k
+DEBUG util.py:264:   libXcursor                 x86_64    1.1.13-2.fc18             fedora     38 k
+DEBUG util.py:264:   libXcursor-devel           x86_64    1.1.13-2.fc18             fedora     22 k
+DEBUG util.py:264:   libXdamage                 x86_64    1.1.3-4.fc18              fedora     19 k
+DEBUG util.py:264:   libXdamage-devel           x86_64    1.1.3-4.fc18              fedora    9.2 k
+DEBUG util.py:264:   libXext                    x86_64    1.3.1-2.fc18              fedora     35 k
+DEBUG util.py:264:   libXext-devel              x86_64    1.3.1-2.fc18              fedora     74 k
+DEBUG util.py:264:   libXfixes                  x86_64    5.0-3.fc18                fedora     24 k
+DEBUG util.py:264:   libXfixes-devel            x86_64    5.0-3.fc18                fedora     12 k
+DEBUG util.py:264:   libXft                     x86_64    2.3.1-2.fc18              fedora     56 k
+DEBUG util.py:264:   libXft-devel               x86_64    2.3.1-2.fc18              fedora     19 k
+DEBUG util.py:264:   libXi                      x86_64    1.6.1-2.fc18              fedora     36 k
+DEBUG util.py:264:   libXi-devel                x86_64    1.6.1-2.fc18              fedora    102 k
+DEBUG util.py:264:   libXinerama                x86_64    1.1.2-2.fc18              fedora     20 k
+DEBUG util.py:264:   libXinerama-devel          x86_64    1.1.2-2.fc18              fedora     13 k
+DEBUG util.py:264:   libXrandr                  x86_64    1.4.0-1.fc18              fedora     37 k
+DEBUG util.py:264:   libXrandr-devel            x86_64    1.4.0-1.fc18              fedora     20 k
+DEBUG util.py:264:   libXrender                 x86_64    0.9.7-2.fc18              fedora     31 k
+DEBUG util.py:264:   libXrender-devel           x86_64    0.9.7-2.fc18              fedora     16 k
+DEBUG util.py:264:   libXxf86vm                 x86_64    1.1.2-2.fc18              fedora     23 k
+DEBUG util.py:264:   libXxf86vm-devel           x86_64    1.1.2-2.fc18              fedora     17 k
+DEBUG util.py:264:   libcom_err-devel           x86_64    1.42.6-2.fc19             fedora     28 k
+DEBUG util.py:264:   libdrm                     x86_64    2.4.40-1.fc19             fedora    121 k
+DEBUG util.py:264:   libdrm-devel               x86_64    2.4.40-1.fc19             fedora     79 k
+DEBUG util.py:264:   libicu                     x86_64    49.1.1-7.fc19             fedora    5.3 M
+DEBUG util.py:264:   libjpeg-turbo              x86_64    1.2.1-5.fc19              fedora    123 k
+DEBUG util.py:264:   libjpeg-turbo-compat       x86_64    1.2.1-6.fc19              fedora    122 k
+DEBUG util.py:264:   libpciaccess               x86_64    0.13.1-2.fc18             fedora     25 k
+DEBUG util.py:264:   libpng                     x86_64    2:1.5.13-1.fc19           fedora    209 k
+DEBUG util.py:264:   libpng-devel               x86_64    2:1.5.13-1.fc19           fedora    120 k
+DEBUG util.py:264:   libselinux-devel           x86_64    2.1.12-9.fc19             fedora    156 k
+DEBUG util.py:264:   libsepol-devel             x86_64    2.1.8-3.fc19              fedora     69 k
+DEBUG util.py:264:   libthai                    x86_64    0.1.14-6.fc18             fedora    186 k
+DEBUG util.py:264:   libtiff                    x86_64    4.0.3-3.fc19              fedora    161 k
+DEBUG util.py:264:   libwayland-client          x86_64    1.0.0-1.fc19              fedora     21 k
+DEBUG util.py:264:   libwayland-server          x86_64    1.0.0-1.fc19              fedora     30 k
+DEBUG util.py:264:   libxcb                     x86_64    1.9-1.fc19                fedora    159 k
+DEBUG util.py:264:   libxcb-devel               x86_64    1.9-1.fc19                fedora    950 k
+DEBUG util.py:264:   m4                         x86_64    1.4.16-6.fc19             fedora    254 k
+DEBUG util.py:264:   mesa-libEGL                x86_64    9.0.1-1.fc19              fedora     79 k
+DEBUG util.py:264:   mesa-libEGL-devel          x86_64    9.0.1-1.fc19              fedora     30 k
+DEBUG util.py:264:   mesa-libGL                 x86_64    9.0.1-1.fc19              fedora    165 k
+DEBUG util.py:264:   mesa-libGL-devel           x86_64    9.0.1-1.fc19              fedora    135 k
+DEBUG util.py:264:   mesa-libgbm                x86_64    9.0.1-1.fc19              fedora     35 k
+DEBUG util.py:264:   mesa-libglapi              x86_64    9.0.1-1.fc19              fedora     60 k
+DEBUG util.py:264:   pango                      x86_64    1.32.3-1.fc19             fedora    279 k
+DEBUG util.py:264:   pango-devel                x86_64    1.32.3-1.fc19             fedora    293 k
+DEBUG util.py:264:   perl-Data-Dumper           x86_64    2.139-1.fc19              fedora     45 k
+DEBUG util.py:264:   perl-Test-Harness          noarch    3.23-244.fc19             fedora    287 k
+DEBUG util.py:264:   pixman                     x86_64    0.28.0-1.fc19             fedora    225 k
+DEBUG util.py:264:   pixman-devel               x86_64    0.28.0-1.fc19             fedora     17 k
+DEBUG util.py:264:   python                     x86_64    2.7.3-14.fc19             fedora     78 k
+DEBUG util.py:264:   systemd-sysv               x86_64    196-4.fc19                fedora     23 k
+DEBUG util.py:264:   xorg-x11-proto-devel       noarch    7.6-24.fc18               fedora    270 k
+DEBUG util.py:264:   zlib-devel                 x86_64    1.2.7-9.fc19              fedora     48 k
+DEBUG util.py:264:  Transaction Summary
+DEBUG util.py:264:  ================================================================================
+DEBUG util.py:264:  Install  4 Packages (+92 Dependent packages)
+DEBUG util.py:264:  Total download size: 119 M
+DEBUG util.py:264:  Installed size: 761 M
+DEBUG util.py:264:  Installed:
+DEBUG util.py:264:    desktop-file-utils.x86_64 0:0.21-1.fc19 fpc.x86_64 0:2.6.2-0.1.rc1.fc19      
+DEBUG util.py:264:    lazarus.x86_64 0:0.9.30.4-2.fc18        openssl-devel.x86_64 1:1.0.1c-10.fc19
+DEBUG util.py:264:  Dependency Installed:
+DEBUG util.py:264:    atk.x86_64 0:2.6.0-1.fc18                                                     
+DEBUG util.py:264:    atk-devel.x86_64 0:2.6.0-1.fc18                                               
+DEBUG util.py:264:    autoconf.noarch 0:2.69-6.fc19                                                 
+DEBUG util.py:264:    automake.noarch 0:1.12.2-5.fc19                                               
+DEBUG util.py:264:    avahi-libs.x86_64 0:0.6.31-6.fc18                                             
+DEBUG util.py:264:    cairo.x86_64 0:1.12.8-2.fc19                                                  
+DEBUG util.py:264:    cairo-devel.x86_64 0:1.12.8-2.fc19                                            
+DEBUG util.py:264:    cups-libs.x86_64 1:1.6.1-17.fc19                                              
+DEBUG util.py:264:    emacs-filesystem.noarch 1:24.2-7.fc19                                         
+DEBUG util.py:264:    fontconfig.x86_64 0:2.10.2-1.fc19                                             
+DEBUG util.py:264:    fontconfig-devel.x86_64 0:2.10.2-1.fc19                                       
+DEBUG util.py:264:    fontpackages-filesystem.noarch 0:1.44-5.fc18                                  
+DEBUG util.py:264:    fpc-src.x86_64 0:2.6.2-0.1.rc1.fc19                                           
+DEBUG util.py:264:    freetype.x86_64 0:2.4.10-2.fc18                                               
+DEBUG util.py:264:    freetype-devel.x86_64 0:2.4.10-2.fc18                                         
+DEBUG util.py:264:    gdk-pixbuf2.x86_64 0:2.26.5-1.fc18                                            
+DEBUG util.py:264:    gdk-pixbuf2-devel.x86_64 0:2.26.5-1.fc18                                      
+DEBUG util.py:264:    gl-manpages.noarch 0:1.1-3.20121009.fc19                                      
+DEBUG util.py:264:    glib2-devel.x86_64 0:2.35.2-1.fc19                                            
+DEBUG util.py:264:    gpm.x86_64 0:1.20.6-25.fc19                                                   
+DEBUG util.py:264:    gpm-libs.x86_64 0:1.20.6-25.fc19                                              
+DEBUG util.py:264:    gtk2.x86_64 0:2.24.13-1.fc19                                                  
+DEBUG util.py:264:    gtk2-devel.x86_64 0:2.24.13-1.fc19                                            
+DEBUG util.py:264:    harfbuzz.x86_64 0:0.9.9-1.fc19                                                
+DEBUG util.py:264:    harfbuzz-devel.x86_64 0:0.9.9-1.fc19                                          
+DEBUG util.py:264:    hicolor-icon-theme.noarch 0:0.12-5.fc18                                       
+DEBUG util.py:264:    jasper-libs.x86_64 0:1.900.1-21.fc19                                          
+DEBUG util.py:264:    jbigkit-libs.x86_64 0:2.0-7.fc18                                              
+DEBUG util.py:264:    keyutils-libs-devel.x86_64 0:1.5.5-3.fc18                                     
+DEBUG util.py:264:    khrplatform-devel.noarch 0:9.0.1-1.fc19                                       
+DEBUG util.py:264:    krb5-devel.x86_64 0:1.11-1.fc19                                               
+DEBUG util.py:264:    libX11.x86_64 0:1.5.0-3.fc18                                                  
+DEBUG util.py:264:    libX11-common.noarch 0:1.5.0-3.fc18                                           
+DEBUG util.py:264:    libX11-devel.x86_64 0:1.5.0-3.fc18                                            
+DEBUG util.py:264:    libXau.x86_64 0:1.0.6-4.fc18                                                  
+DEBUG util.py:264:    libXau-devel.x86_64 0:1.0.6-4.fc18                                            
+DEBUG util.py:264:    libXcomposite.x86_64 0:0.4.3-4.fc18                                           
+DEBUG util.py:264:    libXcomposite-devel.x86_64 0:0.4.3-4.fc18                                     
+DEBUG util.py:264:    libXcursor.x86_64 0:1.1.13-2.fc18                                             
+DEBUG util.py:264:    libXcursor-devel.x86_64 0:1.1.13-2.fc18                                       
+DEBUG util.py:264:    libXdamage.x86_64 0:1.1.3-4.fc18                                              
+DEBUG util.py:264:    libXdamage-devel.x86_64 0:1.1.3-4.fc18                                        
+DEBUG util.py:264:    libXext.x86_64 0:1.3.1-2.fc18                                                 
+DEBUG util.py:264:    libXext-devel.x86_64 0:1.3.1-2.fc18                                           
+DEBUG util.py:264:    libXfixes.x86_64 0:5.0-3.fc18                                                 
+DEBUG util.py:264:    libXfixes-devel.x86_64 0:5.0-3.fc18                                           
+DEBUG util.py:264:    libXft.x86_64 0:2.3.1-2.fc18                                                  
+DEBUG util.py:264:    libXft-devel.x86_64 0:2.3.1-2.fc18                                            
+DEBUG util.py:264:    libXi.x86_64 0:1.6.1-2.fc18                                                   
+DEBUG util.py:264:    libXi-devel.x86_64 0:1.6.1-2.fc18                                             
+DEBUG util.py:264:    libXinerama.x86_64 0:1.1.2-2.fc18                                             
+DEBUG util.py:264:    libXinerama-devel.x86_64 0:1.1.2-2.fc18                                       
+DEBUG util.py:264:    libXrandr.x86_64 0:1.4.0-1.fc18                                               
+DEBUG util.py:264:    libXrandr-devel.x86_64 0:1.4.0-1.fc18                                         
+DEBUG util.py:264:    libXrender.x86_64 0:0.9.7-2.fc18                                              
+DEBUG util.py:264:    libXrender-devel.x86_64 0:0.9.7-2.fc18                                        
+DEBUG util.py:264:    libXxf86vm.x86_64 0:1.1.2-2.fc18                                              
+DEBUG util.py:264:    libXxf86vm-devel.x86_64 0:1.1.2-2.fc18                                        
+DEBUG util.py:264:    libcom_err-devel.x86_64 0:1.42.6-2.fc19                                       
+DEBUG util.py:264:    libdrm.x86_64 0:2.4.40-1.fc19                                                 
+DEBUG util.py:264:    libdrm-devel.x86_64 0:2.4.40-1.fc19                                           
+DEBUG util.py:264:    libicu.x86_64 0:49.1.1-7.fc19                                                 
+DEBUG util.py:264:    libjpeg-turbo.x86_64 0:1.2.1-5.fc19                                           
+DEBUG util.py:264:    libjpeg-turbo-compat.x86_64 0:1.2.1-6.fc19                                    
+DEBUG util.py:264:    libpciaccess.x86_64 0:0.13.1-2.fc18                                           
+DEBUG util.py:264:    libpng.x86_64 2:1.5.13-1.fc19                                                 
+DEBUG util.py:264:    libpng-devel.x86_64 2:1.5.13-1.fc19                                           
+DEBUG util.py:264:    libselinux-devel.x86_64 0:2.1.12-9.fc19                                       
+DEBUG util.py:264:    libsepol-devel.x86_64 0:2.1.8-3.fc19                                          
+DEBUG util.py:264:    libthai.x86_64 0:0.1.14-6.fc18                                                
+DEBUG util.py:264:    libtiff.x86_64 0:4.0.3-3.fc19                                                 
+DEBUG util.py:264:    libwayland-client.x86_64 0:1.0.0-1.fc19                                       
+DEBUG util.py:264:    libwayland-server.x86_64 0:1.0.0-1.fc19                                       
+DEBUG util.py:264:    libxcb.x86_64 0:1.9-1.fc19                                                    
+DEBUG util.py:264:    libxcb-devel.x86_64 0:1.9-1.fc19                                              
+DEBUG util.py:264:    m4.x86_64 0:1.4.16-6.fc19                                                     
+DEBUG util.py:264:    mesa-libEGL.x86_64 0:9.0.1-1.fc19                                             
+DEBUG util.py:264:    mesa-libEGL-devel.x86_64 0:9.0.1-1.fc19                                       
+DEBUG util.py:264:    mesa-libGL.x86_64 0:9.0.1-1.fc19                                              
+DEBUG util.py:264:    mesa-libGL-devel.x86_64 0:9.0.1-1.fc19                                        
+DEBUG util.py:264:    mesa-libgbm.x86_64 0:9.0.1-1.fc19                                             
+DEBUG util.py:264:    mesa-libglapi.x86_64 0:9.0.1-1.fc19                                           
+DEBUG util.py:264:    pango.x86_64 0:1.32.3-1.fc19                                                  
+DEBUG util.py:264:    pango-devel.x86_64 0:1.32.3-1.fc19                                            
+DEBUG util.py:264:    perl-Data-Dumper.x86_64 0:2.139-1.fc19                                        
+DEBUG util.py:264:    perl-Test-Harness.noarch 0:3.23-244.fc19                                      
+DEBUG util.py:264:    pixman.x86_64 0:0.28.0-1.fc19                                                 
+DEBUG util.py:264:    pixman-devel.x86_64 0:0.28.0-1.fc19                                           
+DEBUG util.py:264:    python.x86_64 0:2.7.3-14.fc19                                                 
+DEBUG util.py:264:    systemd-sysv.x86_64 0:196-4.fc19                                              
+DEBUG util.py:264:    xorg-x11-proto-devel.noarch 0:7.6-24.fc18                                     
+DEBUG util.py:264:    zlib-devel.x86_64 0:1.2.7-9.fc19                                              
+DEBUG util.py:354:  Child return code was: 0
+DEBUG util.py:314:  Executing command: ['ccache', '-M', '4G'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'CCACHE_DIR': '/tmp/ccache', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'CCACHE_UMASK': '002'}
+DEBUG util.py:264:  Set cache size limit to 4.0 Gbytes
+DEBUG util.py:354:  Child return code was: 0
+DEBUG util.py:314:  Executing command: ['/bin/umount', '-n', '/var/lib/mock/fedora-rawhide-x86_64/root/proc/filesystems'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:354:  Child return code was: 0
+DEBUG util.py:314:  Executing command: ['/bin/umount', '-n', '/var/lib/mock/fedora-rawhide-x86_64/root/tmp/ccache'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:354:  Child return code was: 0
+DEBUG util.py:314:  Executing command: ['/bin/umount', '-n', '/var/lib/mock/fedora-rawhide-x86_64/root/var/cache/yum'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:354:  Child return code was: 0
+DEBUG util.py:314:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/fedora-rawhide-x86_64/root/dev/pts'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:354:  Child return code was: 0
+DEBUG util.py:314:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/fedora-rawhide-x86_64/root/dev/shm'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:354:  Child return code was: 0
+DEBUG util.py:314:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/fedora-rawhide-x86_64/root/sys'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:354:  Child return code was: 0
+DEBUG util.py:314:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/fedora-rawhide-x86_64/root/proc'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:354:  Child return code was: 0
+DEBUG util.py:116:  kill orphans
+DEBUG util.py:88:  remove tree: /var/lib/mock/fedora-rawhide-x86_64.tmp
+INFO backend.py:201:  chroot (/var/lib/mock/fedora-rawhide-x86_64) unlocked and deleted
+DEBUG util.py:116:  kill orphans

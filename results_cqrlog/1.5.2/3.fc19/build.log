@@ -1,0 +1,73 @@
+Mock Version: 1.1.28
+ENTER do(['bash', '--login', '-c', 'rpmbuild -bs --target x86_64 --nodeps builddir/build/SPECS/cqrlog.spec'], False, '/var/lib/mock/fedora-rawhide-x86_64/root/', None, 0, True, False, 1000, 990, None, False, {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'CCACHE_DIR': '/tmp/ccache', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'CCACHE_UMASK': '002'}, logger=<mockbuild.trace_decorator.getLog object at 0x252b4d0>)
+Executing command: ['bash', '--login', '-c', 'rpmbuild -bs --target x86_64 --nodeps builddir/build/SPECS/cqrlog.spec'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'CCACHE_DIR': '/tmp/ccache', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'CCACHE_UMASK': '002'}
+Building target platforms: x86_64
+Building for target x86_64
+Wrote: /builddir/build/SRPMS/cqrlog-1.5.2-3.fc19.src.rpm
+Child return code was: 0
+LEAVE do --> 
+
+ENTER do(['bash', '--login', '-c', 'rpmbuild -bb --target x86_64 --nodeps builddir/build/SPECS/cqrlog.spec'], False, '/var/lib/mock/fedora-rawhide-x86_64/root/', None, 0, True, False, 1000, 990, None, False, {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'CCACHE_DIR': '/tmp/ccache', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'CCACHE_UMASK': '002'}, logger=<mockbuild.trace_decorator.getLog object at 0x252b4d0>)
+Executing command: ['bash', '--login', '-c', 'rpmbuild -bb --target x86_64 --nodeps builddir/build/SPECS/cqrlog.spec'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'CCACHE_DIR': '/tmp/ccache', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'CCACHE_UMASK': '002'}
+Building target platforms: x86_64
+Building for target x86_64
+Executing(%prep): /bin/sh -e /var/tmp/rpm-tmp.U5JiKS
++ umask 022
++ cd /builddir/build/BUILD
++ tar -xpf /builddir/build/SOURCES/cqrlog_1.5.2.deb.src.tar.gz
++ tar -xpf cqrlog_1.5.2.orig.tar.gz
++ cd /builddir/build/BUILD
++ cd cqrlog-1.5.2
++ /usr/bin/chmod -Rf a+rX,u+w,g-w,o-w .
++ echo 'Patch #0 (cqrlog.makefile.patch):'
+Patch #0 (cqrlog.makefile.patch):
++ /usr/bin/cat /builddir/build/SOURCES/cqrlog.makefile.patch
++ /usr/bin/patch -p0 --fuzz=0
+patching file Makefile
+Patch #1 (cqrlog.desktop.patch):
++ echo 'Patch #1 (cqrlog.desktop.patch):'
++ /usr/bin/cat /builddir/build/SOURCES/cqrlog.desktop.patch
++ /usr/bin/patch -p0 --fuzz=0
+patching file tools/cqrlog.desktop
++ chmod -x src/azidis3.pas
++ chmod -x src/gline2.pas
++ chmod -x src/odbec.pas
++ chmod -x src/aziloc.pas
++ chmod -x src/znacmech.pas
++ exit 0
+Executing(%build): /bin/sh -e /var/tmp/rpm-tmp.3d2LGz
++ umask 022
++ cd /builddir/build/BUILD
++ cd cqrlog-1.5.2
++ make -j8
+lazbuild -d --ws=gtk2 src/cqrlog.lpi
+NOTE: miscellaneous options file not found - using defaults
+TBaseCompilerOptions.MakeOptionsString UnitOutputDirectory="" CurOutputDir=""
+TCompiler.Compile WorkingDir="/builddir/build/BUILD/cqrlog-1.5.2/src/" CompilerFilename="/usr/bin/fpc" CompilerParams=" -MObjFPC -Sghi -O1 -gl -vewil -l -Fl/usr/lib64/lazarus/lcl -Fulnet/lib -Fuipc -Fumysql -Fu/usr/lib64/lazarus/components/memds/lib/x86_64-linux/gtk2 -Fu/usr/lib64/lazarus/components/tdbf/lib/x86_64-linux/gtk2 -Fu/usr/lib64/lazarus/components/rtticontrols/lib/x86_64-linux/gtk2 -Fu/usr/lib64/lazarus/components/tachart/lib/x86_64-linux/gtk2 -Fu/usr/lib64/lazarus/components/sdf/lib/x86_64-linux/gtk2 -Fu/usr/lib64/lazarus/components/sqldb/lib/x86_64-linux/gtk2 -Fu/usr/lib64/lazarus/components/synedit/units/x86_64-linux -Fu/usr/lib64/lazarus/ideintf/units/x86_64-linux -Fu/usr/lib64/lazarus/components/turbopower_ipro/units/x86_64-linux -Fu/usr/lib64/lazarus/components/printers/lib/x86_64-linux/gtk2 -Fu/usr/lib64/lazarus/lcl/units/x86_64-linux -Fu/usr/lib64/lazarus/lcl/units/x86_64-linux/gtk2 -Fu/usr/lib64/lazarus/packager/units/x86_64-linux -Fu. -ocqrlog -dNO_CONTEST -dLCL -dLCLgtk2 cqrlog.lpr"
+[TCompiler.Compile] CmdLine="/usr/bin/fpc  -MObjFPC -Sghi -O1 -gl -vewil -l -Fl/usr/lib64/lazarus/lcl -Fulnet/lib -Fuipc -Fumysql -Fu/usr/lib64/lazarus/components/memds/lib/x86_64-linux/gtk2 -Fu/usr/lib64/lazarus/components/tdbf/lib/x86_64-linux/gtk2 -Fu/usr/lib64/lazarus/components/rtticontrols/lib/x86_64-linux/gtk2 -Fu/usr/lib64/lazarus/components/tachart/lib/x86_64-linux/gtk2 -Fu/usr/lib64/lazarus/components/sdf/lib/x86_64-linux/gtk2 -Fu/usr/lib64/lazarus/components/sqldb/lib/x86_64-linux/gtk2 -Fu/usr/lib64/lazarus/components/synedit/units/x86_64-linux -Fu/usr/lib64/lazarus/ideintf/units/x86_64-linux -Fu/usr/lib64/lazarus/components/turbopower_ipro/units/x86_64-linux -Fu/usr/lib64/lazarus/components/printers/lib/x86_64-linux/gtk2 -Fu/usr/lib64/lazarus/lcl/units/x86_64-linux -Fu/usr/lib64/lazarus/lcl/units/x86_64-linux/gtk2 -Fu/usr/lib64/lazarus/packager/units/x86_64-linux -Fu. -ocqrlog -dNO_CONTEST -dLCL -dLCLgtk2 cqrlog.lpr"
+Free Pascal Compiler version 2.6.2rc1 [2012/11/24] for x86_64
+Copyright (c) 1993-2012 by Florian Klaempfl and others
+Target OS: Linux for x86-64
+Compiling cqrlog.lpr
+2 209/832 Kb Used
+Compiling uScrollBars.pas
+PPU Loading /usr/lib64/lazarus/lcl/units/x86_64-linux/gtk2/interfaces.ppu
+PPU Invalid Version 134
+cqrlog.lpr(6,3) Fatal: Can't find unit Interfaces used by cqrlog
+ERROR: failed compiling of project /builddir/build/BUILD/cqrlog-1.5.2/src/cqrlog.lpi
+make: *** [cqrlog] Error 2
+RPM build errors:
+error: Bad exit status from /var/tmp/rpm-tmp.3d2LGz (%build)
+    Bad exit status from /var/tmp/rpm-tmp.3d2LGz (%build)
+Child return code was: 1
+EXCEPTION: Command failed. See logs for output.
+ # ['bash', '--login', '-c', 'rpmbuild -bb --target x86_64 --nodeps builddir/build/SPECS/cqrlog.spec']
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/mockbuild/trace_decorator.py", line 70, in trace
+    result = func(*args, **kw)
+  File "/usr/lib/python2.7/site-packages/mockbuild/util.py", line 359, in do
+    raise mockbuild.exception.Error, ("Command failed. See logs for output.\n # %s" % (command,), child.returncode)
+Error: Command failed. See logs for output.
+ # ['bash', '--login', '-c', 'rpmbuild -bb --target x86_64 --nodeps builddir/build/SPECS/cqrlog.spec']
+LEAVE do --> EXCEPTION RAISED
+
