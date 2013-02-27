@@ -1,5 +1,5 @@
 Name:		cqrlog
-Version:	1.5.3
+Version:	1.5.4
 Release:	1%{?dist}
 Summary:	An amateur radio contact logging program
 
@@ -150,6 +150,9 @@ iconv -f iso8859-1 -t utf-8 %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt > 
 %{_mandir}/man1/cqrlog.1.gz
 
 %changelog
+* Tue Feb 26 2013 Eric "Sparks" Christensen - 1.5.4-1
+- Fixed an issue with missing MASTER.SCP file.
+
 * Sun Feb 24 2013 Eric "Sparks" Christensen - 1.5.3-1
 - added support for Super Check Partial (Window -> Super Check Partial)
 - added Tune function (for WinKeyerUSB and cwdaemon), hotkey CTRL+T
