@@ -1,6 +1,6 @@
 Name:		cqrlog
 Version:	1.5.2
-Release:	5%{?dist}
+Release:	6%{?dist}
 Summary:	An amateur radio contact logging program
 
 Group:		Applications/Databases
@@ -20,8 +20,9 @@ Requires:	mysql
 Requires:	mysql-server
 Requires:	trustedqsl
 Requires:	hamlib 
-#This entire library is required for this software as this library contains the information for connecting to various transceivers.
-Requires:	openssl-devel
+Requires: libssl.so
+Requires: libcrypto.so.1.0.1c
+Requires: libmysqlclient.so.18
 BuildRequires:	desktop-file-utils
 
 %description
@@ -150,6 +151,9 @@ iconv -f iso8859-1 -t utf-8 %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt > 
 %{_mandir}/man1/cqrlog.1.gz
 
 %changelog
+* Thu 2013-02-28 Eric "Sparks" Christensen - 1.5.2-6
+- Fixed OpenSSL requirements
+
 * Fri Feb 22 2013 Eric "Sparks" Christensen - 1.5.2-5
 - Repaired desktop category
 
