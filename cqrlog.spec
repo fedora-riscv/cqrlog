@@ -151,7 +151,7 @@ iconv -f iso8859-1 -t utf-8 %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt > 
 %{_mandir}/man1/cqrlog.1.gz
 
 %changelog
-* Thu 2013-02-28 Eric "Sparks" Christensen - 1.5.2-6
+* Thu Feb 28 2013 Eric "Sparks" Christensen - 1.5.2-6
 - Fixed OpenSSL requirements
 
 * Fri Feb 22 2013 Eric "Sparks" Christensen - 1.5.2-5
