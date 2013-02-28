@@ -16,12 +16,11 @@ ExcludeArch:	s390 s390x
 
 BuildRequires:	fpc
 BuildRequires:	lazarus
-Requires:	mysql
 Requires:	mysql-server
 Requires:	trustedqsl
 Requires:	hamlib 
-Requires: libssl.so
-Requires: libcrypto.so.1.0.1c
+#Requires: libssl.so
+#Requires: libcrypto.so.1.0.1c
 Requires: libmysqlclient.so.18
 BuildRequires:	desktop-file-utils
 
