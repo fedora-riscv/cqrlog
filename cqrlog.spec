@@ -1,5 +1,5 @@
 Name:		cqrlog
-iVersion:	1.5.4
+Version:	1.5.4
 Release:	1%{?dist}
 Summary:	An amateur radio contact logging program
 
