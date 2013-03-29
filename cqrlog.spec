@@ -1,6 +1,6 @@
 Name:		cqrlog
-Version:	1.5.2
-Release:	5%{?dist}
+Version:	1.5.4
+Release:	1%{?dist}
 Summary:	An amateur radio contact logging program
 
 Group:		Applications/Databases
@@ -16,12 +16,12 @@ ExcludeArch:	s390 s390x
 
 BuildRequires:	fpc
 BuildRequires:	lazarus
-Requires:	mysql
 Requires:	mysql-server
 Requires:	trustedqsl
 Requires:	hamlib 
-#This entire library is required for this software as this library contains the information for connecting to various transceivers.
-Requires:	openssl-devel
+#Requires: libssl.so
+#Requires: libcrypto.so.1.0.1c
+Requires: libmysqlclient.so.18
 BuildRequires:	desktop-file-utils
 
 %description
@@ -150,6 +150,26 @@ iconv -f iso8859-1 -t utf-8 %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt > 
 %{_mandir}/man1/cqrlog.1.gz
 
 %changelog
+* Fri Mar 29 2013 Eric "Sparks" Christensen - 1.5.4-1
+- Upgrade to version 1.5.4
+- fixed problem with MASTER.SCP
+- added support for Super Check Partial (Window -> Super Check Partial)
+- added Tune function (for WinKeyerUSB and cwdaemon), hotkey CTRL+T
+- added Repair table function to database connection window (Utils button)
+- improved export for QSL labels printing (labels are sorted by dxcc, you can choose what fields will be be printed)
+- updated membership tables
+- fixed program crash when editing DX cluster info
+- CW keys window doesn't show caption for F9 and F10 keys
+- ADIF export ignored delimitter in TX_PWR (0.5 was exported as 05)
+- CQRLOG killed rigctld even when autostart was disabled
+- double click to spots listed with SH/DX didn't work
+- QSO list window showed filter is enabled after reopen (filter was disabled)
+- login to eQSL with password containing special character didn't work
+- when QSO passed over the midnight, the qso was saved with wrong date
+
+* Thu Feb 28 2013 Eric "Sparks" Christensen - 1.5.2-6
+- Fixed OpenSSL requirements
+
 * Fri Feb 22 2013 Eric "Sparks" Christensen - 1.5.2-5
 - Repaired desktop category
 
