@@ -1,5 +1,5 @@
 Name:		cqrlog
-Version:	1.5.4
+Version:	1.5.6
 Release:	1%{?dist}
 Summary:	An amateur radio contact logging program
 
@@ -150,6 +150,18 @@ iconv -f iso8859-1 -t utf-8 %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt > 
 %{_mandir}/man1/cqrlog.1.gz
 
 %changelog
+* Wed Jun 19 2013 Eric "Sparks" Christensen - 1.5.6-1
+-Upgrade to version 1.5.6
+-if any error message about LoTW import appear, you can open it in external app directly from CQRLOG
+-LoTW upload url changed
+-fixed "An invalid integer value" error during label export
+-import of QSO with custom digi mode didn't worked if the list of modes didn't ended with comma (,) - fixed
+-bandmap didn't worked if the freq of QSO precision was to ten Hz
+-station with /AM and /MM caused error "You must enter correct WAZ zone!" - fixed
+-removed mode from search criteria to confirm QSO via LoTW
+-QSO will be confirmed when time difference between QSO and QSO from LoTW is not more than 1 hour
+-default debug level is set 0, if you want to get more info what cqrlog does, run it with debug=1 or more
+
 * Fri Mar 29 2013 Eric "Sparks" Christensen - 1.5.4-1
 - Upgrade to version 1.5.4
 - fixed problem with MASTER.SCP
