@@ -1,5 +1,5 @@
 Name:		cqrlog
-Version:	1.5.6
+Version:	1.5.8
 Release:	1%{?dist}
 Summary:	An amateur radio contact logging program
 
@@ -19,7 +19,7 @@ BuildRequires:	lazarus
 Requires:	mysql-server
 Requires:	trustedqsl
 Requires:	hamlib 
-#Requires: libssl.so
+Requires: libssl.so
 #Requires: libcrypto.so.1.0.1c
 Requires: libmysqlclient.so.18
 BuildRequires:	desktop-file-utils
@@ -150,17 +150,30 @@ iconv -f iso8859-1 -t utf-8 %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt > 
 %{_mandir}/man1/cqrlog.1.gz
 
 %changelog
+* Tue Jul 9 2013 Eric "Sparks" Christensen <sparks@fedoraproject.org> - 1.5.8-1
+- Upgraded to version 1.5.8
+- Nothing happened after double click on bandmap spot - fixed
+- Enter key in Filter window will activate the filter
+- Blank locator field in Group edit clears locator field
+- ADIF export didn't contain DXCC field with ADIF id of the country
+- grayline caused program crash after compile with recent FPC and Lazarus versions
+- When the grid was in lowercase, the Big square statistic was broken
+- Bandmap didn't worked if the freq of QSO precision was to one Hz
+- Debug level settings didn't worked at all
+- QSO will be confirmed when time difference between QSO and QSO from LoTW is not more than 10 minutes
+
+
 * Wed Jun 19 2013 Eric "Sparks" Christensen - 1.5.6-1
--Upgrade to version 1.5.6
--if any error message about LoTW import appear, you can open it in external app directly from CQRLOG
--LoTW upload url changed
--fixed "An invalid integer value" error during label export
--import of QSO with custom digi mode didn't worked if the list of modes didn't ended with comma (,) - fixed
--bandmap didn't worked if the freq of QSO precision was to ten Hz
--station with /AM and /MM caused error "You must enter correct WAZ zone!" - fixed
--removed mode from search criteria to confirm QSO via LoTW
--QSO will be confirmed when time difference between QSO and QSO from LoTW is not more than 1 hour
--default debug level is set 0, if you want to get more info what cqrlog does, run it with debug=1 or more
+- Upgrade to version 1.5.6
+- if any error message about LoTW import appear, you can open it in external app directly from CQRLOG
+- LoTW upload url changed
+- fixed "An invalid integer value" error during label export
+- import of QSO with custom digi mode didn't worked if the list of modes didn't ended with comma (,) - fixed
+- bandmap didn't worked if the freq of QSO precision was to ten Hz
+- station with /AM and /MM caused error "You must enter correct WAZ zone!" - fixed
+- removed mode from search criteria to confirm QSO via LoTW
+- QSO will be confirmed when time difference between QSO and QSO from LoTW is not more than 1 hour
+- default debug level is set 0, if you want to get more info what cqrlog does, run it with debug=1 or more
 
 * Fri Mar 29 2013 Eric "Sparks" Christensen - 1.5.4-1
 - Upgrade to version 1.5.4
