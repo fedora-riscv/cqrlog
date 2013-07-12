@@ -1,6 +1,6 @@
 Name:		cqrlog
 Version:	1.5.8
-Release:	2%{?dist}
+Release:	3%{?dist}
 Summary:	An amateur radio contact logging program
 
 Group:		Applications/Databases
@@ -20,7 +20,7 @@ Requires:	mysql-server
 Requires:	trustedqsl
 Requires:	hamlib 
 Requires:	openssl-devel
-Requires:	libmysqlclient.so.18
+Requires:	mariadb-libs
 BuildRequires:	desktop-file-utils
 
 %description
@@ -149,6 +149,9 @@ iconv -f iso8859-1 -t utf-8 %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt > 
 %{_mandir}/man1/cqrlog.1.gz
 
 %changelog
+* Fri Jul 12 2013 Eric "Sparks" Christensen <sparks@fedoraproject.org> - 1.5.8-3
+- Fixed libmysqlclient.so.18 dependency
+
 * Wed Jul 10 2013 Eric "Sparks" Christensen <sparks@fedoraproject.org> - 1.5.8-2
 - Fixed openssl dependency.
 
