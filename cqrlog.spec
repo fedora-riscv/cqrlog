@@ -1,6 +1,6 @@
 Name:		cqrlog
 Version:	1.5.8
-Release:	3%{?dist}
+Release:	4%{?dist}
 Summary:	An amateur radio contact logging program
 
 Group:		Applications/Databases
@@ -149,6 +149,9 @@ iconv -f iso8859-1 -t utf-8 %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt > 
 %{_mandir}/man1/cqrlog.1.gz
 
 %changelog
+* Sat Aug 03 2013 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.5.8-4
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_20_Mass_Rebuild
+
 * Fri Jul 12 2013 Eric "Sparks" Christensen <sparks@fedoraproject.org> - 1.5.8-3
 - Fixed libmysqlclient.so.18 dependency
 
