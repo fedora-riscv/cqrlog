@@ -44,7 +44,7 @@ chmod -x src/gline2.pas
 chmod -x src/odbec.pas
 chmod -x src/aziloc.pas
 chmod -x src/znacmech.pas
-chmod -x src/voice_keyer/README
+chmod -x voice_keyer/README
 
 %build
 make %{?_smp_mflags}
