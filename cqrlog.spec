@@ -1,6 +1,6 @@
 Name:		cqrlog
 Version:	1.6.0
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	An amateur radio contact logging program
 
 Group:		Applications/Databases
@@ -44,6 +44,7 @@ chmod -x src/gline2.pas
 chmod -x src/odbec.pas
 chmod -x src/aziloc.pas
 chmod -x src/znacmech.pas
+chmod -x src/voice_keyer/README
 
 %build
 make %{?_smp_mflags}
@@ -137,6 +138,7 @@ sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/qcwa.txt
 sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/hhc.txt
 sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/rrdxa.txt
 sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/arktika.txt
+sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/ctyfiles/MASTER.SCP
 
 iconv -f iso8859-1 -t utf-8 %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt > %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt.conv && mv -f %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt.conv %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt
 
@@ -146,9 +148,14 @@ iconv -f iso8859-1 -t utf-8 %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt > 
 %{_datadir}/icons/cqrlog.png
 %{_datadir}/pixmaps/cqrlog/cqrlog.png
 %{_bindir}/cqrlog
+%{_datadir}/%{name}/cqrlog-apparmor-fix
+%{_datadir}/%{name}/voice_keyer/voice_keyer.sh
 %{_mandir}/man1/cqrlog.1.gz
 
 %changelog
+* Tue Sep 10 2013 Eric "Sparks" Christensen <sparks@fedoraproject.org> - 1.6.0-2
+- Fixed rpmlint problems.
+
 * Tue Sep 10 2013 Eric "Sparks" Christensen <sparks@fedoraproject.org> - 1.6.0-1
 - your CQ received by RBN will be visible in gray line map
 - local mysqld is executed only when the log is stored to local machine
