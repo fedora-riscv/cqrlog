@@ -1,6 +1,6 @@
 Name:		cqrlog
-Version:	1.5.8
-Release:	5%{?dist}
+Version:	1.6.0
+Release:	1%{?dist}
 Summary:	An amateur radio contact logging program
 
 Group:		Applications/Databases
@@ -149,6 +149,20 @@ iconv -f iso8859-1 -t utf-8 %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt > 
 %{_mandir}/man1/cqrlog.1.gz
 
 %changelog
+* Tue Sep 10 2013 Eric "Sparks" Christensen <sparks@fedoraproject.org> - 1.6.0-1
+- your CQ received by RBN will be visible in gray line map
+- local mysqld is executed only when the log is stored to local machine
+- added JT9 to list of modes
+- added Power field to filter window
+- option to show distance in miles instead of km added
+- limit of max QSO on QSL label increased
+- added whole new bandmap with frequecy indicator
+- double click on bandmap didn't work when the spot had split info - fixed
+- propagation info in spot notes has correct format
+- existing band map record was not updated from dx cluster
+- program didn't accept ITU zones 78 and 90 - fixed
+- program used QTH from previous QSO even is the station was /P - fixed
+
 * Mon Aug 12 2013 Eric "Sparks" Christensen <sparks@fedoraproject.org> - 1.5.8-5
 - Added exclusion for armv7hl arch.
 
