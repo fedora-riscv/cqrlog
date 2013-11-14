@@ -1,6 +1,6 @@
 Name:		cqrlog
-Version:	1.6.0
-Release:	2%{?dist}
+Version:	1.6.1
+Release:	1%{?dist}
 Summary:	An amateur radio contact logging program
 
 Group:		Applications/Databases
@@ -153,6 +153,20 @@ iconv -f iso8859-1 -t utf-8 %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt > 
 %{_mandir}/man1/cqrlog.1.gz
 
 %changelog
+* Thu Nov 14 2013 Eric "Sparks" Christensen <sparks@fedoraproject.org> - 1.6.1-1
+- 630M band added
+- added OQRS (online QSL request system) to QSL sent menu
+- added "Always sort by QSO date" option to Search function
+- cursor is moved to last opened log in DB connection window
+- "Ask before creating a backup" option to "Auto backup" added
+- band map is much faster, a few optimization added
+- program froze for a few milliseconds with every bandmap refresh - fixed
+- "MySQL server has gone away" problem fixed
+- membership values collation were case sensitive - fixed
+- ADIF import sometimes crashed with access violation, now will show what happened
+- qrz search with right click on a call in the recent QSOs list didn't work
+- band map font settings was not loaded when program started
+
 * Tue Sep 10 2013 Eric "Sparks" Christensen <sparks@fedoraproject.org> - 1.6.0-2
 - Fixed rpmlint problems.
 
