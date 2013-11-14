@@ -1,6 +1,6 @@
 Name:		cqrlog
-Version:	1.6.0
-Release:	2%{?dist}
+Version:	1.6.1
+Release:	1%{?dist}
 Summary:	An amateur radio contact logging program
 
 Group:		Applications/Databases
@@ -44,7 +44,8 @@ chmod -x src/gline2.pas
 chmod -x src/odbec.pas
 chmod -x src/aziloc.pas
 chmod -x src/znacmech.pas
-chmod -x voice_keyer/README
+chmod -x tools/cqrlog-apparmor-fix
+chmod -x voice_keyer/voice_keyer.sh
 
 %build
 make %{?_smp_mflags}
@@ -143,16 +144,29 @@ sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/ctyfiles/MASTER.SCP
 iconv -f iso8859-1 -t utf-8 %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt > %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt.conv && mv -f %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt.conv %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt
 
 %files
-%doc %{_datadir}/%{name}
+%doc %{_datadir}/%{name} 
+%doc %{_datadir}/%{name}/voice_keyer/README
 %{_datadir}/applications/cqrlog.desktop
 %{_datadir}/icons/cqrlog.png
 %{_datadir}/pixmaps/cqrlog/cqrlog.png
 %{_bindir}/cqrlog
-%{_datadir}/%{name}/cqrlog-apparmor-fix
-%{_datadir}/%{name}/voice_keyer/voice_keyer.sh
 %{_mandir}/man1/cqrlog.1.gz
 
 %changelog
+* Thu Nov 14 2013 Eric "Sparks" Christensen <sparks@fedoraproject.org> - 1.6.1-1
+- 630M band added
+- added OQRS (online QSL request system) to QSL sent menu
+- added "Always sort by QSO date" option to Search function
+- cursor is moved to last opened log in DB connection window
+- "Ask before creating a backup" option to "Auto backup" added
+- band map is much faster, a few optimization added
+- program froze for a few milliseconds with every bandmap refresh - fixed
+- "MySQL server has gone away" problem fixed
+- membership values collation were case sensitive - fixed
+- ADIF import sometimes crashed with access violation, now will show what happened
+- qrz search with right click on a call in the recent QSOs list didn't work
+- band map font settings was not loaded when program started
+
 * Tue Sep 10 2013 Eric "Sparks" Christensen <sparks@fedoraproject.org> - 1.6.0-2
 - Fixed rpmlint problems.
 
