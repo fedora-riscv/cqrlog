@@ -44,7 +44,8 @@ chmod -x src/gline2.pas
 chmod -x src/odbec.pas
 chmod -x src/aziloc.pas
 chmod -x src/znacmech.pas
-chmod -x voice_keyer/README
+chmod -x tools/cqrlog-apparmor-fix
+chmod -x voice_keyer/voice_keyer.sh
 
 %build
 make %{?_smp_mflags}
@@ -143,13 +144,12 @@ sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/ctyfiles/MASTER.SCP
 iconv -f iso8859-1 -t utf-8 %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt > %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt.conv && mv -f %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt.conv %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt
 
 %files
-%doc %{_datadir}/%{name}
+%doc %{_datadir}/%{name} 
+%doc %{_datadir}/%{name}/voice_keyer/README
 %{_datadir}/applications/cqrlog.desktop
 %{_datadir}/icons/cqrlog.png
 %{_datadir}/pixmaps/cqrlog/cqrlog.png
 %{_bindir}/cqrlog
-%{_datadir}/%{name}/cqrlog-apparmor-fix
-%{_datadir}/%{name}/voice_keyer/voice_keyer.sh
 %{_mandir}/man1/cqrlog.1.gz
 
 %changelog
