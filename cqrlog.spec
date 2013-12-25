@@ -1,6 +1,6 @@
 Name:		cqrlog
 Version:	1.6.1
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	An amateur radio contact logging program
 
 Group:		Applications/Databases
@@ -48,7 +48,7 @@ chmod -x tools/cqrlog-apparmor-fix
 chmod -x voice_keyer/voice_keyer.sh
 
 %build
-make %{?_smp_mflags}
+make %{?_smp_mflags} ST=:
 
 
 %install
@@ -153,6 +153,9 @@ iconv -f iso8859-1 -t utf-8 %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt > 
 %{_mandir}/man1/cqrlog.1.gz
 
 %changelog
+* Wed Dec 25 2013 Ville Skyttä <ville.skytta@iki.fi> - 1.6.1-2
+- Let rpmbuild strip executable (#1008236).
+
 * Thu Nov 14 2013 Eric "Sparks" Christensen <sparks@fedoraproject.org> - 1.6.1-1
 - 630M band added
 - added OQRS (online QSL request system) to QSL sent menu
