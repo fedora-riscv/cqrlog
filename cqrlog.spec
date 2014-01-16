@@ -1,6 +1,6 @@
 Name:		cqrlog
-Version:	1.6.1
-Release:	2%{?dist}
+Version:	1.7.0
+Release:	1%{?dist}
 Summary:	An amateur radio contact logging program
 
 Group:		Applications/Databases
@@ -153,8 +153,27 @@ iconv -f iso8859-1 -t utf-8 %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt > 
 %{_mandir}/man1/cqrlog.1.gz
 
 %changelog
-* Tue Jan 14 2014 Eric "Sparks" Christensen <sparks@fedoraproject.org> - 1.6.1-2
-- Let rpmbuild strip executable (BZ #1008236).
+* Wed Jan 15 2014 Eric "Sparks" Christensen <sparks@fedoraproject.org> - 1.7.0-1
+- online QSO upload to HamQTH, ClubLog and HRDLog added
+- improved QSL managers import, should be faster a bit
+- "Long Path" button to Rotor Control added (Darek, SP2MKI)
+- COMMENT field is exported to eQSL server
+- Always overwrite info from previous QSO with callbook data option added
+- help updated
+- country files updated
+- membership files updated
+- layout improved (mostly new QSO window)
+- LoTW QSL RCVD was not imported when ADIF didn't include LOTW_QSLRDATE value - fixed
+- CONTESTIA mode was saved as CONSTESTI (increased max length of mode to 10 characters) - fixed
+- ReverseBeacon support in Gray line didn't work - fixed
+- after click to OK button in Preferences, bandmap stopped deleting old spots - fixed
+- bandmap was not updated when any spot was not added - fixed
+- station was added to bandmap when offline mode was activated - fixed
+- big square statistics didn't work in newer versions of distributions - fixed
+- QSO JT65* mode were not confirmed by eQSL - fixed
+
+* Wed Dec 25 2013 Ville Skyttä <ville.skytta@iki.fi> - 1.6.1-2
+- Let rpmbuild strip executable (#1008236).
 
 * Thu Nov 14 2013 Eric "Sparks" Christensen <sparks@fedoraproject.org> - 1.6.1-1
 - 630M band added
