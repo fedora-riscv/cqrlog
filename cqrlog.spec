@@ -1,5 +1,5 @@
 Name:		cqrlog
-Version:	1.7.0
+Version:	1.7.1
 Release:	1%{?dist}
 Summary:	An amateur radio contact logging program
 
@@ -153,6 +153,15 @@ iconv -f iso8859-1 -t utf-8 %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt > 
 %{_mandir}/man1/cqrlog.1.gz
 
 %changelog
+* Wed Jan 29 2014 Eric "Sparks" Christensen <sparks@fedoraproject.org> - 1.7.1-1
+- "When TRX control is not active, use frequency and mode from NewQSO window" option to Preferences->Band map added
+- CTRL+N hotkey to QSO list window added (do NOT send QSL)
+- TRX control window was not sizeable - fixed
+- when ESC was pressed twice in Remote mode, log crashed - fixed
+- program crashed when freq was entered with comma as decimal separator - fixed
+- broken grid square statistic fixed
+
+
 * Wed Jan 15 2014 Eric "Sparks" Christensen <sparks@fedoraproject.org> - 1.7.0-1
 - online QSO upload to HamQTH, ClubLog and HRDLog added
 - improved QSL managers import, should be faster a bit
