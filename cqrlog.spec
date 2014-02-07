@@ -1,12 +1,12 @@
 Name:		cqrlog
-Version:	1.7.1
+Version:	1.7.3
 Release:	1%{?dist}
 Summary:	An amateur radio contact logging program
 
 Group:		Applications/Databases
 License:	GPLv2
 URL:		http://www.cqrlog.com/
-Source0:	http://www.cqrlog.com/files/%{name}_%{version}/%{name}_%{version}.deb.src.tar.gz
+Source0:	http://www.cqrlog.com/files/%{name}_%{version}/%{name}_%{version}.src.tar.gz
 Patch0:		cqrlog.makefile.patch
 Patch1:		cqrlog.desktop.patch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
@@ -34,7 +34,6 @@ operation and maintenance.
 
 %prep
 tar -xpf %{SOURCE0}
-tar -xpf %{name}_%{version}.orig.tar.gz
 %setup -q -D -T
 %patch0
 %patch1
@@ -153,6 +152,16 @@ iconv -f iso8859-1 -t utf-8 %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt > 
 %{_mandir}/man1/cqrlog.1.gz
 
 %changelog
+* Fri Feb 07 2014 Eric "Sparks" Christensen <sparks@fedoraproject.org> - 1.7.3-1
+- after hitting ESC in any window opened from NewQSO, cursor will be returned to callsign edit field
+- frequency in New QSO and QSO list wondow is formated to 0.0000
+- added Help -> Keys and shortcut to menu in QSO window
+- RBN integration into GrayLine showed CW speed instead of signal strench - fixed
+- DXCC entity window didn't show when compiled in Debian Sid and Ubuntu 13.10 - fixed
+- when CQRLOG was run for the first time, two mysqld proccesses opened the same database - fixed
+- upload to ClubLog didn't work after enter QSO and delete - fixed (big thanks to Pawel, SQ5LTL)
+- TRX control window's layout was broken with some font sizes - fixed
+
 * Wed Jan 29 2014 Eric "Sparks" Christensen <sparks@fedoraproject.org> - 1.7.1-1
 - "When TRX control is not active, use frequency and mode from NewQSO window" option to Preferences->Band map added
 - CTRL+N hotkey to QSO list window added (do NOT send QSL)
