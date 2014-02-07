@@ -34,7 +34,7 @@ operation and maintenance.
 
 %prep
 tar -xpf %{SOURCE0}
-tar -xpf %{name}_%{version}.orig.tar.gz
+#tar -xpf %{name}_%{version}.orig.tar.gz
 %setup -q -D -T
 %patch0
 %patch1
