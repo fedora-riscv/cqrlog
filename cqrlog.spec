@@ -1,5 +1,5 @@
 Name:		cqrlog
-Version:	1.7.3
+Version:	1.7.4
 Release:	1%{?dist}
 Summary:	An amateur radio contact logging program
 
@@ -152,6 +152,21 @@ iconv -f iso8859-1 -t utf-8 %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt > 
 %{_mandir}/man1/cqrlog.1.gz
 
 %changelog
+* Sun Apr 20 2014 Eric "Sparks" Christensen <sparks@fedoraproject.org> - 1.7.4-1
+- F keys to CW type window added
+- address to RBN server can be changed in Preferences
+- full date (not only year,month) is supported in membership files
+- Close the "Status of log upload" window after successful upload added
+- moved to new LoTW url and updated upload routines
+- band button description is editable (Preferences -> TRX control -> Change default frequencies)
+- 6W/MM0NDX was marked as unknown country instead of Senegal - fixed
+- after View QSO and CTRL+F2 fields was still read-only - fixed
+- QSL information was added to Commend to QSO even if it already exists
+- '+' character is now allowed in any field in New QSO window
+- log could not recover from a wrong upload of updated QSO - fixed
+- '+' as hotkey to add to bandmap function removed, use CTRL+A instead
+- any result from ClubLog with 'Skipping QSO' won't stop uploading of the log
+
 * Fri Feb 07 2014 Eric "Sparks" Christensen <sparks@fedoraproject.org> - 1.7.3-1
 - after hitting ESC in any window opened from NewQSO, cursor will be returned to callsign edit field
 - frequency in New QSO and QSO list wondow is formated to 0.0000
