@@ -1,6 +1,6 @@
 Name:		cqrlog
 Version:	1.7.4
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	An amateur radio contact logging program
 
 Group:		Applications/Databases
@@ -152,6 +152,9 @@ iconv -f iso8859-1 -t utf-8 %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt > 
 %{_mandir}/man1/cqrlog.1.gz
 
 %changelog
+* Sat Jun 07 2014 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.7.4-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_21_Mass_Rebuild
+
 * Sun Apr 20 2014 Eric "Sparks" Christensen <sparks@fedoraproject.org> - 1.7.4-1
 - F keys to CW type window added
 - address to RBN server can be changed in Preferences
