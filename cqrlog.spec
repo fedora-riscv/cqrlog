@@ -1,5 +1,5 @@
 Name:		cqrlog
-Version:	1.7.4
+Version:	1.8.1
 Release:	1%{?dist}
 Summary:	An amateur radio contact logging program
 
@@ -152,6 +152,35 @@ iconv -f iso8859-1 -t utf-8 %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt > 
 %{_mandir}/man1/cqrlog.1.gz
 
 %changelog
+* Mon Jul 28 2014 Eric "Sparks" Christensen <sparks@fedoraproject.org> - 1.8.1-1
+- Program crashed with error about Exceptions.tbl when started for the first time
+- After hit enter in New QSO window, it took long time to save QSO
+
+* Mon Jul 21 2014 Eric "Sparks" Christensen <sparks@fedoraproject.org> - 1.8.0-1
+- after click to "Upload all" qso to online logs, info about disabled services is not shown
+- added new optimized MySQL configuration file (log should be faster and won't show error about missing tables)
+- additional date formats for QSL label printing added (Tom, DL7BJ)
+- alert for for callsign on specific mode and band added
+- %h CW macro added (sends GM/GA/GE calculated from wkd station local time)
+- %rs CW macro added (sends RST_S and replace 9 with N)
+- design of gridlists can be changed in Preferences/Fonts/Gridlist settings (Tom, DL7BJ)
+- additional options to split RST (TX and RX) in three fields for QSL label printing (Tom, DL7BJ)
+- K3NG key support added
+- "Use '+' key to add spots to band map" option added to Preferences -> Band map
+- program crashed with error about Exceptions.tbl when started for the first time
+- Shift+F12 didn't cancel the filtr - fixed
+- "Filter is USED!" info wasn't canceled after click to Sort button (filter was disabled)
+- reading signal strength from RBN spots fixed
+- RBN default port is 7000 not 7300 - fixed
+- fixed a bug in DXCC statistics, mode 'Paper QSL only' (Tom, DL7BJ)
+- program crashed after close - fixed
+- program crashed after click to Cancel in DB connection window
+- sunrise, sunse and greeting info was broken - fixed
+- xplanet opened from the "New QSO Window" was not centred on own lattitude and longitude
+
+* Sat Jun 07 2014 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.7.4-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_21_Mass_Rebuild
+
 * Sun Apr 20 2014 Eric "Sparks" Christensen <sparks@fedoraproject.org> - 1.7.4-1
 - F keys to CW type window added
 - address to RBN server can be changed in Preferences
