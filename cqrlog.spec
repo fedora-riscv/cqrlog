@@ -1,6 +1,6 @@
 Name:		cqrlog
 Version:	1.8.1
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	An amateur radio contact logging program
 
 Group:		Applications/Databases
@@ -152,6 +152,9 @@ iconv -f iso8859-1 -t utf-8 %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt > 
 %{_mandir}/man1/cqrlog.1.gz
 
 %changelog
+* Sat Aug 16 2014 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.8.1-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_21_22_Mass_Rebuild
+
 * Mon Jul 28 2014 Eric "Sparks" Christensen <sparks@fedoraproject.org> - 1.8.1-1
 - Program crashed with error about Exceptions.tbl when started for the first time
 - After hit enter in New QSO window, it took long time to save QSO
