@@ -1,0 +1,12 @@
+diff -up cqrlog-1.8.1/src/cqrlog.lpi~ cqrlog-1.8.1/src/cqrlog.lpi
+--- cqrlog-1.8.1/src/cqrlog.lpi~	2014-07-26 10:27:10.000000000 +0300
++++ cqrlog-1.8.1/src/cqrlog.lpi	2014-08-04 00:06:14.224116323 +0300
+@@ -692,7 +692,7 @@
+     </CodeGeneration>
+     <Linking>
+       <Debugging>
+-        <GenerateDebugInfo Value="False"/>
++        <GenerateDebugInfo Value="True"/>
+       </Debugging>
+     </Linking>
+     <Other>
