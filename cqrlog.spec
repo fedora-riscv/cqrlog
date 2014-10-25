@@ -1,6 +1,6 @@
 Name:		cqrlog
 Version:	1.8.1
-Release:	3%{?dist}
+Release:	4%{?dist}
 Summary:	An amateur radio contact logging program
 
 Group:		Applications/Databases
@@ -13,7 +13,7 @@ Patch2:		cqrlog-generateDebug.patch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 # fpc not available on these arches
-ExcludeArch:	s390 s390x armv7hl
+ExcludeArch:	s390 s390x
 
 BuildRequires:	fpc
 BuildRequires:	lazarus
@@ -154,6 +154,9 @@ iconv -f iso8859-1 -t utf-8 %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt > 
 %{_mandir}/man1/cqrlog.1.gz
 
 %changelog
+* Fri Oct 24 2014 Eric "Sparks" Christensen <sparks@fedoraproject.org> - 1.8.1-4
+- Allowing builds for ARM.
+
 * Tue Sep 30 2014 Eric "Sparks" Christensen <sparks@fedoraproject.org> - 1.8.1-3
 - Fixed empty debugging (BZ 1126233)
 
