@@ -1,6 +1,6 @@
 Name:		cqrlog
-Version:	1.8.1
-Release:	4%{?dist}
+Version:	1.8.2
+Release:	1%{?dist}
 Summary:	An amateur radio contact logging program
 
 Group:		Applications/Databases
@@ -154,6 +154,25 @@ iconv -f iso8859-1 -t utf-8 %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt > 
 %{_mandir}/man1/cqrlog.1.gz
 
 %changelog
+* Fri Oct 24 2014 Eric "Sparks" Christensen <sparks@fedoraproject.org> - 1.8.2-1
+- Select Modes in Preferences/New QSO for New QSO Form (Tom, DL7BJ)
+- Load default values for Frequency and Mode in Preferences/New QSO (Tom, DL7BJ)
+- uploading COMMENT field to eQSL is now configurable in Preferences
+- His RST and My RST changed to RST sent/RST rcvd
+- MySQL 5.6 support added
+- web dx cluster works again, it reads data from HamQTH.com
+- added Grayline offset option (sometimes Grayline is not accurate)
+- added button to refresh start and end time of QSO
+- added "Mark all QSO as uploaded to eQSL/LoTW" functions
+- sometimes program loaded configuration from different log - fixed
+- rotctld process still running when cqrlog was closed - fixed
+- export for SOTA website didn't work - fixed
+- upgrade problem with already existing tables fixed
+- LoTW/eQSL were not marked as sent/received after upload/download - fixed
+- Clear log function in Database connection window didn't work - fixed
+- sunrise and sunset times get blanked out when enter a call - fixed
+- export for QSL labels crashed when program has been running for more than 5 minutes - fixed
+
 * Fri Oct 24 2014 Eric "Sparks" Christensen <sparks@fedoraproject.org> - 1.8.1-4
 - Allowing builds for ARM.
 
