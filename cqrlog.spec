@@ -9,7 +9,6 @@ URL:		http://www.cqrlog.com/
 Source0:	http://www.cqrlog.com/files/%{name}_%{version}/%{name}_%{version}.src.tar.gz
 Patch0:		cqrlog.makefile.patch
 Patch1:		cqrlog.desktop.patch
-Patch2:		cqrlog-generateDebug.patch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 # fpc not available on these arches
@@ -38,7 +37,6 @@ tar -xpf %{SOURCE0}
 %setup -q -D -T
 %patch0
 %patch1
-%patch2
 
 chmod -x src/azidis3.pas
 chmod -x src/gline2.pas
