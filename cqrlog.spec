@@ -1,6 +1,6 @@
 Name:		cqrlog
 Version:	1.8.1
-Release:	4%{?dist}
+Release:	5%{?dist}
 Summary:	An amateur radio contact logging program
 
 Group:		Applications/Databases
@@ -154,6 +154,9 @@ iconv -f iso8859-1 -t utf-8 %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt > 
 %{_mandir}/man1/cqrlog.1.gz
 
 %changelog
+* Wed Jun 17 2015 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.8.1-5
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_23_Mass_Rebuild
+
 * Fri Oct 24 2014 Eric "Sparks" Christensen <sparks@fedoraproject.org> - 1.8.1-4
 - Allowing builds for ARM.
 
