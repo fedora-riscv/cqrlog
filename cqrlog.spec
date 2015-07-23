@@ -1,28 +1,28 @@
 Name:		cqrlog
-Version:	1.8.1
-Release:	5%{?dist}
+Version:	1.9.0
+Release:	2%{?dist}
 Summary:	An amateur radio contact logging program
 
-Group:		Applications/Databases
 License:	GPLv2
 URL:		http://www.cqrlog.com/
-Source0:	http://www.cqrlog.com/files/%{name}_%{version}/%{name}_%{version}.src.tar.gz
-Patch0:		cqrlog.makefile.patch
+Source0:	http://www.cqrlog.com/files/%{name}_%{version}/%{name}-%{version}.tar.gz
+
+Patch0:		cqrlog-1.9.0-install.patch
 Patch1:		cqrlog.desktop.patch
-Patch2:		cqrlog-generateDebug.patch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 # fpc not available on these arches
+#ExcludeArch:	s390 s390x armv7hl
 ExcludeArch:	s390 s390x
 
-BuildRequires:	fpc
+BuildRequires:	fpc >= 2.6.4
 BuildRequires:	lazarus
-Requires:	mysql-server
+BuildRequires:	desktop-file-utils
+Requires:	mariadb-server
 Requires:	trustedqsl
 Requires:	hamlib 
 Requires:	openssl-devel
 Requires:	mariadb-libs
-BuildRequires:	desktop-file-utils
+
 
 %description
 CQRLOG is an advanced ham radio logger based on MySQL database. Provides radio
@@ -34,11 +34,9 @@ daily general logging of HF, CW & SSB contacts and strongly focused on easy
 operation and maintenance.
 
 %prep
-tar -xpf %{SOURCE0}
-%setup -q -D -T
-%patch0
+%setup -q
+%patch0 -p1
 %patch1
-%patch2
 
 chmod -x src/azidis3.pas
 chmod -x src/gline2.pas
@@ -48,14 +46,15 @@ chmod -x src/znacmech.pas
 chmod -x tools/cqrlog-apparmor-fix
 chmod -x voice_keyer/voice_keyer.sh
 
+
 %build
-make %{?_smp_mflags} ST=:
+make %{?_smp_mflags}
 
 
 %install
-make install DESTDIR=%{buildroot}
+%make_install
 
-desktop-file-validate ${RPM_BUILD_ROOT}%{_datadir}/applications/cqrlog.desktop
+desktop-file-validate %{buildroot}%{_datadir}/applications/cqrlog.desktop
 
 sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/ctyfiles/lotw1.txt
 sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/ria.txt
@@ -144,18 +143,33 @@ sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/ctyfiles/MASTER.SCP
 
 iconv -f iso8859-1 -t utf-8 %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt > %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt.conv && mv -f %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt.conv %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt
 
+
 %files
-%doc %{_datadir}/%{name} 
-%doc %{_datadir}/%{name}/voice_keyer/README
-%{_datadir}/applications/cqrlog.desktop
-%{_datadir}/icons/cqrlog.png
-%{_datadir}/pixmaps/cqrlog/cqrlog.png
+%if 0%{?rhel} < 7 || 0%{?fedora} < 21
+%doc src/COPYING
+%else
+%license src/COPYING
+%endif
+%doc README.md src/AUTHORS src/CHANGELOG src/README
 %{_bindir}/cqrlog
+%{_datadir}/%{name}/
+%{_datadir}/applications/cqrlog.desktop
+%{_datadir}/pixmaps/cqrlog/cqrlog.png
 %{_mandir}/man1/cqrlog.1.gz
 
+
 %changelog
+* Thu Jul 23 2015 Richard Shaw <hobbes1069@gmail.com> - 1.9.0-2
+- Bump release for new build so it's newer than the temporary COPR builds.
+
 * Wed Jun 17 2015 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.8.1-5
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_23_Mass_Rebuild
+
+* Fri Mar  6 2015 Richard Shaw <hobbes1069@gmail.com> - 1.9.0-1
+- Update to latest upstream release.
+
+* Fri Feb  6 2015 Richard Shaw <hobbes1069@gmail.com> - 1.8.3-1
+- Update to latest upstream release.
 
 * Fri Oct 24 2014 Eric "Sparks" Christensen <sparks@fedoraproject.org> - 1.8.1-4
 - Allowing builds for ARM.
