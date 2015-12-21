@@ -1,14 +1,14 @@
 Name:		cqrlog
-Version:	1.9.0
-Release:	2%{?dist}
+Version:	1.9.1
+Release:	1%{?dist}
 Summary:	An amateur radio contact logging program
 
 License:	GPLv2
 URL:		http://www.cqrlog.com/
-Source0:	http://www.cqrlog.com/files/%{name}_%{version}/%{name}-%{version}.tar.gz
+Source0:	https://github.com/ok2cqr/cqrlog/archive/v1.9.1/%{name}-%{version}.tar.gz
 
 Patch0:		cqrlog-1.9.0-install.patch
-Patch1:		cqrlog.desktop.patch
+Patch1:		cqrlog-1.9.1-desktop.patch
 
 # fpc not available on these arches
 #ExcludeArch:	s390 s390x armv7hl
@@ -18,10 +18,12 @@ BuildRequires:	fpc >= 2.6.4
 BuildRequires:	lazarus
 BuildRequires:	desktop-file-utils
 Requires:	mariadb-server
-Requires:	trustedqsl
 Requires:	hamlib 
 Requires:	openssl-devel
 Requires:	mariadb-libs
+%if 0%{?fedora}
+Requires:	trustedqsl
+%endif
 
 
 %description
@@ -36,7 +38,7 @@ operation and maintenance.
 %prep
 %setup -q
 %patch0 -p1
-%patch1
+%patch1 -p1
 
 chmod -x src/azidis3.pas
 chmod -x src/gline2.pas
@@ -159,6 +161,9 @@ iconv -f iso8859-1 -t utf-8 %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt > 
 
 
 %changelog
+* Wed Dec  2 2015 Richard Shaw <hobbes1069@gmail.com> - 1.9.1-1
+- Update to latest upstream release.
+
 * Thu Jul 23 2015 Richard Shaw <hobbes1069@gmail.com> - 1.9.0-2
 - Bump release for new build so it's newer than the temporary COPR builds.
 
