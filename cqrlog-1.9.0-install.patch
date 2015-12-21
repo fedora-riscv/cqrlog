@@ -1,10 +1,9 @@
-diff -Naur cqrlog-1.9.0.orig/Makefile cqrlog-1.9.0/Makefile
---- cqrlog-1.9.0.orig/Makefile	2015-03-04 09:17:21.000000000 -0600
-+++ cqrlog-1.9.0/Makefile	2015-03-06 21:17:31.002138573 -0600
-@@ -6,14 +6,12 @@
+--- a/Makefile
++++ b/Makefile
+@@ -7,14 +7,12 @@ tmpdir   = /tmp
  
  cqrlog: src/cqrlog.lpi
- 	$(CC) --ws=gtk2 src/cqrlog.lpi
+ 	$(CC) --ws=gtk2 --pcp=$(tmpdir)/.lazarus src/cqrlog.lpi
 -	$(ST) src/cqrlog
 -	gzip tools/cqrlog.1 -c > tools/cqrlog.1.gz
  
@@ -17,7 +16,7 @@ diff -Naur cqrlog-1.9.0.orig/Makefile cqrlog-1.9.0/Makefile
  	
  install:
  	install -d -v         $(bindir)
-@@ -44,9 +42,8 @@
+@@ -45,9 +43,8 @@ install:
  	install    -v -m 0644 images/*   $(datadir)/images/
  	install    -v -m 0644 tools/cqrlog.desktop $(sharedir)/applications/cqrlog.desktop
  	install    -v -m 0644 images/cqrlog.png $(sharedir)/pixmaps/cqrlog/cqrlog.png
