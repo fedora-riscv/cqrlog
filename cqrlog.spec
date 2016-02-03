@@ -1,6 +1,6 @@
 Name:		cqrlog
 Version:	1.9.1
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	An amateur radio contact logging program
 
 License:	GPLv2
@@ -161,6 +161,9 @@ iconv -f iso8859-1 -t utf-8 %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt > 
 
 
 %changelog
+* Wed Feb 03 2016 Fedora Release Engineering <releng@fedoraproject.org> - 1.9.1-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_24_Mass_Rebuild
+
 * Wed Dec  2 2015 Richard Shaw <hobbes1069@gmail.com> - 1.9.1-1
 - Update to latest upstream release.
 
