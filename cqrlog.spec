@@ -1,14 +1,15 @@
 Name:		cqrlog
 Version:	1.9.1
-Release:	2%{?dist}
+Release:	3%{?dist}
 Summary:	An amateur radio contact logging program
 
 License:	GPLv2
 URL:		http://www.cqrlog.com/
 Source0:	https://github.com/ok2cqr/cqrlog/archive/v1.9.1/%{name}-%{version}.tar.gz
 
-Patch0:		cqrlog-1.9.0-install.patch
-Patch1:		cqrlog-1.9.1-desktop.patch
+Patch0:         cqrlog-1.9.0-install.patch
+Patch1:         cqrlog-1.9.1-desktop.patch
+Patch2:         cqrlog-1.9.1-build.patch
 
 # fpc not available on these arches
 #ExcludeArch:	s390 s390x armv7hl
@@ -17,12 +18,13 @@ ExcludeArch:	s390 s390x
 BuildRequires:	fpc >= 2.6.4
 BuildRequires:	lazarus
 BuildRequires:	desktop-file-utils
+
 Requires:	mariadb-server
-Requires:	hamlib 
-Requires:	openssl-devel
 Requires:	mariadb-libs
+Requires:	hamlib 
+Requires:       openssl
 %if 0%{?fedora}
-Requires:	trustedqsl
+Requires:	tqsllib
 %endif
 
 
@@ -39,6 +41,7 @@ operation and maintenance.
 %setup -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 chmod -x src/azidis3.pas
 chmod -x src/gline2.pas
@@ -58,109 +61,34 @@ make %{?_smp_mflags}
 
 desktop-file-validate %{buildroot}%{_datadir}/applications/cqrlog.desktop
 
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/ctyfiles/lotw1.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/ria.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/okdxf.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/htc.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/pro.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/9acwg.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/gqrpc.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/prl.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/ctyfiles/iota.tbl
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/ffr.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/mfca.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/firac.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/cwsp.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/gacw.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/conveniat.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/was.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/jaig.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/mcl.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/cft.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/epc.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/tfc.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/fmc.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/hh.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/okdxc.txt
+mv %{buildroot}%{_datadir}/pixmaps/cqrlog/cqrlog.png \
+   %{buildroot}%{_datadir}/pixmaps/
+
+for file in $(find %{buildroot}%{_datadir}/%{name} -name "*.txt"); do
+    sed -i 's/\r//' $file
+done
 sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/ctyfiles/CountryDel.tab
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/qthloc.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/070-club.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/dtc.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/afm.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/prc.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/rtc.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/rnars.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/okqrp.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/a1-op.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/mcwg.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/rsars.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/fnars.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/trc.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/mf.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/hacwg.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/wff.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/udxc.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/marac.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/nra.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/wwyc.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/bcc.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/ctc.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/bscc.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/ehsc.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/tenten.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/spcwc.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/armi.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/ten-ten.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/vhsc.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/cwjf.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/spar.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/cav.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/vrk.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/wap.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/wcc.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/uksmg.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/inorc.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/fists.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/yasme.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/uft.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/mdxg.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/shsc.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/rafars.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/gdxf.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/cfo.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/cct.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/cdxc.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/spar-rcc.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/marconista.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/fog.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/sdxg.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/spdxc.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/bmars.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/qcwa.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/hhc.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/rrdxa.txt
-sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/members/arktika.txt
 sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/ctyfiles/MASTER.SCP
 
 iconv -f iso8859-1 -t utf-8 %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt > %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt.conv && mv -f %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt.conv %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt
 
 
 %files
-%if 0%{?rhel} < 7 || 0%{?fedora} < 21
-%doc src/COPYING
-%else
 %license src/COPYING
-%endif
 %doc README.md src/AUTHORS src/CHANGELOG src/README
 %{_bindir}/cqrlog
 %{_datadir}/%{name}/
 %{_datadir}/applications/cqrlog.desktop
-%{_datadir}/pixmaps/cqrlog/cqrlog.png
+%{_datadir}/pixmaps/cqrlog.png
 %{_mandir}/man1/cqrlog.1.gz
 
 
 %changelog
+* Thu Mar 24 2016 Richard Shaw <hobbes1069@gmail.com> - 1.9.1-3
+- Update to latest upstream release.
+- Add patch to deal with newer fpc.
+- Remove old dependency on openssl-devel.
+
 * Wed Feb 03 2016 Fedora Release Engineering <releng@fedoraproject.org> - 1.9.1-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_24_Mass_Rebuild
 

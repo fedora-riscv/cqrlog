@@ -1,0 +1,31 @@
+Description: Fix build with fpc 3.0
+ Some deprecated field name aliases were removed in fpc 3.0. Update the code
+ to use non-deprecated names.
+Author: Peter Michael Green <plugwash@debian.org>
+Bug-Debian: https://bugs.debian.org/813461
+
+Index: cqrlog-1.9.0.new/src/lnet/lib/lcommon.pp
+===================================================================
+--- cqrlog-1.9.0.new.orig/src/lnet/lib/lcommon.pp
++++ cqrlog-1.9.0.new/src/lnet/lib/lcommon.pp
+@@ -512,15 +512,15 @@ end;
+ procedure FillAddressInfo(var aAddrInfo: TLSocketAddress; const aFamily: sa_family_t;
+   const Address: string; const aPort: Word);
+ begin
+-  aAddrInfo.IPv4.family := aFamily;
+-  aAddrInfo.IPv4.Port := htons(aPort);
++  aAddrInfo.IPv4.sin_family := aFamily;
++  aAddrInfo.IPv4.sin_port := htons(aPort);
+ 
+   case aFamily of
+     LAF_INET  :
+       begin
+-        aAddrInfo.IPv4.Addr := StrToNetAddr(Address);
+-        if (Address <> LADDR_ANY) and (aAddrInfo.IPv4.Addr = 0) then
+-          aAddrInfo.IPv4.Addr := StrToNetAddr(GetHostIP(Address));
++        aAddrInfo.IPv4.sin_addr.s_addr := StrToNetAddr(Address);
++        if (Address <> LADDR_ANY) and (aAddrInfo.IPv4.sin_addr.s_addr = 0) then
++          aAddrInfo.IPv4.sin_addr.s_addr := StrToNetAddr(GetHostIP(Address));
+       end;
+     LAF_INET6 :
+       begin
