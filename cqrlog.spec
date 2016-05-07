@@ -1,11 +1,11 @@
 Name:		cqrlog
-Version:	1.9.1
-Release:	3%{?dist}
+Version:	2.0.1
+Release:	1%{?dist}
 Summary:	An amateur radio contact logging program
 
 License:	GPLv2
 URL:		http://www.cqrlog.com/
-Source0:	https://github.com/ok2cqr/cqrlog/archive/v1.9.1/%{name}-%{version}.tar.gz
+Source0:	https://github.com/ok2cqr/cqrlog/archive/v%{version}/%{name}-%{version}.tar.gz
 
 Patch0:         cqrlog-1.9.0-install.patch
 Patch1:         cqrlog-1.9.1-desktop.patch
@@ -41,7 +41,7 @@ operation and maintenance.
 %setup -q
 %patch0 -p1
 %patch1 -p1
-%patch2 -p1
+#patch2 -p1
 
 chmod -x src/azidis3.pas
 chmod -x src/gline2.pas
@@ -84,6 +84,9 @@ iconv -f iso8859-1 -t utf-8 %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt > 
 
 
 %changelog
+* Sat May  7 2016 Richard Shaw <hobbes1069@gmail.com> - 2.0.1-1
+- Update to latest upstream release.
+
 * Thu Mar 24 2016 Richard Shaw <hobbes1069@gmail.com> - 1.9.1-3
 - Update to latest upstream release.
 - Add patch to deal with newer fpc.
