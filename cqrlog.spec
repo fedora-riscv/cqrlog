@@ -1,5 +1,5 @@
 Name:		cqrlog
-Version:	2.0.1
+Version:	2.0.2
 Release:	1%{?dist}
 Summary:	An amateur radio contact logging program
 
@@ -84,6 +84,9 @@ iconv -f iso8859-1 -t utf-8 %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt > 
 
 
 %changelog
+* Mon Aug 29 2016 Richard Shaw <hobbes1069@gmail.com> - 2.0.2-1
+- Update to latest upstream release.
+
 * Sat May  7 2016 Richard Shaw <hobbes1069@gmail.com> - 2.0.1-1
 - Update to latest upstream release.
 

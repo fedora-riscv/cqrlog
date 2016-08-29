@@ -1,6 +1,6 @@
 --- a/Makefile
 +++ b/Makefile
-@@ -7,14 +7,12 @@ tmpdir   = /tmp
+@@ -7,15 +7,13 @@ tmpdir   = /tmp
  
  cqrlog: src/cqrlog.lpi
  	$(CC) --ws=gtk2 --pcp=$(tmpdir)/.lazarus src/cqrlog.lpi
@@ -9,6 +9,7 @@
  
  clean:
  	rm -f -v src/*.o src/*.ppu src/*.bak src/lnet/lib/*.ppu src/lnet/lib/*.o src/lnet/lib/*.bak src/cqrlog src/cqrlog.compiled debian/cqrlog.* src/ipc/*.o src/ipc/*.ppu src/cqrlog.or
+ 	rm -f -v src/*.lrs src/*.ps src/*.lrt src/*.rsh  src/*.rst src/*.a
  	rm -rf debian/cqrlog
  	rm -f -v src/mysql/*.ppu src/mysq/*.bak src/mysql/*.o
 -	rm -f -v tools/cqrlog.1.gz
@@ -16,7 +17,7 @@
  	
  install:
  	install -d -v         $(bindir)
-@@ -45,9 +43,8 @@ install:
+@@ -46,9 +44,8 @@ install:
  	install    -v -m 0644 images/*   $(datadir)/images/
  	install    -v -m 0644 tools/cqrlog.desktop $(sharedir)/applications/cqrlog.desktop
  	install    -v -m 0644 images/cqrlog.png $(sharedir)/pixmaps/cqrlog/cqrlog.png
