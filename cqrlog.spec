@@ -1,5 +1,5 @@
 Name:		cqrlog
-Version:	2.0.2
+Version:	2.0.4
 Release:	1%{?dist}
 Summary:	An amateur radio contact logging program
 
@@ -7,7 +7,7 @@ License:	GPLv2
 URL:		http://www.cqrlog.com/
 Source0:	https://github.com/ok2cqr/cqrlog/archive/v%{version}/%{name}-%{version}.tar.gz
 
-Patch0:         cqrlog-1.9.0-install.patch
+Patch0:         cqrlog-2.0.4-install.patch
 Patch1:         cqrlog-1.9.1-desktop.patch
 Patch2:         cqrlog-1.9.1-build.patch
 
@@ -61,8 +61,11 @@ make %{?_smp_mflags}
 
 desktop-file-validate %{buildroot}%{_datadir}/applications/cqrlog.desktop
 
-mv %{buildroot}%{_datadir}/pixmaps/cqrlog/cqrlog.png \
-   %{buildroot}%{_datadir}/pixmaps/
+# As of 2.0.4 cqrlog puts icons in both /usr/share/icons and /usr/share/pixmaps
+# incorrectly fix it here.
+mv %{buildroot}%{_datadir}/icons/cqrlog \
+   %{buildroot}%{_datadir}/icons/hicolor
+rm -rf %{buildroot}%{_datadir}/pixmaps
 
 for file in $(find %{buildroot}%{_datadir}/%{name} -name "*.txt"); do
     sed -i 's/\r//' $file
@@ -73,17 +76,33 @@ sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/ctyfiles/MASTER.SCP
 iconv -f iso8859-1 -t utf-8 %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt > %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt.conv && mv -f %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt.conv %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt
 
 
+%post
+/bin/touch --no-create %{_datadir}/icons/hicolor &>/dev/null || :
+
+%postun
+if [ $1 -eq 0 ] ; then
+    /bin/touch --no-create %{_datadir}/icons/hicolor &>/dev/null
+    /usr/bin/gtk-update-icon-cache %{_datadir}/icons/hicolor &>/dev/null || :
+fi
+
+%posttrans
+/usr/bin/gtk-update-icon-cache %{_datadir}/icons/hicolor &>/dev/null || :
+
+
 %files
 %license src/COPYING
 %doc README.md src/AUTHORS src/CHANGELOG src/README
-%{_bindir}/cqrlog
+%{_bindir}/%{name}
 %{_datadir}/%{name}/
-%{_datadir}/applications/cqrlog.desktop
-%{_datadir}/pixmaps/cqrlog.png
+%{_datadir}/applications/%{name}.desktop
+%{_datadir}/icons/hicolor/*/%{name}.png
 %{_mandir}/man1/cqrlog.1.gz
 
 
 %changelog
+* Tue Jan 17 2017 Richard Shaw <hobbes1069@gmail.com> - 2.0.4-1
+- Update to latest upstream release.
+
 * Mon Aug 29 2016 Richard Shaw <hobbes1069@gmail.com> - 2.0.2-1
 - Update to latest upstream release.
 
