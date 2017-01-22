@@ -11,9 +11,7 @@ Patch0:         cqrlog-2.0.4-install.patch
 Patch1:         cqrlog-1.9.1-desktop.patch
 Patch2:         cqrlog-1.9.1-build.patch
 
-# fpc not available on these arches
-#ExcludeArch:	s390 s390x armv7hl
-ExcludeArch:	s390 s390x
+ExclusiveArch:  %{fpc_arches}
 
 BuildRequires:	fpc >= 2.6.4
 BuildRequires:	lazarus
