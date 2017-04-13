@@ -1,5 +1,5 @@
 Name:		cqrlog
-Version:	2.0.4
+Version:	2.0.5
 Release:	1%{?dist}
 Summary:	An amateur radio contact logging program
 
@@ -7,7 +7,7 @@ License:	GPLv2
 URL:		http://www.cqrlog.com/
 Source0:	https://github.com/ok2cqr/cqrlog/archive/v%{version}/%{name}-%{version}.tar.gz
 
-Patch0:         cqrlog-2.0.4-install.patch
+Patch0:         cqrlog-2.0.5-install.patch
 Patch1:         cqrlog-1.9.1-desktop.patch
 Patch2:         cqrlog-1.9.1-build.patch
 
@@ -59,11 +59,12 @@ make %{?_smp_mflags}
 
 desktop-file-validate %{buildroot}%{_datadir}/applications/cqrlog.desktop
 
-# As of 2.0.4 cqrlog puts icons in both /usr/share/icons and /usr/share/pixmaps
-# incorrectly fix it here.
-mv %{buildroot}%{_datadir}/icons/cqrlog \
-   %{buildroot}%{_datadir}/icons/hicolor
-rm -rf %{buildroot}%{_datadir}/pixmaps
+# Fix icon location
+for size in 32 48 64 128 256; do
+    mkdir -p %{buildroot}%{_datadir}/icons/hicolor/${size}x${size}/apps/
+    mv images/icon/${size}x${size}/%{name}.png \
+    %{buildroot}%{_datadir}/icons/hicolor/${size}x${size}/apps/
+done
 
 for file in $(find %{buildroot}%{_datadir}/%{name} -name "*.txt"); do
     sed -i 's/\r//' $file
@@ -93,11 +94,15 @@ fi
 %{_bindir}/%{name}
 %{_datadir}/%{name}/
 %{_datadir}/applications/%{name}.desktop
-%{_datadir}/icons/hicolor/*/%{name}.png
+%{_datadir}/icons/hicolor/*/apps/%{name}.png
 %{_mandir}/man1/cqrlog.1.gz
 
 
 %changelog
+* Mon Mar 13 2017 Richard Shaw <hobbes1069@gmail.com> - 2.0.5-1
+- Update to latest upstream release, 2.0.5.
+- Fix icon install location, fixes BZ#1440477.
+
 * Tue Jan 17 2017 Richard Shaw <hobbes1069@gmail.com> - 2.0.4-1
 - Update to latest upstream release.
 
