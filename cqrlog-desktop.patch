@@ -1,12 +1,10 @@
 --- a/tools/cqrlog.desktop
 +++ b/tools/cqrlog.desktop
-@@ -4,7 +4,7 @@ Comment=Advanced logging program for ham
- Exec=cqrlog
+@@ -5,6 +5,6 @@ Exec=cqrlog
  Terminal=false
  Type=Application
--Icon=cqrlog.png
+ Icon=cqrlog
 -Categories=Utility;Database;HamRadio
-+Icon=cqrlog
 +Categories=Utility;Database;HamRadio;
  Keywords=Ham;Radio;Log;
  

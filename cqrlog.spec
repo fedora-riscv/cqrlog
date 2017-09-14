@@ -1,20 +1,21 @@
 Name:		cqrlog
-Version:	2.0.5
-Release:	3%{?dist}
+Version:	2.1.0
+Release:	1%{?dist}
 Summary:	An amateur radio contact logging program
 
 License:	GPLv2
 URL:		http://www.cqrlog.com/
 Source0:	https://github.com/ok2cqr/cqrlog/archive/v%{version}/%{name}-%{version}.tar.gz
 
-Patch0:         cqrlog-2.0.5-install.patch
-Patch1:         cqrlog-1.9.1-desktop.patch
-Patch2:         cqrlog-1.9.1-build.patch
+Patch0:         cqrlog-install.patch
+Patch1:         cqrlog-desktop.patch
+Patch2:         cqrlog-debug.patch
 
 ExclusiveArch:  %{fpc_arches}
 
 BuildRequires:	fpc >= 2.6.4
 BuildRequires:	lazarus
+BuildRequires:  libappstream-glib
 BuildRequires:	desktop-file-utils
 
 Requires:	mariadb-server
@@ -36,10 +37,7 @@ daily general logging of HF, CW & SSB contacts and strongly focused on easy
 operation and maintenance.
 
 %prep
-%setup -q
-%patch0 -p1
-%patch1 -p1
-#patch2 -p1
+%autosetup -p1
 
 chmod -x src/azidis3.pas
 chmod -x src/gline2.pas
@@ -75,6 +73,11 @@ sed -i 's/\r//' %{buildroot}%{_datadir}/%{name}/ctyfiles/MASTER.SCP
 iconv -f iso8859-1 -t utf-8 %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt > %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt.conv && mv -f %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt.conv %{buildroot}%{_datadir}/%{name}/ctyfiles/eqsl.txt
 
 
+%check
+appstream-util validate-relax --nonet \
+    %{buildroot}/%{_datadir}/appdata/*.appdata.xml
+
+
 %post
 /bin/touch --no-create %{_datadir}/icons/hicolor &>/dev/null || :
 
@@ -93,12 +96,16 @@ fi
 %doc README.md src/AUTHORS src/CHANGELOG src/README
 %{_bindir}/%{name}
 %{_datadir}/%{name}/
+%{_datadir}/appdata/%{name}.appdata.xml
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/icons/hicolor/*/apps/%{name}.png
 %{_mandir}/man1/cqrlog.1.gz
 
 
 %changelog
+* Mon Aug 07 2017 Richard Shaw <hobbes1069@gmail.com> - 2.1.0-1
+- Update to latest upstream release.
+
 * Wed Aug 02 2017 Fedora Release Engineering <releng@fedoraproject.org> - 2.0.5-3
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_27_Binutils_Mass_Rebuild
 

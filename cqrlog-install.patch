@@ -14,10 +14,10 @@
  	rm -f -v src/mysql/*.ppu src/mysq/*.bak src/mysql/*.o
 -	rm -f -v tools/cqrlog.1.gz
 +	rm -f -v tools/cqrlog.1
+ 	rm -rf src/backup
+ 	rm -f -v src/richmemo/*.o src/richmemo/*.ppu src/richmemo/gtk2/*.ppu src/richmemo/gtk2/*.o
  	
- install:
- 	install -d -v         $(bindir)
-@@ -32,8 +30,8 @@ install:
+@@ -34,8 +32,8 @@ install:
  	install -d -v         $(datadir)/images/icon/64x64
  	install -d -v         $(datadir)/images/icon/128x128 
  	install -d -v         $(datadir)/images/icon/256x256 
@@ -26,9 +26,9 @@
 +#	install -d -v         $(sharedir)/pixmaps/cqrlog
 +#	install -d -v         $(sharedir)/icons/cqrlog
  	install -d -v         $(sharedir)/applications
+ 	install -d -v         $(sharedir)/appdata
  	install -d -v         $(sharedir)/man/man1
- 	install    -v -m 0755 src/cqrlog $(bindir)
-@@ -49,18 +47,18 @@ install:
+@@ -52,8 +50,8 @@ install:
  	install    -v -m 0644 zipcodes/* $(datadir)/zipcodes/
  #	install -v -m 0644 -t images/*   $(datadir)/images/
  	cp -v -R images/* $(datadir)/images
@@ -39,9 +39,10 @@
  #	install    -v -m 0644 images/icon/32x32/*   $(datadir)/images/icon/32x32/
  #	install    -v -m 0644 images/icon/64x64/*   $(datadir)/images/icon/64x64/
  #	install    -v -m 0644 images/icon/128x128/*   $(datadir)/images/icon/128x128/
- #	install    -v -m 0644 images/icon/256x256/*   $(datadir)/images/icon/256x256/
+@@ -61,15 +59,15 @@ install:
  #	install    -v -m 0644 images/*   $(datadir)/images/
  	install    -v -m 0644 tools/cqrlog.desktop $(sharedir)/applications/cqrlog.desktop
+ 	install    -v -m 0644 tools/cqrlog.appdata.xml $(sharedir)/appdata/cqrlog.appdata.xml
 -	install    -v -m 0644 images/icon/32x32/cqrlog.png $(sharedir)/pixmaps/cqrlog/cqrlog.png
 -	install    -v -m 0644 images/icon/128x128/cqrlog.png $(sharedir)/icons/cqrlog.png
 +#	install    -v -m 0644 images/icon/32x32/cqrlog.png $(sharedir)/pixmaps/cqrlog/cqrlog.png
@@ -52,3 +53,10 @@
  deb:
  	dpkg-buildpackage -rfakeroot -i -I
  deb_src:
+ 	dpkg-buildpackage -rfakeroot -i -I -S
+ debug:
+-	$(CC) --ws=gtk2 --pcp=$(tmpdir)/.lazarus src/cqrlog.lpi
+-	gzip tools/cqrlog.1 -c > tools/cqrlog.1.gz
++	$(CC) --bm=debug --ws=gtk2 --pcp=$(tmpdir)/.lazarus src/cqrlog.lpi
++	gzip tools/cqrlog.1 -c > tools/cqrlog.1
+ 
