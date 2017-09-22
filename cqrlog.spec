@@ -1,6 +1,6 @@
 Name:		cqrlog
 Version:	2.1.0
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	An amateur radio contact logging program
 
 License:	GPLv2
@@ -19,7 +19,12 @@ BuildRequires:  libappstream-glib
 BuildRequires:	desktop-file-utils
 
 Requires:	mariadb-server
+# https://bugzilla.redhat.com/show_bug.cgi?id=1486480
+%if 0%{?fedora} >= 28
+Requires:       mariadb-connector-c
+%else
 Requires:	mariadb-libs
+%endif
 Requires:	hamlib 
 Requires:       openssl
 %if 0%{?fedora}
@@ -103,6 +108,10 @@ fi
 
 
 %changelog
+* Fri Sep 22 2017 Richard Shaw <hobbes1069@gmail.com> - 2.1.0-2
+- Fix mariadb requires for Fedora 28 and up.
+  https://bugzilla.redhat.com/show_bug.cgi?id=1486480
+
 * Mon Aug 07 2017 Richard Shaw <hobbes1069@gmail.com> - 2.1.0-1
 - Update to latest upstream release.
 
