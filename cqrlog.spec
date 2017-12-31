@@ -1,6 +1,6 @@
 Name:		cqrlog
-Version:	2.1.0
-Release:	2%{?dist}
+Version:	2.2.0
+Release:	1%{?dist}
 Summary:	An amateur radio contact logging program
 
 License:	GPLv2
@@ -9,9 +9,13 @@ Source0:	https://github.com/ok2cqr/cqrlog/archive/v%{version}/%{name}-%{version}
 
 Patch0:         cqrlog-install.patch
 Patch1:         cqrlog-desktop.patch
-Patch2:         cqrlog-debug.patch
 
 ExclusiveArch:  %{fpc_arches}
+# fpc broken in rawhide, see:
+# https://bugzilla.redhat.com/show_bug.cgi?id=1517323
+%if 0%{?fedora} >= 28
+ExcludeArch:    armv7hl
+%endif
 
 BuildRequires:	fpc >= 2.6.4
 BuildRequires:	lazarus
@@ -108,6 +112,10 @@ fi
 
 
 %changelog
+* Sun Dec 31 2017 Richard Shaw <hobbes1069@gmail.com> - 2.2.0-1
+- Update to latest upstream release.
+- Disable armv7hl on rawhide/28 until fpc is fixed.
+
 * Fri Sep 22 2017 Richard Shaw <hobbes1069@gmail.com> - 2.1.0-2
 - Fix mariadb requires for Fedora 28 and up.
   https://bugzilla.redhat.com/show_bug.cgi?id=1486480
