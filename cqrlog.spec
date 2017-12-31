@@ -11,11 +11,10 @@ Patch0:         cqrlog-install.patch
 Patch1:         cqrlog-desktop.patch
 
 ExclusiveArch:  %{fpc_arches}
-# fpc broken in rawhide, see:
+# fpc/lazarus is broken, see:
 # https://bugzilla.redhat.com/show_bug.cgi?id=1517323
-%if 0%{?fedora} >= 28
+# https://bugzilla.redhat.com/show_bug.cgi?id=1491788
 ExcludeArch:    armv7hl
-%endif
 
 BuildRequires:	fpc >= 2.6.4
 BuildRequires:	lazarus
@@ -114,7 +113,7 @@ fi
 %changelog
 * Sun Dec 31 2017 Richard Shaw <hobbes1069@gmail.com> - 2.2.0-1
 - Update to latest upstream release.
-- Disable armv7hl on rawhide/28 until fpc is fixed.
+- Disable armv7hl until fpc/lazarus is fixed.
 
 * Fri Sep 22 2017 Richard Shaw <hobbes1069@gmail.com> - 2.1.0-2
 - Fix mariadb requires for Fedora 28 and up.
