@@ -1,6 +1,6 @@
 Name:		cqrlog
 Version:	2.2.0
-Release:	2%{?dist}
+Release:	3%{?dist}
 Summary:	An amateur radio contact logging program
 
 License:	GPLv2
@@ -111,6 +111,9 @@ fi
 
 
 %changelog
+* Fri Feb 09 2018 Igor Gnatenko <ignatenkobrain@fedoraproject.org> - 2.2.0-3
+- Escape macros in %%changelog
+
 * Wed Feb 07 2018 Fedora Release Engineering <releng@fedoraproject.org> - 2.2.0-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_28_Mass_Rebuild
 
@@ -188,8 +191,8 @@ fi
 - added new optimized MySQL configuration file (log should be faster and won't show error about missing tables)
 - additional date formats for QSL label printing added (Tom, DL7BJ)
 - alert for for callsign on specific mode and band added
-- %h CW macro added (sends GM/GA/GE calculated from wkd station local time)
-- %rs CW macro added (sends RST_S and replace 9 with N)
+- %%h CW macro added (sends GM/GA/GE calculated from wkd station local time)
+- %%rs CW macro added (sends RST_S and replace 9 with N)
 - design of gridlists can be changed in Preferences/Fonts/Gridlist settings (Tom, DL7BJ)
 - additional options to split RST (TX and RX) in three fields for QSL label printing (Tom, DL7BJ)
 - K3NG key support added
