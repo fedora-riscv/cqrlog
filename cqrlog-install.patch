@@ -16,8 +16,8 @@
 +	rm -f -v tools/cqrlog.1
  	rm -rf src/backup
  	rm -f -v src/richmemo/*.o src/richmemo/*.ppu src/richmemo/gtk2/*.ppu src/richmemo/gtk2/*.o
- 	
-@@ -34,8 +32,8 @@ install:
+ 	rm -f -v tools/adif_hash_generator tools/adif_hash_generator.lpi tools/adif_hash_generator.lps
+@@ -35,8 +33,8 @@ install:
  	install -d -v         $(datadir)/images/icon/64x64
  	install -d -v         $(datadir)/images/icon/128x128 
  	install -d -v         $(datadir)/images/icon/256x256 
@@ -28,7 +28,7 @@
  	install -d -v         $(sharedir)/applications
  	install -d -v         $(sharedir)/appdata
  	install -d -v         $(sharedir)/man/man1
-@@ -52,8 +50,8 @@ install:
+@@ -53,8 +51,8 @@ install:
  	install    -v -m 0644 zipcodes/* $(datadir)/zipcodes/
  #	install -v -m 0644 -t images/*   $(datadir)/images/
  	cp -v -R images/* $(datadir)/images
@@ -39,7 +39,7 @@
  #	install    -v -m 0644 images/icon/32x32/*   $(datadir)/images/icon/32x32/
  #	install    -v -m 0644 images/icon/64x64/*   $(datadir)/images/icon/64x64/
  #	install    -v -m 0644 images/icon/128x128/*   $(datadir)/images/icon/128x128/
-@@ -61,15 +59,15 @@ install:
+@@ -62,15 +60,15 @@ install:
  #	install    -v -m 0644 images/*   $(datadir)/images/
  	install    -v -m 0644 tools/cqrlog.desktop $(sharedir)/applications/cqrlog.desktop
  	install    -v -m 0644 tools/cqrlog.appdata.xml $(sharedir)/appdata/cqrlog.appdata.xml

@@ -1,23 +1,21 @@
 Name:		cqrlog
 Version:	2.2.0
-Release:	3%{?dist}
+Release:	4%{?dist}
 Summary:	An amateur radio contact logging program
 
 License:	GPLv2
 URL:		http://www.cqrlog.com/
 Source0:	https://github.com/ok2cqr/cqrlog/archive/v%{version}/%{name}-%{version}.tar.gz
 
-Patch0:         cqrlog-install.patch
-Patch1:         cqrlog-desktop.patch
+# Fixes arm builds, translation improvements, and other bug fixes.
+Patch0:         cqrlog-fixes.patch
+Patch1:         cqrlog-install.patch
+Patch2:         cqrlog-desktop.patch
 
 ExclusiveArch:  %{fpc_arches}
-# fpc/lazarus is broken, see:
-# https://bugzilla.redhat.com/show_bug.cgi?id=1517323
-# https://bugzilla.redhat.com/show_bug.cgi?id=1491788
-ExcludeArch:    armv7hl
 
-BuildRequires:	fpc >= 2.6.4
-BuildRequires:	lazarus
+BuildRequires:	fpc >= 3.0.4
+BuildRequires:	lazarus >= 1.8
 BuildRequires:  libappstream-glib
 BuildRequires:	desktop-file-utils
 
@@ -111,6 +109,9 @@ fi
 
 
 %changelog
+* Thu Mar 01 2018 Richard Shaw <hobbes1069@gmail.com> - 2.2.0-4
+- Fix arm builds, improved translations, and other fixes.
+
 * Fri Feb 09 2018 Igor Gnatenko <ignatenkobrain@fedoraproject.org> - 2.2.0-3
 - Escape macros in %%changelog
 
