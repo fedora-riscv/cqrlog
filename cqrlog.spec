@@ -1,6 +1,6 @@
 Name:		cqrlog
-Version:	2.2.0
-Release:	4%{?dist}
+Version:	2.3.0
+Release:	1%{?dist}
 Summary:	An amateur radio contact logging program
 
 License:	GPLv2
@@ -8,9 +8,8 @@ URL:		http://www.cqrlog.com/
 Source0:	https://github.com/ok2cqr/cqrlog/archive/v%{version}/%{name}-%{version}.tar.gz
 
 # Fixes arm builds, translation improvements, and other bug fixes.
-Patch0:         cqrlog-fixes.patch
-Patch1:         cqrlog-install.patch
-Patch2:         cqrlog-desktop.patch
+Patch0:         cqrlog-install.patch
+Patch1:         cqrlog-desktop.patch
 
 ExclusiveArch:  %{fpc_arches}
 
@@ -52,6 +51,11 @@ chmod -x src/aziloc.pas
 chmod -x src/znacmech.pas
 chmod -x tools/cqrlog-apparmor-fix
 chmod -x voice_keyer/voice_keyer.sh
+
+# libmysqlclient.so is only provided in mariadb-connector-c-devel and a devel
+# package should not be required.
+# fixes RHBZ #1592176
+sed -i 's/libmysqlclient/libmariadbclient/g' src/dData.pas
 
 
 %build
@@ -109,6 +113,10 @@ fi
 
 
 %changelog
+* Mon Jun 18 2018 Richard Shaw <hobbes1069@gmail.com> - 2.3.0-1
+- Update to 2.3.0.
+- Fix dependency on libmysqlclient.so, fixes RHBZ#1592176.
+
 * Thu Mar 01 2018 Richard Shaw <hobbes1069@gmail.com> - 2.2.0-4
 - Fix arm builds, improved translations, and other fixes.
 
