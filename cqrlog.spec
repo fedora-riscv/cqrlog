@@ -13,7 +13,7 @@ Patch1:         cqrlog-desktop.patch
 
 ExclusiveArch:  %{fpc_arches}
 
-BuildRequires:	fpc >= 3.0.4
+BuildRequires:	fpc >= 3.0.2
 BuildRequires:	lazarus >= 1.8
 BuildRequires:  libappstream-glib
 BuildRequires:	desktop-file-utils
