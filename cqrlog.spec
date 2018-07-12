@@ -1,6 +1,6 @@
 Name:		cqrlog
 Version:	2.3.0
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	An amateur radio contact logging program
 
 License:	GPLv2
@@ -113,6 +113,9 @@ fi
 
 
 %changelog
+* Thu Jul 12 2018 Fedora Release Engineering <releng@fedoraproject.org> - 2.3.0-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_29_Mass_Rebuild
+
 * Mon Jun 18 2018 Richard Shaw <hobbes1069@gmail.com> - 2.3.0-1
 - Update to 2.3.0.
 - Fix dependency on libmysqlclient.so, fixes RHBZ#1592176.
