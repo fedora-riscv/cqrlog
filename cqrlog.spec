@@ -1,6 +1,6 @@
 Name:		cqrlog
 Version:	2.3.0
-Release:	2%{?dist}
+Release:	3%{?dist}
 Summary:	An amateur radio contact logging program
 
 License:	GPLv2
@@ -22,6 +22,8 @@ Requires:	mariadb-server
 # https://bugzilla.redhat.com/show_bug.cgi?id=1486480
 %if 0%{?fedora} >= 28
 Requires:       mariadb-connector-c
+# https://bugzilla.redhat.com/show_bug.cgi?id=1592176
+Requires:       mariadb-connector-c-devel
 %else
 Requires:	mariadb-libs
 %endif
@@ -88,19 +90,6 @@ appstream-util validate-relax --nonet \
     %{buildroot}/%{_datadir}/appdata/*.appdata.xml
 
 
-%post
-/bin/touch --no-create %{_datadir}/icons/hicolor &>/dev/null || :
-
-%postun
-if [ $1 -eq 0 ] ; then
-    /bin/touch --no-create %{_datadir}/icons/hicolor &>/dev/null
-    /usr/bin/gtk-update-icon-cache %{_datadir}/icons/hicolor &>/dev/null || :
-fi
-
-%posttrans
-/usr/bin/gtk-update-icon-cache %{_datadir}/icons/hicolor &>/dev/null || :
-
-
 %files
 %license src/COPYING
 %doc README.md src/AUTHORS src/CHANGELOG src/README
@@ -113,6 +102,10 @@ fi
 
 
 %changelog
+* Fri Nov 09 2018 Richard Shaw <hobbes1069@gmail.com> - 2.3.0-3
+- Add Require for mariadb-connector-c-devel to work around fpc link issue.
+- Clean up scripts that are no longer required by the packaging guidelines.
+
 * Thu Jul 12 2018 Fedora Release Engineering <releng@fedoraproject.org> - 2.3.0-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_29_Mass_Rebuild
 
