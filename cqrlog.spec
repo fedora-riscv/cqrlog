@@ -10,6 +10,7 @@ Source0:	https://github.com/ok2cqr/cqrlog/archive/v%{version}/%{name}-%{version}
 # Fixes arm builds, translation improvements, and other bug fixes.
 Patch0:         cqrlog-install.patch
 Patch1:         cqrlog-desktop.patch
+Patch2:         cqrlog-mariadb.patch
 
 ExclusiveArch:  %{fpc_arches}
 
@@ -54,10 +55,6 @@ chmod -x src/znacmech.pas
 chmod -x tools/cqrlog-apparmor-fix
 chmod -x voice_keyer/voice_keyer.sh
 
-# libmysqlclient.so is only provided in mariadb-connector-c-devel and a devel
-# package should not be required.
-# fixes RHBZ #1592176
-sed -i 's/libmysqlclient/libmariadbclient/g' src/dData.pas
 
 
 %build
@@ -103,8 +100,10 @@ appstream-util validate-relax --nonet \
 
 %changelog
 * Fri Nov 09 2018 Richard Shaw <hobbes1069@gmail.com> - 2.3.0-3
-- Add Require for mariadb-connector-c-devel to work around fpc link issue.
 - Clean up scripts that are no longer required by the packaging guidelines.
+
+* Sat Oct 27 2018 Jim Lieb <lieb@sea-troll.net.> - 2.3.0-3
+- Fix mysql/mariadb client lib search path
 
 * Thu Jul 12 2018 Fedora Release Engineering <releng@fedoraproject.org> - 2.3.0-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_29_Mass_Rebuild
