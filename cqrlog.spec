@@ -1,6 +1,6 @@
 Name:		cqrlog
-Version:	2.3.0
-Release:	5%{?dist}
+Version:	2.4.0
+Release:	1%{?dist}
 Summary:	An amateur radio contact logging program
 
 License:	GPLv2
@@ -10,7 +10,7 @@ Source0:	https://github.com/ok2cqr/cqrlog/archive/v%{version}/%{name}-%{version}
 # Fixes arm builds, translation improvements, and other bug fixes.
 Patch0:         cqrlog-install.patch
 Patch1:         cqrlog-desktop.patch
-Patch2:         cqrlog-mariadb.patch
+#Patch2:         cqrlog-mariadb.patch
 
 ExclusiveArch:  %{fpc_arches}
 
@@ -21,7 +21,7 @@ BuildRequires:	desktop-file-utils
 
 Requires:	mariadb-server
 # https://bugzilla.redhat.com/show_bug.cgi?id=1486480
-%if 0%{?fedora} >= 28
+%if 0%{?fedora}
 Requires:       mariadb-connector-c
 # https://bugzilla.redhat.com/show_bug.cgi?id=1592176
 Requires:       mariadb-connector-c-devel
@@ -88,8 +88,8 @@ appstream-util validate-relax --nonet \
 
 
 %files
-%license src/COPYING
-%doc README.md src/AUTHORS src/CHANGELOG src/README
+%license COPYING
+%doc README.md AUTHORS CHANGELOG
 %{_bindir}/%{name}
 %{_datadir}/%{name}/
 %{_datadir}/appdata/%{name}.appdata.xml
@@ -99,6 +99,9 @@ appstream-util validate-relax --nonet \
 
 
 %changelog
+* Mon Nov 11 2019 Richard Shaw <hobbes1069@gmail.com> - 2.4.0-1
+- Update to 2.4.0.
+
 * Wed Jul 24 2019 Fedora Release Engineering <releng@fedoraproject.org> - 2.3.0-5
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_31_Mass_Rebuild
 

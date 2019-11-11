@@ -4,7 +4,7 @@
  Terminal=false
  Type=Application
  Icon=cqrlog
--Categories=Utility;Database;HamRadio
-+Categories=Utility;Database;HamRadio;
- Keywords=Ham;Radio;Log;
+-Categories=Network;HamRadio
++Categories=Network;HamRadio;
+ Keywords=Ham;Radio;Log;cqrlog;
  
