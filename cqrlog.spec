@@ -1,6 +1,6 @@
 Name:		cqrlog
 Version:	2.4.0
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	An amateur radio contact logging program
 
 License:	GPLv2
@@ -10,7 +10,7 @@ Source0:	https://github.com/ok2cqr/cqrlog/archive/v%{version}/%{name}-%{version}
 # Fixes arm builds, translation improvements, and other bug fixes.
 Patch0:         cqrlog-install.patch
 Patch1:         cqrlog-desktop.patch
-#Patch2:         cqrlog-mariadb.patch
+Patch2:         cqrlog-jtdx.patch
 
 ExclusiveArch:  %{fpc_arches}
 
@@ -99,6 +99,9 @@ appstream-util validate-relax --nonet \
 
 
 %changelog
+* Tue Nov 12 2019 Richard Shaw <hobbes1069@gmail.com> - 2.4.0-2
+- Add patch to deal with JTDX UDP issue.
+
 * Mon Nov 11 2019 Richard Shaw <hobbes1069@gmail.com> - 2.4.0-1
 - Update to 2.4.0.
 
