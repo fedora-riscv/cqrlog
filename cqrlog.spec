@@ -1,6 +1,6 @@
 Name:		cqrlog
 Version:	2.4.0
-Release:	2%{?dist}
+Release:	3%{?dist}
 Summary:	An amateur radio contact logging program
 
 License:	GPLv2
@@ -99,6 +99,9 @@ appstream-util validate-relax --nonet \
 
 
 %changelog
+* Tue Jan 28 2020 Fedora Release Engineering <releng@fedoraproject.org> - 2.4.0-3
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_32_Mass_Rebuild
+
 * Tue Nov 12 2019 Richard Shaw <hobbes1069@gmail.com> - 2.4.0-2
 - Add patch to deal with JTDX UDP issue.
 
