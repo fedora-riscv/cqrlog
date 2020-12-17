@@ -18,6 +18,7 @@ BuildRequires:	fpc >= 3.0.4
 BuildRequires:	lazarus >= 1.8
 BuildRequires:  libappstream-glib
 BuildRequires:	desktop-file-utils
+BuildRequires: make
 
 Requires:	mariadb-server
 # https://bugzilla.redhat.com/show_bug.cgi?id=1486480
