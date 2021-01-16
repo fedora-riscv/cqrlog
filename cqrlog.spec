@@ -1,6 +1,6 @@
 Name:		cqrlog
-Version:	2.4.0
-Release:	4%{?dist}
+Version:	2.5.0
+Release:	1%{?dist}
 Summary:	An amateur radio contact logging program
 
 License:	GPLv2
@@ -10,15 +10,14 @@ Source0:	https://github.com/ok2cqr/cqrlog/archive/v%{version}/%{name}-%{version}
 # Fixes arm builds, translation improvements, and other bug fixes.
 Patch0:         cqrlog-install.patch
 Patch1:         cqrlog-desktop.patch
-Patch2:         cqrlog-jtdx.patch
 
 ExclusiveArch:  %{fpc_arches}
 
+BuildRequires:	desktop-file-utils
 BuildRequires:	fpc >= 3.0.4
 BuildRequires:	lazarus >= 1.8
 BuildRequires:  libappstream-glib
-BuildRequires:	desktop-file-utils
-BuildRequires: make
+BuildRequires:  make
 
 Requires:	mariadb-server
 # https://bugzilla.redhat.com/show_bug.cgi?id=1486480
@@ -27,12 +26,12 @@ Requires:       mariadb-connector-c
 # https://bugzilla.redhat.com/show_bug.cgi?id=1592176
 Requires:       mariadb-connector-c-devel
 %else
-Requires:	mariadb-libs
+Requires:       mariadb-libs
 %endif
-Requires:	hamlib 
+Requires:       hamlib 
 Requires:       openssl
 %if 0%{?fedora}
-Requires:	tqsllib
+Requires:       tqsllib
 %endif
 
 
@@ -100,6 +99,9 @@ appstream-util validate-relax --nonet \
 
 
 %changelog
+* Sat Jan 16 2021 Richard Shaw <hobbes1069@gmail.com> - 2.5.0-1
+- Update to 2.5.0.
+
 * Mon Jul 27 2020 Fedora Release Engineering <releng@fedoraproject.org> - 2.4.0-4
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_33_Mass_Rebuild
 
