@@ -1,5 +1,5 @@
 Name:		cqrlog
-Version:	2.5.1
+Version:	2.5.2
 Release:	1%{?dist}
 Summary:	An amateur radio contact logging program
 
@@ -99,6 +99,9 @@ appstream-util validate-relax --nonet \
 
 
 %changelog
+* Sat Feb 13 2021 Richard Shaw <hobbes1069@gmail.com> - 2.5.2-1
+- Update to 2.5.2.
+
 * Fri Feb 05 2021 Richard Shaw <hobbes1069@gmail.com> - 2.5.1-1
 - Update to 2.5.1.
 
