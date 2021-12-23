@@ -1,6 +1,6 @@
 Name:		cqrlog
 Version:	2.5.2
-Release:	5%{?dist}
+Release:	6%{?dist}
 Summary:	An amateur radio contact logging program
 
 License:	GPLv2
@@ -99,6 +99,9 @@ appstream-util validate-relax --nonet \
 
 
 %changelog
+* Thu Dec 23 2021 Richard Shaw <hobbes1069@gmail.com> - 2.5.2-6
+- f35-build-side-49088
+
 * Thu Dec 23 2021 Richard Shaw <hobbes1069@gmail.com> - 2.5.2-5
 - 36-build-side-49086
 
