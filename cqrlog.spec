@@ -99,11 +99,8 @@ appstream-util validate-relax --nonet \
 
 
 %changelog
-* Thu Dec 23 2021 Richard Shaw <hobbes1069@gmail.com> - 2.5.2-6
-- f35-build-side-49088
-
 * Thu Dec 23 2021 Richard Shaw <hobbes1069@gmail.com> - 2.5.2-5
-- 36-build-side-49086
+- Rebuild for hamlib 4.4.
 
 * Tue Oct 12 2021 Richard Shaw <hobbes1069@gmail.com> - 2.5.2-4
 - Rebuild for hamlib 4.3.1.
