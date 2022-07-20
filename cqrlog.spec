@@ -1,6 +1,6 @@
 Name:		cqrlog
 Version:	2.5.2
-Release:	8%{?dist}
+Release:	9%{?dist}
 Summary:	An amateur radio contact logging program
 
 License:	GPLv2
@@ -99,6 +99,9 @@ appstream-util validate-relax --nonet \
 
 
 %changelog
+* Wed Jul 20 2022 Fedora Release Engineering <releng@fedoraproject.org> - 2.5.2-9
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_37_Mass_Rebuild
+
 * Wed Jan 19 2022 Fedora Release Engineering <releng@fedoraproject.org> - 2.5.2-8
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_36_Mass_Rebuild
 
