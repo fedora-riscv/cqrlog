@@ -1,6 +1,6 @@
 Name:		cqrlog
 Version:	2.5.2
-Release:	12%{?dist}
+Release:	12.rv64%{?dist}
 Summary:	An amateur radio contact logging program
 
 License:	GPLv2
@@ -11,7 +11,7 @@ Source0:	https://github.com/ok2cqr/cqrlog/archive/v%{version}/%{name}-%{version}
 Patch0:         cqrlog-install.patch
 Patch1:         cqrlog-desktop.patch
 
-ExclusiveArch:  %{fpc_arches}
+ExclusiveArch:  %{fpc_arches} riscv64
 
 BuildRequires:	desktop-file-utils
 BuildRequires:	fpc >= 3.0.4
